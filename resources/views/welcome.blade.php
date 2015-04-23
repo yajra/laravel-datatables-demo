@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
 	<div class="col-md-12">
-		<h1>Welcome to Laravel Datatables Package Demo Site</h1>
+		<h1>Welcome to Laravel Datatables Package Demo App</h1>
 		<h2>Datatables Package for Laravel 4|5</h2>
 		<p>
 		<a href="https://packagist.org/packages/yajra/laravel-datatables-oracle"><img src="https://poser.pugx.org/yajra/laravel-datatables-oracle/v/stable.png" alt=""></a>
