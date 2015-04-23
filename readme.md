@@ -10,7 +10,7 @@
 
 This package is created to handle server-side works of [DataTables](http://datatables.net/) jQuery Plugin via AJAX option by using Eloquent ORM or Fluent Query Builder.
 
-**Note** This demo app aims to guide **artisan developers** on how to use the package by examples. To begin your journey, click an example on the left menu!
+**Note** This demo app aims to guide **artisan developers** on how to use the package by examples.
 
 ## Installation
 
