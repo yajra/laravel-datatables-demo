@@ -1,6 +1,9 @@
 @extends('app')
 
 @section('content')
+    <div class="alert alert-info">
+        <p><strong>Heads Up!</strong> Data used here are random using faker. Filtering/sorting results data will be on a luck basis</p>
+    </div>
 <div class="row">
 	<div class="col-md-12">
 		<table id="users-table" class="table table-condensed">
