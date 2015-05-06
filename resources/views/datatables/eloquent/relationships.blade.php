@@ -28,7 +28,7 @@ $(function() {
 		ajax: '/eloquent/relationships-data',
 		columns: [
 			{data: 'id', name: 'id'},
-			{data: 'id', name: 'title'},
+			{data: 'title', name: 'title'},
 			{data: 'user.name', name: 'name', orderable: false, searchable: false},
 			{data: 'user.email', name: 'email', orderable: false, searchable: false},
 			{data: 'created_at', name: 'created_at'},

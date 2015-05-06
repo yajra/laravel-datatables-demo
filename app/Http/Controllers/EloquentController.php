@@ -42,7 +42,9 @@ class EloquentController extends Controller {
 	{
 		$posts = Post::with('user')->select('*');
 
-		return Datatables::of($posts)->make(true);
+		return Datatables::of($posts)
+            ->editColumn('title', '{!! str_limit($title, 60) !!}')
+            ->make(true);
 	}
 
 	public function getJoins()
