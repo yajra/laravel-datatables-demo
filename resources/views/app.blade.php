@@ -13,8 +13,8 @@
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="/highlight/styles/zenburn.css">
-    <script src="/highlight/highlight.pack.js"></script>
+    <link rel="stylesheet" href="{{ asset('highlight/styles/zenburn.css') }}">
+    <script src="{{ asset('highlight/highlight.pack.js')  }}"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -68,10 +68,10 @@
 		</div>
 
 		<!-- Scripts -->
-		<script src="/js/jquery.min.js"></script>
-		<script src="/js/bootstrap.min.js"></script>
-		<script src="/js/jquery.dataTables.min.js"></script>
-		<script src="/js/datatables.bootstrap.js"></script>
+		<script src="{{ asset('js/jquery.min.js') }}"></script>
+		<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
+		<script src="{{ asset('js/datatables.bootstrap.js') }}"></script>
 
 		@stack('scripts')
 	</body>
