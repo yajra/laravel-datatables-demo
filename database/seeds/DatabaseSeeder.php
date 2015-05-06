@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
 use App\User;
+use App\Post;
 
 class DatabaseSeeder extends Seeder {
 
@@ -16,7 +17,8 @@ class DatabaseSeeder extends Seeder {
 	{
 		Model::unguard();
 
-		$this->call('UsersTableSeeder');
+		// $this->call('UsersTableSeeder');
+		$this->call('PostsTableSeeder');
 	}
 
 }
@@ -35,6 +37,24 @@ class UsersTableSeeder extends Seeder {
 			$user->email = $faker->email;
 			$user->password = Hash::make('secret');
 			$user->save();
+		}
+
+	}
+
+}
+
+class PostsTableSeeder extends Seeder {
+
+	public function run()
+	{
+		DB::table('posts')->delete();
+
+		$faker = Faker\Factory::create();
+		$users = User::all();
+		for ($i=0; $i < 500; $i++) {
+			$post = new Post;
+			$post->title = $faker->paragraph;
+			$users->random(1)->posts()->save($post);
 		}
 
 	}

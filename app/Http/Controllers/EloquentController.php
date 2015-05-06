@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Post;
 use Datatables;
 use Illuminate\Http\Request;
 
@@ -30,6 +31,36 @@ class EloquentController extends Controller {
 		$users = User::select(['id','name','email','created_at','updated_at']);
 
 		return Datatables::of($users)->make(true);
+	}
+
+	public function getRelationships()
+	{
+		return view('datatables.eloquent.relationships');
+	}
+
+	public function getRelationshipsData()
+	{
+		$posts = Post::with('user')->select('*');
+
+		return Datatables::of($posts)->make(true);
+	}
+
+	public function getJoins()
+	{
+		return view('datatables.eloquent.joins');
+	}
+
+	public function getJoinsData()
+	{
+		$posts = Post::join('users','posts.user_id', '=', 'users.id')
+			->select(['posts.id', 'posts.title', 'users.name','users.email','posts.created_at','posts.updated_at']);
+
+		return Datatables::of($posts)
+			->editColumn('title', '{!! str_limit($title, 60) !!}')
+			->editColumn('name', function($model) {
+				return \HTML::mailto($model->email, $model->name);
+			})
+			->make(true);
 	}
 
 	public function getAddEditRemoveColumn()

@@ -6,7 +6,7 @@
 	<a href="{!! url('eloquent/dt-row') !!}" class="list-group-item {!! Request::is('eloquent/dt-row') ? 'active' : '' !!}">DT Row Option</a>
 	<a href="{!! url('eloquent/custom-filter') !!}" class="list-group-item {!! Request::is('eloquent/custom-filter') ? 'active' : '' !!}">Custom Filter</a>
 	<a href="{!! url('eloquent/carbon') !!}" class="list-group-item {!! Request::is('eloquent/carbon') ? 'active' : '' !!}">DateTime/Carbon Objects</a>
-	<a href="{!! url('eloquent/relationships') !!}" class="list-group-item {!! Request::is('eloquent/relationships') ? 'active' : '' !!}">Relationships</a>
+	<a href="{!! url('eloquent/relationships') !!}" class="list-group-item {!! Request::is('eloquent/relationships') ? 'active' : '' !!}">Eager Loading</a>
 	<a href="{!! url('eloquent/joins') !!}" class="list-group-item {!! Request::is('eloquent/joins') ? 'active' : '' !!}">Join Queries</a>
 </div>
 
