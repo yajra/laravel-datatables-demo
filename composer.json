@@ -1,7 +1,7 @@
 {
-	"name": "yajra/adsxtrm",
-	"description": "Ads Extreme",
-	"keywords": ["laravel", "mlm", "ads"],
+	"name": "yajra/laravel-datatables-demo",
+	"description": "Laravel Datatables Demo App",
+	"keywords": ["laravel", "datatables"],
 	"license": "MIT",
 	"type": "project",
 	"require": {
