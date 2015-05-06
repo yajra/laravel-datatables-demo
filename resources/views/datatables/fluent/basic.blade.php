@@ -36,6 +36,6 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/fluent/basic-data'
+        ajax: '{{ url("fluent/basic-data") }}'
     });
 @endsection

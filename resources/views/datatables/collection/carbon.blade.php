@@ -41,7 +41,7 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/collection/carbon-data',
+        ajax: '{{ url("collection/carbon-data") }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

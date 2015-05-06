@@ -51,7 +51,7 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/collection/array-data',
+        ajax: '{{ url("collection/array-data") }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

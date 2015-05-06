@@ -53,7 +53,7 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/eloquent/dt-row-data',
+        ajax: '{{ url("eloquent/dt-row-data") }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

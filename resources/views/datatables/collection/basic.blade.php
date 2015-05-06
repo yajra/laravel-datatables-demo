@@ -36,6 +36,6 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/collection/basic-data'
+        ajax: '{{ url("collection/basic-data") }}',
     });
 @endsection

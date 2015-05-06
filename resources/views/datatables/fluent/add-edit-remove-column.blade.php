@@ -44,7 +44,7 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/fluent/add-edit-remove-column-data',
+        ajax: '{{ url("fluent/add-edit-remove-column-data") }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

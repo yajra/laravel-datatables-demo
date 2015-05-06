@@ -36,7 +36,7 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/fluent/basic-object-data',
+        ajax: '{{ url("fluent/basic-object-data") }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

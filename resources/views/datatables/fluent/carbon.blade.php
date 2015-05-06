@@ -43,7 +43,7 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/fluent/carbon-data',
+        ajax: '{{ url("fluent/carbon-data") }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

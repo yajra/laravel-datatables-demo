@@ -39,7 +39,7 @@
     $('#posts-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/eloquent/relationships-data',
+        ajax: '{{ url("eloquent/relationships-data") }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'title', name: 'title'},

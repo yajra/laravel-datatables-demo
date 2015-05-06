@@ -54,7 +54,7 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/fluent/dt-row-data',
+        ajax: '{{ url("fluent/dt-row-data") }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

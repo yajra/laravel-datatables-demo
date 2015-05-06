@@ -37,7 +37,7 @@
         $('#users-table').DataTable({
             processing: true,
             serverSide: true,
-            ajax: '/eloquent/basic-data'
+            ajax: '{{ url("eloquent/basic-data") }}'
         });
     });
 @endsection

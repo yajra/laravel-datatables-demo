@@ -45,7 +45,7 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/eloquent/multi-filter-select-data',
+        ajax: '{{ url("eloquent/multi-filter-select-data") }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

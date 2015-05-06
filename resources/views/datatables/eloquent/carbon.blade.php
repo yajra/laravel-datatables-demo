@@ -41,7 +41,7 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/eloquent/carbon-data',
+        ajax: '{{ url("eloquent/carbon-data") }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

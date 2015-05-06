@@ -42,7 +42,7 @@
     $('#posts-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/eloquent/joins-data',
+        ajax: '{{ url("eloquent/joins-data") }}',
         columns: [
             {data: 'id', name: 'posts.id'},
             {data: 'title', name: 'posts.title'},
