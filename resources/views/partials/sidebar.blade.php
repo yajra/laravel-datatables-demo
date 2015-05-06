@@ -17,4 +17,6 @@
 	<a href="{!! url('fluent/add-edit-remove-column') !!}" class="list-group-item {!! Request::is('fluent/add-edit-remove-column') ? 'active' : '' !!}">Add/Edit/Remove Column</a>
 	<a href="{!! url('fluent/dt-row') !!}" class="list-group-item {!! Request::is('fluent/dt-row') ? 'active' : '' !!}">DT Row Option</a>
 	<a href="{!! url('fluent/custom-filter') !!}" class="list-group-item {!! Request::is('fluent/custom-filter') ? 'active' : '' !!}">Custom Filter</a>
+    <a href="{!! url('fluent/carbon') !!}" class="list-group-item {!! Request::is('fluent/carbon') ? 'active' : '' !!}">DateTime/Carbon Objects</a>
+    <a href="{!! url('fluent/joins') !!}" class="list-group-item {!! Request::is('fluent/joins') ? 'active' : '' !!}">Join Queries</a>
 </div>
