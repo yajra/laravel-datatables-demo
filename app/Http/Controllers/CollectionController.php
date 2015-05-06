@@ -12,6 +12,11 @@ use Illuminate\Support\Str;
 class CollectionController extends Controller
 {
 
+    function __construct()
+    {
+        view()->share('controller', 'CollectionController.php');
+    }
+
     public function getBasic()
     {
         return view('datatables.collection.basic');
