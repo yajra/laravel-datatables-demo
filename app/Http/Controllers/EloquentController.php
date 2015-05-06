@@ -150,4 +150,16 @@ class EloquentController extends Controller {
             ->make(true);
     }
 
+    public function getMultiFilterSelect()
+    {
+        return view('datatables.eloquent.multi-filter-select');
+    }
+
+    public function getMultiFilterSelectData()
+    {
+        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
+
+        return Datatables::of($users)->make(true);
+    }
+
 }

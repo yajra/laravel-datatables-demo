@@ -24,7 +24,7 @@ $(function() {
 	$('#users-table').DataTable({
 		processing: true,
 		serverSide: true,
-		ajax: '/collection/basic-object-data',
+		ajax: '/fluent/basic-object-data',
 		columns: [
 			{data: 'id', name: 'id'},
 			{data: 'name', name: 'name'},

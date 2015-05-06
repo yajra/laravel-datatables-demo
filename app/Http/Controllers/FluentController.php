@@ -141,4 +141,16 @@ class FluentController extends Controller
             ->make(true);
     }
 
+    public function getMultiFilterSelect()
+    {
+        return view('datatables.fluent.multi-filter-select');
+    }
+
+    public function getMultiFilterSelectData()
+    {
+        $users = DB::table('users')->select(['id', 'name', 'email', 'created_at', 'updated_at']);
+
+        return Datatables::of($users)->make(true);
+    }
+
 }

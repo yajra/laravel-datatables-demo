@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\User;
 use Carbon\Carbon;
 use Datatables;
+use Faker\Factory as Faker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -35,6 +36,18 @@ class CollectionController extends Controller
         return Datatables::of($users)->make(true);
     }
 
+    public function getMultiFilterSelect()
+    {
+        return view('datatables.collection.multi-filter-select');
+    }
+
+    public function getMultiFilterSelectData()
+    {
+        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at'])->get();
+
+        return Datatables::of($users)->make(true);
+    }
+
     public function getArray()
     {
         return view('datatables.collection.array');
@@ -43,7 +56,7 @@ class CollectionController extends Controller
     public function getArrayData()
     {
         $users = new Collection;
-        $faker = \Faker\Factory::create();
+        $faker = Faker::create();
 
         for ($i = 0; $i < 100; $i++) {
             $users->push([

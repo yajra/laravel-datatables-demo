@@ -2,6 +2,7 @@
 	<a href="#" class="list-group-item disabled">Eloquent ORM</a>
 	<a href="{!! url('eloquent/basic') !!}" class="list-group-item {!! Request::is('eloquent/basic') ? 'active' : '' !!}">Basic</a>
 	<a href="{!! url('eloquent/basic-object') !!}" class="list-group-item {!! Request::is('eloquent/basic-object') ? 'active' : '' !!}">Object Data Source</a>
+    <a href="{!! url('eloquent/multi-filter-select') !!}" class="list-group-item {!! Request::is('eloquent/multi-filter-select') ? 'active' : '' !!}">Column Search</a>
 	<a href="{!! url('eloquent/add-edit-remove-column') !!}" class="list-group-item {!! Request::is('eloquent/add-edit-remove-column') ? 'active' : '' !!}">Add/Edit/Remove Column</a>
 	<a href="{!! url('eloquent/dt-row') !!}" class="list-group-item {!! Request::is('eloquent/dt-row') ? 'active' : '' !!}">DT Row Option</a>
 	<a href="{!! url('eloquent/custom-filter') !!}" class="list-group-item {!! Request::is('eloquent/custom-filter') ? 'active' : '' !!}">Custom Filter</a>
@@ -14,6 +15,7 @@
 	<a href="#" class="list-group-item disabled">Fluent/Query Builder</a>
 	<a href="{!! url('fluent/basic') !!}" class="list-group-item {!! Request::is('fluent/basic') ? 'active' : '' !!}">Basic</a>
 	<a href="{!! url('fluent/basic-object') !!}" class="list-group-item {!! Request::is('fluent/basic-object') ? 'active' : '' !!}">Object Data Source</a>
+    <a href="{!! url('fluent/multi-filter-select') !!}" class="list-group-item {!! Request::is('fluent/multi-filter-select') ? 'active' : '' !!}">Column Search</a>
 	<a href="{!! url('fluent/add-edit-remove-column') !!}" class="list-group-item {!! Request::is('fluent/add-edit-remove-column') ? 'active' : '' !!}">Add/Edit/Remove Column</a>
 	<a href="{!! url('fluent/dt-row') !!}" class="list-group-item {!! Request::is('fluent/dt-row') ? 'active' : '' !!}">DT Row Option</a>
 	<a href="{!! url('fluent/custom-filter') !!}" class="list-group-item {!! Request::is('fluent/custom-filter') ? 'active' : '' !!}">Custom Filter</a>
@@ -25,6 +27,7 @@
     <a href="#" class="list-group-item disabled">Collection [v5.x]</a>
     <a href="{!! url('collection/basic') !!}" class="list-group-item {!! Request::is('collection/basic') ? 'active' : '' !!}">Basic</a>
     <a href="{!! url('collection/basic-object') !!}" class="list-group-item {!! Request::is('collection/basic-object') ? 'active' : '' !!}">Object Data Source</a>
+    <a href="{!! url('collection/multi-filter-select') !!}" class="list-group-item {!! Request::is('collection/multi-filter-select') ? 'active' : '' !!}">Column Search</a>
     <a href="{!! url('collection/array') !!}" class="list-group-item {!! Request::is('collection/array') ? 'active' : '' !!}">Array Data Source</a>
     <a href="{!! url('collection/add-edit-remove-column') !!}" class="list-group-item {!! Request::is('collection/add-edit-remove-column') ? 'active' : '' !!}">Add/Edit/Remove Column</a>
     <a href="{!! url('collection/dt-row') !!}" class="list-group-item {!! Request::is('collection/dt-row') ? 'active' : '' !!}">DT Row Option</a>
