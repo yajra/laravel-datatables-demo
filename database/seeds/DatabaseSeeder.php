@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder {
 	{
 		Model::unguard();
 
-		// $this->call('UsersTableSeeder');
+		$this->call('UsersTableSeeder');
 		$this->call('PostsTableSeeder');
 	}
 
@@ -34,7 +34,7 @@ class UsersTableSeeder extends Seeder {
 		for ($i=0; $i < 500; $i++) {
 			$user = new User;
 			$user->name = $faker->name;
-			$user->email = $faker->email;
+			$user->email = $faker->unique()->email;
 			$user->password = Hash::make('secret');
 			$user->save();
 		}
