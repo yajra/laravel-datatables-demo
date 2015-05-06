@@ -107,3 +107,20 @@ body {
 pre {
     margin: 10px;
 }
+
+.navbar-list > li.header {
+    font-weight: 900;
+    font-size: 1.1em;
+}
+.navbar-list > li > a {
+    padding: 6px 8px;
+}
+
+.navbar-list > li > a.active {
+    background: #10100D;
+    color: #9d9d9d;
+}
+
+.navbar-list > li > a.active:hover {
+    color: #FFFFFF;
+}
