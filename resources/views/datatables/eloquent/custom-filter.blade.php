@@ -1,6 +1,7 @@
-@extends('app')
+@extends('datatables.template')
 
-@section('content')
+@section('demo')
+<br/>
 <div class="row">
 	<div class="col-md-12">
 		<div class="panel panel-default">
@@ -38,35 +39,55 @@
 </div>
 @endsection
 
-@push('scripts')
-<script>
-$(function() {
-	var oTable = $('#users-table').DataTable({
-		dom: "<'row'<'col-xs-12'<'col-xs-6'l><'col-xs-6'p>>r>"+
-			"<'row'<'col-xs-12't>>"+
-			"<'row'<'col-xs-12'<'col-xs-6'i><'col-xs-6'p>>>",
-		processing: true,
-		serverSide: true,
-		ajax: {
-			url: '/eloquent/custom-filter-data',
-			data: function (d) {
-				d.name = $('input[name=name]').val();
-				d.email = $('input[name=email]').val();
-			}
-		},
-		columns: [
-			{data: 'id', name: 'id'},
-			{data: 'name', name: 'name'},
-			{data: 'email', name: 'email'},
-			{data: 'created_at', name: 'created_at'},
-			{data: 'updated_at', name: 'updated_at'}
-		]
-	});
+@section('controller')
+    public function getCustomFilter()
+    {
+        return view('datatables.eloquent.custom-filter');
+    }
 
-	$('#search-form').on('submit', function(e) {
-		oTable.draw();
-		e.preventDefault();
-	});
-});
-</script>
-@endpush
+    public function getCustomFilterData(Request $request)
+    {
+        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
+
+        return Datatables::of($users)
+        ->filter(function ($query) use ($request) {
+            if ($request->has('name')) {
+                $query->where('name', 'like', "%{$request->get('name')}%");
+            }
+
+            if ($request->has('email')) {
+                $query->where('email', 'like', "%{$request->get('email')}%");
+            }
+        })
+        ->make(true);
+    }
+@endsection
+
+@section('js')
+    var oTable = $('#users-table').DataTable({
+        dom: "<'row'<'col-xs-12'<'col-xs-6'l><'col-xs-6'p>>r>"+
+            "<'row'<'col-xs-12't>>"+
+            "<'row'<'col-xs-12'<'col-xs-6'i><'col-xs-6'p>>>",
+        processing: true,
+        serverSide: true,
+        ajax: {
+            url: '/eloquent/custom-filter-data',
+            data: function (d) {
+                d.name = $('input[name=name]').val();
+                d.email = $('input[name=email]').val();
+            }
+        },
+        columns: [
+            {data: 'id', name: 'id'},
+            {data: 'name', name: 'name'},
+            {data: 'email', name: 'email'},
+            {data: 'created_at', name: 'created_at'},
+            {data: 'updated_at', name: 'updated_at'}
+        ]
+    });
+
+    $('#search-form').on('submit', function(e) {
+        oTable.draw();
+        e.preventDefault();
+    });
+@endsection

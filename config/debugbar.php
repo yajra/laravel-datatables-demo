@@ -47,7 +47,7 @@ return array(
      |
      */
 
-    'include_vendors' => true,
+    'include_vendors' => false,
 
     /*
      |--------------------------------------------------------------------------
@@ -87,7 +87,7 @@ return array(
         'mail'            => true,  // Catch mail messages
         'logs'            => false, // Add the latest log messages
         'files'           => false, // Show the included files
-        'config'          => false, // Display config settings
+        'config'          => true, // Display config settings
         'auth'            => false, // Display Laravel authentication status
         'session'         => false, // Display session data in a separate tab
     ),
