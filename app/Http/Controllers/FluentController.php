@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 class FluentController extends Controller
 {
 
+    function __construct()
+    {
+        view()->share('controller', 'FluentController.php');
+    }
+
     public function getBasic()
     {
         return view('datatables.fluent.basic');
@@ -89,10 +94,10 @@ class FluentController extends Controller
 
     public function getCustomFilterData(Request $request)
     {
-        $users = DB::table('users')->select(['id','name','email','created_at','updated_at']);
+        $users = DB::table('users')->select(['id', 'name', 'email', 'created_at', 'updated_at']);
 
         return Datatables::of($users)
-            ->filter(function($query) use($request) {
+            ->filter(function ($query) use ($request) {
                 if ($request->has('name')) {
                     $query->where('name', 'like', "%{$request->get('name')}%");
                 }
@@ -111,13 +116,13 @@ class FluentController extends Controller
 
     public function getCarbonData()
     {
-        $users = DB::table('users')->select(['id','name','email','created_at','updated_at']);
+        $users = DB::table('users')->select(['id', 'name', 'email', 'created_at', 'updated_at']);
 
         return Datatables::of($users)
-            ->editColumn('created_at', function($user) {
+            ->editColumn('created_at', function ($user) {
                 return $user->created_at ? with(new Carbon($user->created_at))->format('m/d/Y') : '';
             })
-            ->editColumn('updated_at', function($user) {
+            ->editColumn('updated_at', function ($user) {
                 return $user->updated_at ? with(new Carbon($user->updated_at))->format('Y/m/d') : '';;
             })
             ->make(true);
@@ -130,12 +135,12 @@ class FluentController extends Controller
 
     public function getJoinsData()
     {
-        $posts = DB::table('posts')->join('users','posts.user_id', '=', 'users.id')
-            ->select(['posts.id', 'posts.title', 'users.name','users.email','posts.created_at','posts.updated_at']);
+        $posts = DB::table('posts')->join('users', 'posts.user_id', '=', 'users.id')
+            ->select(['posts.id', 'posts.title', 'users.name', 'users.email', 'posts.created_at', 'posts.updated_at']);
 
         return Datatables::of($posts)
             ->editColumn('title', '{!! str_limit($title, 60) !!}')
-            ->editColumn('name', function($model) {
+            ->editColumn('name', function ($model) {
                 return \HTML::mailto($model->email, $model->name);
             })
             ->make(true);
