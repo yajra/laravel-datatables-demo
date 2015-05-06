@@ -11,7 +11,7 @@
 </div>
 
 <div class="list-group">
-	<a href="#" class="list-group-item disabled">Fluent Examples</a>
+	<a href="#" class="list-group-item disabled">Fluent/Query Builder Examples</a>
 	<a href="{!! url('fluent/basic') !!}" class="list-group-item {!! Request::is('fluent/basic') ? 'active' : '' !!}">Basic</a>
 	<a href="{!! url('fluent/basic-object') !!}" class="list-group-item {!! Request::is('fluent/basic-object') ? 'active' : '' !!}">Object Data Source</a>
 	<a href="{!! url('fluent/add-edit-remove-column') !!}" class="list-group-item {!! Request::is('fluent/add-edit-remove-column') ? 'active' : '' !!}">Add/Edit/Remove Column</a>
