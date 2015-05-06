@@ -124,3 +124,13 @@ pre {
 .navbar-list > li > a.active:hover {
     color: #FFFFFF;
 }
+
+div.dataTables_wrapper {
+    padding: 10px 0;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.panel {
+    margin: 0;
+}

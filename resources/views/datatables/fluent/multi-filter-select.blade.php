@@ -41,7 +41,7 @@
     }
 @endsection
 
-@@section('js')
+@section('js')
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
