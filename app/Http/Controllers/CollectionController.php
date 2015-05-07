@@ -172,17 +172,23 @@ class CollectionController extends Controller
 
     public function getGithubData(Request $request)
     {
-        $repositories = \Cache::get('repositories', function() use($request) {
+        $search = $request->get('search');
+        $keyword = $search['value']?: 'laravel';
+        $repositories = \Cache::get($keyword, function() use($keyword) {
             $client = new \GuzzleHttp\Client();
-            $response = $client->get('https://api.github.com/repositories');
+            $response = $client->get('https://api.github.com/search/repositories', [
+                    'query' => ['q' => $keyword]
+                ]);
             $repositories = $response->json();
-            \Cache::put('repositories', $repositories, 5);
+            \Cache::put($keyword, $repositories, 1);
             return $repositories;
         });
 
-        $data = new Collection($repositories);
+        $data = new Collection($repositories['items']);
 
-        return Datatables::of($data)->make(true);
+        return Datatables::of($data)
+            ->filter(function(){}) // disable built-in search function
+            ->make(true);
     }
 
 }
