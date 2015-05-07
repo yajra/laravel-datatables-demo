@@ -6,7 +6,7 @@
         <table id="datatable" class="table table-condensed">
             <thead>
                 <tr>
-                    <th>Id</th>
+                    <th>Stars</th>
                     <th>Repo</th>
                     <th>Owner</th>
                     <th>Description</th>
@@ -80,12 +80,13 @@
         serverSide: true,
         ajax: '{{ url("collection/github-data") }}',
         columns: [
-            {data: 'id', name: 'id'},
+            {data: 'stargazers_count', name: 'stargazers_count'},
             {data: 'full_name', name: 'full_name'},
             {data: 'owner.login', name: 'owner.login', orderable: false, searchable: false},
             {data: 'description', name: 'description'},
             {data: 'private', name: 'private'}
-        ]
+        ],
+        order: [[0, 'desc']]
     });
 
     // submit search on return
