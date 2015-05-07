@@ -170,11 +170,15 @@ class CollectionController extends Controller
         return view('datatables.collection.github');
     }
 
-    public function getGithubData()
+    public function getGithubData(Request $request)
     {
-        $client = new \GuzzleHttp\Client();
-        $response = $client->get('https://api.github.com/repositories');
-        $repositories = $response->json();
+        $repositories = \Cache::get('repositories', function() use($request) {
+            $client = new \GuzzleHttp\Client();
+            $response = $client->get('https://api.github.com/repositories');
+            $repositories = $response->json();
+            \Cache::put('repositories', $repositories, 5);
+            return $repositories;
+        });
 
         $data = new Collection($repositories);
 
