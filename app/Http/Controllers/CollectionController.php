@@ -187,6 +187,12 @@ class CollectionController extends Controller
         $data = new Collection($repositories['items']);
 
         return Datatables::of($data)
+            ->editColumn('full_name', function($row) {
+                return \HTML::link($row['url'], $row['full_name']);
+            })
+            ->editColumn('private', function($row) {
+                return $row['private'] ? 'Y' : 'N';
+            })
             ->filter(function(){}) // disable built-in search function
             ->make(true);
     }

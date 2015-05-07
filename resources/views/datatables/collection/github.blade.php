@@ -11,7 +11,6 @@
                     <th>Owner</th>
                     <th>Description</th>
                     <th>Private</th>
-                    <th>Url</th>
                 </tr>
             </thead>
         </table>
@@ -27,17 +26,29 @@
 
     public function getGithubData()
     {
-        $repositories = \Cache::get('repositories', function() use($request) {
+        $search = $request->get('search');
+        $keyword = $search['value']?: 'laravel';
+        $repositories = \Cache::get($keyword, function() use($keyword) {
             $client = new \GuzzleHttp\Client();
-            $response = $client->get('https://api.github.com/repositories');
+            $response = $client->get('https://api.github.com/search/repositories', [
+                    'query' => ['q' => $keyword]
+                ]);
             $repositories = $response->json();
-            \Cache::put('repositories', $repositories, 5);
+            \Cache::put($keyword, $repositories, 1);
             return $repositories;
         });
 
-        $data = new Collection($repositories);
+        $data = new Collection($repositories['items']);
 
-        return Datatables::of($data)->make(true);
+        return Datatables::of($data)
+            ->editColumn('full_name', function($row) {
+                return \HTML::link($row['url'], $row['full_name']);
+            })
+            ->editColumn('private', function($row) {
+                return $row['private'] ? 'Y' : 'N';
+            })
+            ->filter(function(){}) // disable built-in search function
+            ->make(true);
     }
 @endsection
 
@@ -51,8 +62,7 @@
             {data: 'full_name', name: 'full_name'},
             {data: 'owner.login', name: 'owner.login'},
             {data: 'description', name: 'description'},
-            {data: 'private', name: 'private'},
-            {data: 'url', name: 'url'}
+            {data: 'private', name: 'private'}
         ]
     });
 @endsection
