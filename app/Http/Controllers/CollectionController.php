@@ -60,18 +60,18 @@ class CollectionController extends Controller
 
     public function getArrayData()
     {
-        $users = new Collection;
         $faker = Faker::create();
-
+        $data = [];
         for ($i = 0; $i < 100; $i++) {
-            $users->push([
+            $data[] = [
                 'id'         => $i + 1,
                 'name'       => $faker->name,
                 'email'      => $faker->email,
                 'created_at' => Carbon::now()->format('m-d-Y'),
                 'updated_at' => Carbon::now()->format('m-d-Y'),
-            ]);
+            ];
         }
+        $users = new Collection($data);
 
         return Datatables::of($users)->make(true);
     }
@@ -163,6 +163,22 @@ class CollectionController extends Controller
                 return $user->updated_at->format('Y/m/d');
             })
             ->make(true);
+    }
+
+    public function getGithub()
+    {
+        return view('datatables.collection.github');
+    }
+
+    public function getGithubData()
+    {
+        $client = new \GuzzleHttp\Client();
+        $response = $client->get('https://api.github.com/repositories');
+        $repositories = $response->json();
+
+        $data = new Collection($repositories);
+
+        return Datatables::of($data)->make(true);
     }
 
 }

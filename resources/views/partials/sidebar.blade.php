@@ -25,10 +25,11 @@
 
 <ul class="nav navbar-list">
     <li class="header">Collection [v5.x]</li>
+    <li><a href="{!! url('collection/array') !!}" class="{!! Request::is('collection/array') ? 'active' : '' !!}">Array Data Source</a></li>
+    <li><a href="{!! url('collection/github') !!}" class="{!! Request::is('collection/github') ? 'active' : '' !!}">Github API Data Source</a></li>
     <li><a href="{!! url('collection/basic') !!}" class="{!! Request::is('collection/basic') ? 'active' : '' !!}">Basic</a></li>
     <li><a href="{!! url('collection/basic-object') !!}" class="{!! Request::is('collection/basic-object') ? 'active' : '' !!}">Object Data Source</a></li>
     <li><a href="{!! url('collection/multi-filter-select') !!}" class="{!! Request::is('collection/multi-filter-select') ? 'active' : '' !!}">Column Search</a></li>
-    <li><a href="{!! url('collection/array') !!}" class="{!! Request::is('collection/array') ? 'active' : '' !!}">Array Data Source</a></li>
     <li><a href="{!! url('collection/add-edit-remove-column') !!}" class="{!! Request::is('collection/add-edit-remove-column') ? 'active' : '' !!}">Add/Edit/Remove Column</a></li>
     <li><a href="{!! url('collection/dt-row') !!}" class="{!! Request::is('collection/dt-row') ? 'active' : '' !!}">DT Row Option</a></li>
     <li><a href="{!! url('collection/custom-filter') !!}" class="{!! Request::is('collection/custom-filter') ? 'active' : '' !!}">Custom Filter</a></li>
