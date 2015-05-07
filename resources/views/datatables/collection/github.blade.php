@@ -61,7 +61,7 @@
         columns: [
             {data: 'id', name: 'id'},
             {data: 'full_name', name: 'full_name'},
-            {data: 'owner.login', name: 'owner.login'},
+            {data: 'owner.login', name: 'owner.login', orderable: false, searchable: false},
             {data: 'description', name: 'description'},
             {data: 'private', name: 'private'}
         ]
