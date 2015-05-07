@@ -35,6 +35,7 @@
                 ]);
             $repositories = $response->json();
             \Cache::put($keyword, $repositories, 1);
+
             return $repositories;
         });
 
