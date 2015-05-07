@@ -75,7 +75,7 @@
         processing: true,
         serverSide: true,
         ajax: {
-            url: '/collection/custom-filter-data',
+            url: '{{ url("collection/custom-filter-data")  }}',
             data: function (d) {
                 d.name = $('input[name=name]').val();
                 d.email = $('input[name=email]').val();

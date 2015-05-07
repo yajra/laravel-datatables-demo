@@ -71,7 +71,7 @@
         processing: true,
         serverSide: true,
         ajax: {
-            url: '/fluent/custom-filter-data',
+            url: '{{ url("fluent/custom-filter-data") }}',
             data: function (d) {
                 d.name = $('input[name=name]').val();
                 d.email = $('input[name=email]').val();
