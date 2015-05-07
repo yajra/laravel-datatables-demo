@@ -71,7 +71,7 @@
         processing: true,
         serverSide: true,
         ajax: {
-            url: '/eloquent/custom-filter-data',
+            url: '{{ url("eloquent/custom-filter-data") }}',
             data: function (d) {
                 d.name = $('input[name=name]').val();
                 d.email = $('input[name=email]').val();
