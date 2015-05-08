@@ -1,21 +1,17 @@
 @extends('datatables.template')
 
 @section('demo')
-<div class="row">
-    <div class="col-md-12">
-        <table id="datatable" class="table table-condensed">
-            <thead>
-                <tr>
-                    <th>Stars</th>
-                    <th>Repo</th>
-                    <th>Owner</th>
-                    <th>Description</th>
-                    <th>Private</th>
-                </tr>
-            </thead>
-        </table>
-    </div>
-</div>
+<table id="datatable" class="table table-condensed">
+    <thead>
+        <tr>
+            <th>Stars</th>
+            <th>Repo</th>
+            <th>Owner</th>
+            <th>Description</th>
+            <th>Private</th>
+        </tr>
+    </thead>
+</table>
 @endsection
 
 @section('controller')

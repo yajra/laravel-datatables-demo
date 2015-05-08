@@ -2,41 +2,37 @@
 
 @section('demo')
 <br/>
-<div class="row">
-	<div class="col-md-12">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">Custom Filter</h3>
-			</div>
-			<div class="panel-body">
-				<form method="POST" id="search-form" class="form-inline" role="form">
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Custom Filter</h3>
+	</div>
+	<div class="panel-body">
+		<form method="POST" id="search-form" class="form-inline" role="form">
 
-					<div class="form-group">
-						<label for="name">Name</label>
-						<input type="text" class="form-control" name="name" id="name" placeholder="search name">
-					</div>
-					<div class="form-group">
-						<label for="email">Email</label>
-						<input type="text" class="form-control" name="email" id="email" placeholder="search email">
-					</div>
-
-					<button type="submit" class="btn btn-primary">Search</button>
-				</form>
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" name="name" id="name" placeholder="search name">
 			</div>
-		</div>
-		<table id="users-table" class="table table-condensed">
-			<thead>
-				<tr>
-					<th>Id</th>
-					<th>Name</th>
-					<th>Email</th>
-					<th>Created At</th>
-					<th>Updated At</th>
-				</tr>
-			</thead>
-		</table>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="text" class="form-control" name="email" id="email" placeholder="search email">
+			</div>
+
+			<button type="submit" class="btn btn-primary">Search</button>
+		</form>
 	</div>
 </div>
+<table id="users-table" class="table table-condensed">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Created At</th>
+			<th>Updated At</th>
+		</tr>
+	</thead>
+</table>
 @endsection
 
 @section('controller')

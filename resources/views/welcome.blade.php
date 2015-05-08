@@ -8,7 +8,7 @@
 		<p>
 		<a href="https://packagist.org/packages/yajra/laravel-datatables-oracle"><img src="https://poser.pugx.org/yajra/laravel-datatables-oracle/v/stable.png" alt=""></a>
 		<a href="https://packagist.org/packages/yajra/laravel-datatables-oracle"><img src="https://poser.pugx.org/yajra/laravel-datatables-oracle/downloads.png" alt=""></a>
-		<a href="https://travis-ci.org/yajra/laravel-datatables-oracle"><img src="https://travis-ci.org/yajra/laravel-datatables-oracle.png?branch=master" alt=""></a>
+		<a href="https://travis-ci.org/yajra/laravel-datatables"><img src="https://travis-ci.org/yajra/laravel-datatables.png?branch=master" alt=""></a>
 		<a href="https://packagist.org/packages/yajra/laravel-datatables-oracle"><img src="https://poser.pugx.org/yajra/laravel-datatables-oracle/v/unstable.svg" alt=""></a>
 		<a href="https://packagist.org/packages/yajra/laravel-datatables-oracle"><img src="https://poser.pugx.org/yajra/laravel-datatables-oracle/license.svg" alt=""></a>
 		</p>

@@ -1,22 +1,18 @@
 @extends('datatables.template')
 
 @section('demo')
-<div class="row">
-    <div class="col-md-12">
-        <table id="posts-table" class="table table-condensed">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Title</th>
-                    <th>Author Name</th>
-                    <th>Email</th>
-                    <th>Created At</th>
-                    <th>Updated At</th>
-                </tr>
-            </thead>
-        </table>
-    </div>
-</div>
+<table id="posts-table" class="table table-condensed">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+        </tr>
+    </thead>
+</table>
 @endsection
 
 @section('controller')
