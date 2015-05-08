@@ -21,31 +21,8 @@
             dom: "<'row'<'col-xs-12'<'col-xs-6'l><'col-xs-6'f>>r>" +
             "<'row'<'col-xs-12't>>" +
             "<'row'<'col-xs-12'<'col-xs-6'i><'col-xs-6'p>>>",
-            "sPaginationType": "bootstrap",
-            renderer: 'bootstrap',
-            language: {
-                "emptyTable": '<div class="cell-center"><h5><i class="fa fa-info-circle"></i> No data available!</h5></div>',
-                "info": "Showing _START_ to _END_ of _TOTAL_ entries",
-                "infoEmpty": "Showing 0 to 0 of 0 entries",
-                "infoFiltered": "(filtered from _MAX_ total entries)",
-                "infoPostFix": "",
-                "thousands": ",",
-                "lengthMenu": '_MENU_ records per page',
-                "loadingRecords": '<h3><i class="fa fa-spin fa-spinner"></i> Loading...</h3>',
-                "processing": 'Loading',
-                "search": '<i class="fa fa-search"></i> &nbsp;',
-                "zeroRecords": '<div class="cell-center"><h5><i class="fa fa-info-circle"></i> No records found!</h5></div>',
-                "paginate": {
-                    "first": "First",
-                    "last": "Last",
-                    "next": '',
-                    "previous": ''
-                },
-                "aria": {
-                    "sortAscending": ": activate to sort column ascending",
-                    "sortDescending": ": activate to sort column descending"
-                }
-            }
+            paginationType: "bootstrap",
+            renderer: "bootstrap"
         });
 
 
@@ -58,32 +35,32 @@
 
 
         /* Bootstrap paging button renderer */
-        DataTable.ext.renderer.pageButton.bootstrap = function (settings, host, idx, buttons, page, pages) {
-            var api = new DataTable.Api(settings);
+        DataTable.ext.renderer.pageButton.bootstrap = function ( settings, host, idx, buttons, page, pages ) {
+            var api     = new DataTable.Api( settings );
             var classes = settings.oClasses;
-            var lang = settings.oLanguage.oPaginate;
-            var btnDisplay, btnClass;
+            var lang    = settings.oLanguage.oPaginate;
+            var btnDisplay, btnClass, counter=0;
 
-            var attach = function (container, buttons) {
+            var attach = function( container, buttons ) {
                 var i, ien, node, button;
-                var clickHandler = function (e) {
+                var clickHandler = function ( e ) {
                     e.preventDefault();
-                    if (!$(e.currentTarget).hasClass('disabled')) {
-                        api.page(e.data.action).draw(false);
+                    if ( !$(e.currentTarget).hasClass('disabled') ) {
+                        api.page( e.data.action ).draw( false );
                     }
                 };
 
-                for (i = 0, ien = buttons.length; i < ien; i++) {
+                for ( i=0, ien=buttons.length ; i<ien ; i++ ) {
                     button = buttons[i];
 
-                    if ($.isArray(button)) {
-                        attach(container, button);
+                    if ( $.isArray( button ) ) {
+                        attach( container, button );
                     }
                     else {
                         btnDisplay = '';
                         btnClass = '';
 
-                        switch (button) {
+                        switch ( button ) {
                             case 'ellipsis':
                                 btnDisplay = '&hellip;';
                                 btnClass = 'disabled';
@@ -103,13 +80,13 @@
 
                             case 'next':
                                 btnDisplay = lang.sNext;
-                                btnClass = button + (page < pages - 1 ?
+                                btnClass = button + (page < pages-1 ?
                                     '' : ' disabled');
                                 break;
 
                             case 'last':
                                 btnDisplay = lang.sLast;
-                                btnClass = button + (page < pages - 1 ?
+                                btnClass = button + (page < pages-1 ?
                                     '' : ' disabled');
                                 break;
 
@@ -120,34 +97,54 @@
                                 break;
                         }
 
-                        if (btnDisplay) {
+                        if ( btnDisplay ) {
                             node = $('<li>', {
-                                'class': classes.sPageButton + ' ' + btnClass,
-                                'aria-controls': settings.sTableId,
-                                'tabindex': settings.iTabIndex,
-                                'id': idx === 0 && typeof button === 'string' ?
-                                settings.sTableId + '_' + button :
-                                    null
-                            })
-                                .append($('<a>', {
-                                    'href': '#'
-                                })
-                                    .html(btnDisplay)
-                            )
-                                .appendTo(container);
+                                    'class': classes.sPageButton+' '+btnClass,
+                                    'id': idx === 0 && typeof button === 'string' ?
+                                        settings.sTableId +'_'+ button :
+                                        null
+                                } )
+                                .append( $('<a>', {
+                                        'href': '#',
+                                        'aria-controls': settings.sTableId,
+                                        'data-dt-idx': counter,
+                                        'tabindex': settings.iTabIndex
+                                    } )
+                                    .html( btnDisplay )
+                                )
+                                .appendTo( container );
 
                             settings.oApi._fnBindAction(
                                 node, {action: button}, clickHandler
                             );
+
+                            counter++;
                         }
                     }
                 }
             };
 
+            // IE9 throws an 'unknown error' if document.activeElement is used
+            // inside an iframe or frame.
+            var activeEl;
+
+            try {
+                // Because this approach is destroying and recreating the paging
+                // elements, focus is lost on the select button which is bad for
+                // accessibility. So we want to restore focus once the draw has
+                // completed
+                activeEl = $(document.activeElement).data('dt-idx');
+            }
+            catch (e) {}
+
             attach(
-                $(host).empty().html('<ul class="pagination pagination-sm"/>').children('ul'),
+                $(host).empty().html('<ul class="pagination"/>').children('ul'),
                 buttons
             );
+
+            if ( activeEl ) {
+                $(host).find( '[data-dt-idx='+activeEl+']' ).focus();
+            }
         };
 
 
@@ -155,10 +152,9 @@
          * TableTools Bootstrap compatibility
          * Required TableTools 2.1+
          */
-        if ($.fn.DataTable.TableTools) {
+        if ( DataTable.TableTools ) {
             // Set the classes that TableTools uses to something suitable for Bootstrap
-            // Set the classes that TableTools uses to something suitable for Bootstrap
-            $.extend(true, $.fn.DataTable.TableTools.classes, {
+            $.extend( true, DataTable.TableTools.classes, {
                 "container": "DTTT btn-group",
                 "buttons": {
                     "normal": "btn btn-default",
@@ -172,21 +168,21 @@
                     }
                 },
                 "print": {
-                    "info": "DTTT_print_info modal"
+                    "info": "DTTT_print_info"
                 },
                 "select": {
                     "row": "active"
                 }
-            });
+            } );
 
-            // Have the collection use a bootstrap compatible dropdown
-            $.extend(true, $.fn.DataTable.TableTools.DEFAULTS.oTags, {
+            // Have the collection use a bootstrap compatible drop down
+            $.extend( true, DataTable.TableTools.DEFAULTS.oTags, {
                 "collection": {
                     "container": "ul",
                     "button": "li",
                     "liner": "a"
                 }
-            });
+            } );
         }
 
     }; // /factory
