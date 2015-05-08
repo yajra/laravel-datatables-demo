@@ -192,7 +192,7 @@
     }; // /factory
 
 
-// Define as an AMD module if possible
+    // Define as an AMD module if possible
     if (typeof define === 'function' && define.amd) {
         define(['jquery', 'datatables'], factory);
     }
@@ -289,4 +289,25 @@ $.fn.dataTableExt.oApi.fnPagingInfo = function (oSettings) {
         "iPage": oSettings._iDisplayLength === -1 ? 0 : Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength),
         "iTotalPages": oSettings._iDisplayLength === -1 ? 0 : Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength)
     };
+};
+
+// add plugin http://datatables.net/plug-ins/api/fnFilterOnReturn
+$.fn.dataTableExt.oApi.fnFilterOnReturn = function (oSettings) {
+    var _that = this;
+
+    this.each(function (i) {
+        $.fn.dataTableExt.iApiIndex = i;
+        var $this = this;
+        var anControl = $('input', _that.fnSettings().aanFeatures.f);
+        anControl
+            .unbind('keyup search input')
+            .bind('keypress', function (e) {
+                if (e.which == 13) {
+                    $.fn.dataTableExt.iApiIndex = i;
+                    _that.fnFilter(anControl.val());
+                }
+            });
+        return this;
+    });
+    return this;
 };

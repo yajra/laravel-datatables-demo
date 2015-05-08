@@ -4,6 +4,8 @@ use App\Http\Requests;
 use App\User;
 use Carbon\Carbon;
 use Datatables;
+use Cache;
+use HTML;
 use Faker\Factory as Faker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
@@ -174,13 +176,13 @@ class CollectionController extends Controller
     {
         $search = $request->get('search');
         $keyword = $search['value']?: 'laravel';
-        $repositories = \Cache::get($keyword, function() use($keyword) {
+        $repositories = Cache::get($keyword, function() use($keyword) {
             $client = new \GuzzleHttp\Client();
             $response = $client->get('https://api.github.com/search/repositories', [
                     'query' => ['q' => $keyword]
                 ]);
             $repositories = $response->json();
-            \Cache::put($keyword, $repositories, 1);
+            Cache::put($keyword, $repositories, 10);
 
             return $repositories;
         });
@@ -188,8 +190,14 @@ class CollectionController extends Controller
         $data = new Collection($repositories['items']);
 
         return Datatables::of($data)
+            ->editColumn('stargazers_count', function($row) {
+                return '<div class="input-group input-group-sm">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
+                            <input type="text" class="form-control" style="width:64px" readonly value="'. number_format($row['stargazers_count'] , 0) .'">
+                        </div>';
+            })
             ->editColumn('full_name', function($row) {
-                return \HTML::link($row['url'], $row['full_name']);
+                return HTML::link($row['html_url'], $row['full_name']);
             })
             ->editColumn('private', function($row) {
                 return $row['private'] ? 'Y' : 'N';
