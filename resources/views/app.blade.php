@@ -72,6 +72,7 @@
 		<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 		<script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
 		<script src="{{ asset('js/datatables.bootstrap.js') }}"></script>
+		<script src="{{ asset('js/handlebars.js') }}"></script>
 
 		@stack('scripts')
 	</body>

@@ -167,4 +167,16 @@ class EloquentController extends Controller
         return Datatables::of($users)->make(true);
     }
 
+    public function getRowDetails()
+    {
+        return view('datatables.eloquent.row-details');
+    }
+
+    public function getRowDetailsData()
+    {
+        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
+
+        return Datatables::of($users)->make(true);
+    }
+
 }

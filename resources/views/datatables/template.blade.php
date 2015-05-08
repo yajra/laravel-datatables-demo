@@ -15,6 +15,7 @@
             <pre><code>@yield('controller')</code></pre>
             <h3 class="lead">Javascript</h3>
             <pre><code>@yield('js')</code></pre>
+            @yield('extra')
         </div>
     </div>
 </div>
