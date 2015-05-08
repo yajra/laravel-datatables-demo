@@ -31,7 +31,7 @@
 
         return Datatables::of($users)
             ->addColumn('action', function ($user) {
-                return '<a href="#" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
+                return '&lta href="#edit-'.$user->id.'" class="btn btn-xs btn-primary"&gt&lti class="glyphicon glyphicon-edit"&gt&lt/i&gt Edit&lt/a&gt';
             })
             ->editColumn('id', 'ID: @{{$id}}')
             ->removeColumn('password')
