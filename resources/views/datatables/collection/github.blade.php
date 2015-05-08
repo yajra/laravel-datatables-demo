@@ -73,6 +73,6 @@
             {data: 'private', name: 'private'}
         ],
         order: [[0, 'desc']],
-        "displayLength": -1
+        displayLength: -1
     }).fnFilterOnReturn();
 @endsection
