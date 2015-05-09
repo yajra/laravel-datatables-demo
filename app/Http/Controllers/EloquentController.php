@@ -179,4 +179,17 @@ class EloquentController extends Controller
         return Datatables::of($users)->make(true);
     }
 
+    public function getHasMany()
+    {
+        return view('datatables.eloquent.has-many');
+    }
+
+    public function getHasManyData()
+    {
+        $posts = User::find(1)->posts()->with('user');
+
+        return Datatables::of($posts)
+            ->editColumn('title', '{!! str_limit($title, 60) !!}')
+            ->make(true);
+    }
 }
