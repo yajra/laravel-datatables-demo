@@ -16,6 +16,25 @@
 @endsection
 
 @section('controller')
+    public function getCount()
+    {
+        return view('datatables.eloquent.count');
+    }
+
+    public function getCountData()
+    {
+        $users = User::select([
+            'users.id',
+            'users.name',
+            'users.email',
+            \DB::raw('count(posts.user_id) as count'),
+            'users.created_at',
+            'users.updated_at'
+        ])->join('posts','posts.user_id','=','users.id')
+        ->groupBy('posts.user_id');
+
+        return Datatables::of($users)->make(true);
+    }
 @endsection
 
 @section('js')
