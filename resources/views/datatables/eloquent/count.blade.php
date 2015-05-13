@@ -46,7 +46,7 @@
             {data: 'id', name: 'users.id'},
             {data: 'name', name: 'users.name'},
             {data: 'email', name: 'users.email'},
-            {data: 'count', name: 'count'},
+            {data: 'count', name: 'count', searchable: false},
             {data: 'created_at', name: 'users.created_at'},
             {data: 'updated_at', name: 'users.updated_at'}
         ]

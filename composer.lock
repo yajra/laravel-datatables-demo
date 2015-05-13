@@ -2359,16 +2359,16 @@
         },
         {
             "name": "yajra/laravel-pdo-via-oci8",
-            "version": "0.10.1",
+            "version": "0.11.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yajra/laravel-pdo-via-oci8.git",
-                "reference": "65811743ea13beaad22e0e143238c546cd0d534f"
+                "url": "https://github.com/yajra/pdo-via-oci8.git",
+                "reference": "d0e62e6abc2ca039060cfe92024e07733331edc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-pdo-via-oci8/zipball/65811743ea13beaad22e0e143238c546cd0d534f",
-                "reference": "65811743ea13beaad22e0e143238c546cd0d534f",
+                "url": "https://api.github.com/repos/yajra/pdo-via-oci8/zipball/d0e62e6abc2ca039060cfe92024e07733331edc9",
+                "reference": "d0e62e6abc2ca039060cfe92024e07733331edc9",
                 "shasum": ""
             },
             "require-dev": {
@@ -2391,7 +2391,7 @@
                 }
             ],
             "description": "PDO userspace driver proxying calls to PHP OCI8 driver",
-            "time": "2015-03-13 08:17:05"
+            "time": "2015-05-13 03:10:41"
         }
     ],
     "packages-dev": [
