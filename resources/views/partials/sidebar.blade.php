@@ -18,6 +18,7 @@
 	<li class="header">Fluent/Query Builder</li>
 	<li><a href="{!! url('fluent/basic') !!}" class="{!! Request::is('fluent/basic') ? 'active' : '' !!}">Basic</a></li>
 	<li><a href="{!! url('fluent/basic-object') !!}" class="{!! Request::is('fluent/basic-object') ? 'active' : '' !!}">Object Data Source</a></li>
+	<li><a href="{!! url('fluent/union') !!}" class="{!! Request::is('fluent/union') ? 'active' : '' !!}">Union Queries</a></li>
     <li><a href="{!! url('fluent/multi-filter-select') !!}" class="{!! Request::is('fluent/multi-filter-select') ? 'active' : '' !!}">Column Search</a></li>
 	<li><a href="{!! url('fluent/add-edit-remove-column') !!}" class="{!! Request::is('fluent/add-edit-remove-column') ? 'active' : '' !!}">Add/Edit/Remove Column</a></li>
 	<li><a href="{!! url('fluent/dt-row') !!}" class="{!! Request::is('fluent/dt-row') ? 'active' : '' !!}">DT Row Option</a></li>

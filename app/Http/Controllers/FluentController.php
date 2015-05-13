@@ -27,6 +27,25 @@ class FluentController extends Controller
         return Datatables::of($users)->make();
     }
 
+    public function getUnion()
+    {
+        return view('datatables.fluent.union');
+    }
+
+    public function getUnionData()
+    {
+        $first = DB::table('users')
+            ->select(['id', 'name', 'email', 'created_at', 'updated_at'])
+            ->where('name', 'like', '%jon%');
+
+        $users = DB::table('users')
+            ->select(['id', 'name', 'email', 'created_at', 'updated_at'])
+            ->where('name', 'like', '%sus%')
+            ->union($first);
+
+        return Datatables::of($users)->make(true);
+    }
+
     public function getBasicObject()
     {
         return view('datatables.fluent.basic-object');
