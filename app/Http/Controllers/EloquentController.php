@@ -52,10 +52,52 @@ class EloquentController extends Controller
                 \DB::raw('count(posts.user_id) as count'),
                 'users.created_at',
                 'users.updated_at'
-        ])->join('posts','posts.user_id','=','users.id')
-        ->groupBy('posts.user_id');
+        ])->leftJoin('posts','posts.user_id','=','users.id')
+        ->groupBy('users.id');
 
         return Datatables::of($users)->make(true);
+    }
+
+    public function getAdvanceFilter()
+    {
+        return view('datatables.eloquent.advance-filter');
+    }
+
+    public function getAdvanceFilterData(Request $request)
+    {
+        $users = User::select([
+                \DB::raw("CONCAT(users.id,'-',users.id) as id"),
+                'users.name',
+                'users.email',
+                \DB::raw('count(posts.user_id) AS count'),
+                'users.created_at',
+                'users.updated_at'
+        ])->leftJoin('posts','posts.user_id','=','users.id')
+        ->groupBy('users.id');
+
+        $datatables =  Datatables::of($users);
+        if ($request->get('post')) {
+            $datatables->having('count', $request->get('operator'), $request->get('post')); // having count search
+        }
+
+        if ($name = $request->get('name')) {
+            $datatables->where('users.name', 'like', "$name%"); // additional users.name search
+        }
+
+        // Global search function
+        if ($keyword = $request->get('search')['value']) {
+            // override users.name global search
+            $datatables->filterColumn('users.name', 'where', 'like', "$keyword%");
+
+            // Laravel Bug: having clause not added on where closure?
+            // $datatables->filterColumn('count', 'having', '>=', (int) $keyword);
+            // $datatables->filterColumn('count', 'havingRaw', 'count > ?', [$keyword]);
+
+            // override users.id global search - demo for concat
+            $datatables->filterColumn('users.id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ? ", ["%$keyword%"]);
+        }
+
+        return $datatables->make(true);
     }
 
     public function getAddEditRemoveColumn()
