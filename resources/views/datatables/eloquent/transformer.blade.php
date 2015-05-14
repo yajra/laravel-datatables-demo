@@ -3,36 +3,25 @@
 @section('demo')
 <table id="users-table" class="table table-condensed">
     <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Created At</th>
-            <th>Updated At</th>
-        </tr>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+    </tr>
     </thead>
 </table>
 @endsection
 
 @section('controller')
-    public function getBasicObject()
-    {
-        return view('datatables.collection.basic-object');
-    }
-
-    public function getBasicObjectData()
-    {
-        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at'])->get();
-
-        return Datatables::of($users)->make(true);
-    }
 @endsection
 
 @section('js')
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '{{ url("collection/basic-object-data") }}',
+        ajax: '{{ url("eloquent/transformer-data") }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

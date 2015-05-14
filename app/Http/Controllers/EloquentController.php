@@ -250,4 +250,19 @@ class EloquentController extends Controller
             ->editColumn('title', '{!! str_limit($title, 60) !!}')
             ->make(true);
     }
+
+    public function getTransformer()
+    {
+        return view('datatables.eloquent.transformer');
+    }
+
+    public function getTransformerData()
+    {
+        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
+
+        return Datatables::of($users)
+            ->setTransformer('App\Transformers\DatatablesTransformer')
+            ->make(true);
+    }
+
 }

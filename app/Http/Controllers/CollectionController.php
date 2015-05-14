@@ -28,7 +28,9 @@ class CollectionController extends Controller
     {
         $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at'])->get();
 
-        return Datatables::of($users)->make();
+        return Datatables::of($users)
+            ->setTransformer('App\Transformers\DatatablesTransformer')
+            ->make();
     }
 
     public function getBasicObject()

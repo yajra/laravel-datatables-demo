@@ -9,6 +9,7 @@
 	<li><a href="{!! url('eloquent/dt-row') !!}" class="{!! Request::is('eloquent/dt-row') ? 'active' : '' !!}">DT Row Option</a></li>
 	<li><a href="{!! url('eloquent/custom-filter') !!}" class="{!! Request::is('eloquent/custom-filter') ? 'active' : '' !!}">Overriding Global Filter</a></li>
 	<li><a href="{!! url('eloquent/advance-filter') !!}" class="{!! Request::is('eloquent/advance-filter') ? 'active' : '' !!}">Advance Global Filter [v5.1++]</a></li>
+	<li><a href="{!! url('eloquent/transformer') !!}" class="{!! Request::is('eloquent/transformer') ? 'active' : '' !!}">Fractal Transformer [v5.1++]</a></li>
 	<li><a href="{!! url('eloquent/carbon') !!}" class="{!! Request::is('eloquent/carbon') ? 'active' : '' !!}">DateTime/Carbon Objects</a></li>
     <li><a href="{!! url('eloquent/relationships') !!}" class="{!! Request::is('eloquent/relationships') ? 'active' : '' !!}">Eager Loading</a></li>
 	<li><a href="{!! url('eloquent/has-many') !!}" class="{!! Request::is('eloquent/has-many') ? 'active' : '' !!}">HasMany Relationship</a></li>
