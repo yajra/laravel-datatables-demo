@@ -89,10 +89,6 @@ class EloquentController extends Controller
             // override users.name global search
             $datatables->filterColumn('users.name', 'where', 'like', "$keyword%");
 
-            // Laravel Bug: having clause not added on where closure?
-            // $datatables->filterColumn('count', 'having', '>=', (int) $keyword);
-            // $datatables->filterColumn('count', 'havingRaw', 'count > ?', [$keyword]);
-
             // override users.id global search - demo for concat
             $datatables->filterColumn('users.id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ? ", ["%$keyword%"]);
         }
