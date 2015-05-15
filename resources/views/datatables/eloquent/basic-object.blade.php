@@ -33,6 +33,9 @@
         processing: true,
         serverSide: true,
         ajax: '{{ url("eloquent/basic-object-data") }}',
+        search: {
+            caseInsensitive: true
+        },
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

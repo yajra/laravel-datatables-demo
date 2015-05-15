@@ -22,6 +22,7 @@
 	<li><a href="{!! url('fluent/basic-object') !!}" class="{!! Request::is('fluent/basic-object') ? 'active' : '' !!}">Object Data Source</a></li>
 	<li><a href="{!! url('fluent/union') !!}" class="{!! Request::is('fluent/union') ? 'active' : '' !!}">Union Queries</a></li>
     <li><a href="{!! url('fluent/multi-filter-select') !!}" class="{!! Request::is('fluent/multi-filter-select') ? 'active' : '' !!}">Column Search</a></li>
+	<li><a href="{!! url('fluent/advance-filter') !!}" class="{!! Request::is('eloquent/advance-filter') ? 'active' : '' !!}">Advance Global Filter [v5.1++]</a></li>
 	<li><a href="{!! url('fluent/add-edit-remove-column') !!}" class="{!! Request::is('fluent/add-edit-remove-column') ? 'active' : '' !!}">Add/Edit/Remove Column</a></li>
 	<li><a href="{!! url('fluent/dt-row') !!}" class="{!! Request::is('fluent/dt-row') ? 'active' : '' !!}">DT Row Option</a></li>
 	<li><a href="{!! url('fluent/custom-filter') !!}" class="{!! Request::is('fluent/custom-filter') ? 'active' : '' !!}">Custom Filter</a></li>
