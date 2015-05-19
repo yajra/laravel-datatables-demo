@@ -5,6 +5,7 @@ use App\Post;
 use App\User;
 use Datatables;
 use Illuminate\Http\Request;
+use DB;
 
 class EloquentController extends Controller
 {
@@ -263,6 +264,31 @@ class EloquentController extends Controller
         return Datatables::of($users)
             ->setTransformer('App\Transformers\DatatablesTransformer')
             ->make(true);
+    }
+
+    public function getPostColumnSearch()
+    {
+        return view('datatables.eloquent.post-column-search');
+    }
+
+    public function postColumnSearchData(Request $request)
+    {
+        $users = User::select([
+            DB::raw("CONCAT(users.id,'-',users.id) as user_id"),
+            'name',
+            'email',
+            'created_at',
+            'updated_at']);
+        $datatables = Datatables::of($users);
+
+        $columns = $request->get('columns');
+        foreach ($columns as $column) {
+            if ($column['searchable'] == 'true' and $column['search']['value'] != '' and $column['name'] == 'user_id') {
+                $datatables->filterColumn('user_id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ?", ["%{$column['search']['value']}%"]);
+            }
+        }
+
+        return $datatables->make(true);
     }
 
 }

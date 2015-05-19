@@ -5,6 +5,7 @@
 	<li><a href="{!! url('eloquent/row-details') !!}" class="{!! Request::is('eloquent/row-details') ? 'active' : '' !!}">Row Details</a></li>
     <li><a href="{!! url('eloquent/count') !!}" class="{!! Request::is('eloquent/count') ? 'active' : '' !!}">Count Alias</a></li>
     <li><a href="{!! url('eloquent/multi-filter-select') !!}" class="{!! Request::is('eloquent/multi-filter-select') ? 'active' : '' !!}">Column Search</a></li>
+    <li><a href="{!! url('eloquent/post-column-search') !!}" class="{!! Request::is('eloquent/post-column-search') ? 'active' : '' !!}">Filter Column Search [via POST]</a></li>
 	<li><a href="{!! url('eloquent/add-edit-remove-column') !!}" class="{!! Request::is('eloquent/add-edit-remove-column') ? 'active' : '' !!}">Add/Edit/Remove Column</a></li>
 	<li><a href="{!! url('eloquent/dt-row') !!}" class="{!! Request::is('eloquent/dt-row') ? 'active' : '' !!}">DT Row Option</a></li>
 	<li><a href="{!! url('eloquent/custom-filter') !!}" class="{!! Request::is('eloquent/custom-filter') ? 'active' : '' !!}">Overriding Global Filter</a></li>
