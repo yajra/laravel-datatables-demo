@@ -291,4 +291,28 @@ class EloquentController extends Controller
         return $datatables->make(true);
     }
 
+    public function getRowNum()
+    {
+        return view('datatables.eloquent.rownum');
+    }
+
+    public function getRowNumData(Request $request)
+    {
+        DB::statement(DB::raw('set @rownum=0'));
+        $users = User::select([
+            DB::raw('@rownum := @rownum + 1 AS rownum'),
+            'id',
+            'name',
+            'email',
+            'created_at',
+            'updated_at']);
+        $datatables = Datatables::of($users);
+
+        if ($keyword = $request->get('search')['value']) {
+            $datatables->filterColumn('rownum', 'whereRaw', '@rownum + 1 like ?', ["%{$keyword}%"]);
+        }
+
+        return $datatables->make(true);
+    }
+
 }
