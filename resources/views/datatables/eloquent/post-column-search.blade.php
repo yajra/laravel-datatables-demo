@@ -46,6 +46,11 @@
             }
         }
 
+        // Global search function
+        if ($keyword = $request->get('search')['value']) {
+            $datatables->filterColumn('user_id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ?", ["%{$column['search']['value']}%"]);
+        }
+
         return $datatables->make(true);
     }
 @endsection
