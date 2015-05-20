@@ -208,4 +208,17 @@ class CollectionController extends Controller
             ->make(true);
     }
 
+    public function getIoc()
+    {
+        return view('datatables.collection.ioc');
+    }
+
+    public function getIocData()
+    {
+        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at'])->get();
+        $datatables = app('datatables');
+
+        return $datatables->usingCollection($users)->make(true);
+    }
+
 }

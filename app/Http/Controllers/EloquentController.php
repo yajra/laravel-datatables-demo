@@ -39,6 +39,19 @@ class EloquentController extends Controller
         return Datatables::of($users)->make(true);
     }
 
+    public function getIoc()
+    {
+        return view('datatables.eloquent.ioc');
+    }
+
+    public function getIocData()
+    {
+        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
+        $datatables = app('datatables');
+
+        return $datatables->usingEloquent($users)->make(true);
+    }
+
     public function getCount()
     {
         return view('datatables.eloquent.count');

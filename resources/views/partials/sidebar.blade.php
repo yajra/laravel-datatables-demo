@@ -16,6 +16,7 @@
     <li><a href="{!! url('eloquent/relationships') !!}" class="{!! Request::is('eloquent/relationships') ? 'active' : '' !!}">Eager Loading</a></li>
 	<li><a href="{!! url('eloquent/has-many') !!}" class="{!! Request::is('eloquent/has-many') ? 'active' : '' !!}">HasMany Relationship</a></li>
 	<li><a href="{!! url('eloquent/joins') !!}" class="{!! Request::is('eloquent/joins') ? 'active' : '' !!}">Join Queries</a></li>
+	<li><a href="{!! url('eloquent/ioc') !!}" class="{!! Request::is('eloquent/ioc') ? 'active' : '' !!}">IOC Container [v5.2++]</a></li>
 </ul>
 
 <ul class="nav navbar-list">
@@ -30,6 +31,7 @@
 	<li><a href="{!! url('fluent/custom-filter') !!}" class="{!! Request::is('fluent/custom-filter') ? 'active' : '' !!}">Custom Filter</a></li>
     <li><a href="{!! url('fluent/carbon') !!}" class="{!! Request::is('fluent/carbon') ? 'active' : '' !!}">DateTime/Carbon Objects</a></li>
     <li><a href="{!! url('fluent/joins') !!}" class="{!! Request::is('fluent/joins') ? 'active' : '' !!}">Join Queries</a></li>
+    <li><a href="{!! url('fluent/ioc') !!}" class="{!! Request::is('fluent/ioc') ? 'active' : '' !!}">IOC Container [v5.2++]</a></li>
 </ul>
 
 <ul class="nav navbar-list">
@@ -43,4 +45,5 @@
     <li><a href="{!! url('collection/dt-row') !!}" class="{!! Request::is('collection/dt-row') ? 'active' : '' !!}">DT Row Option</a></li>
     <li><a href="{!! url('collection/custom-filter') !!}" class="{!! Request::is('collection/custom-filter') ? 'active' : '' !!}">Custom Filter</a></li>
     <li><a href="{!! url('collection/carbon') !!}" class="{!! Request::is('collection/carbon') ? 'active' : '' !!}">DateTime/Carbon Objects</a></li>
+    <li><a href="{!! url('collection/ioc') !!}" class="{!! Request::is('collection/ioc') ? 'active' : '' !!}">IOC Container [v5.2++]</a></li>
 </ul>

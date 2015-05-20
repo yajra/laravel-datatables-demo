@@ -215,4 +215,17 @@ class FluentController extends Controller
         return $datatables->make(true);
     }
 
+    public function getIoc()
+    {
+        return view('datatables.fluent.ioc');
+    }
+
+    public function getIocData()
+    {
+        $users = DB::table('users')->select(['id', 'name', 'email', 'created_at', 'updated_at']);
+        $datatables = app('datatables');
+
+        return $datatables->usingQueryBuilder($users)->make(true);
+    }
+
 }
