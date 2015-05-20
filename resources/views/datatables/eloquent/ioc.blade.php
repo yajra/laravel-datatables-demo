@@ -27,6 +27,14 @@
 
         return $datatables->usingEloquent($users)->make(true);
     }
+
+    // OR via dependency injection
+    public function getIocData(Datatables $datatables)
+    {
+        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
+
+        return $datatables->usingEloquent($users)->make(true);
+    }
 @endsection
 
 @section('js')
