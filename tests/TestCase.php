@@ -1,6 +1,8 @@
 <?php
 
-class TestCase extends Illuminate\Foundation\Testing\TestCase {
+use Laracasts\Integrated\Extensions\Laravel as IntegrationTest;
+
+class TestCase extends IntegrationTest {
 
 	/**
 	 * Creates the application.

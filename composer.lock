@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d8baa3138208f580205d41a8ac31c74a",
+    "hash": "00d5b0d22bddae5d1949654772716a0c",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -2516,6 +2516,160 @@
             "time": "2014-10-13 12:58:55"
         },
         {
+            "name": "fabpot/goutte",
+            "version": "v2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfPHP/Goutte.git",
+                "reference": "0ad3ee6dc2d0aaa832a80041a1e09bf394e99802"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfPHP/Goutte/zipball/0ad3ee6dc2d0aaa832a80041a1e09bf394e99802",
+                "reference": "0ad3ee6dc2d0aaa832a80041a1e09bf394e99802",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": ">=4,<6",
+                "php": ">=5.4.0",
+                "symfony/browser-kit": "~2.1",
+                "symfony/css-selector": "~2.1",
+                "symfony/dom-crawler": "~2.1"
+            },
+            "type": "application",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Goutte\\": "Goutte"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "A simple PHP Web Scraper",
+            "homepage": "https://github.com/FriendsOfPHP/Goutte",
+            "keywords": [
+                "scraper"
+            ],
+            "time": "2015-05-05 21:14:57"
+        },
+        {
+            "name": "instaclick/php-webdriver",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/instaclick/php-webdriver.git",
+                "reference": "6aa16bbc02a5897200ab70316e0d2a01664afc51"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/6aa16bbc02a5897200ab70316e0d2a01664afc51",
+                "reference": "6aa16bbc02a5897200ab70316e0d2a01664afc51",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "WebDriver": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Bishop",
+                    "email": "jubishop@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anthon Pang",
+                    "email": "apang@softwaredevelopment.ca",
+                    "role": "Fork Maintainer"
+                }
+            ],
+            "description": "PHP WebDriver for Selenium 2",
+            "homepage": "http://instaclick.com/",
+            "keywords": [
+                "browser",
+                "selenium",
+                "webdriver",
+                "webtest"
+            ],
+            "time": "2015-04-05 19:52:55"
+        },
+        {
+            "name": "laracasts/integrated",
+            "version": "0.15.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/Integrated.git",
+                "reference": "144f14006aa9d646b1f8d9f45aa2c798d783aaee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/Integrated/zipball/144f14006aa9d646b1f8d9f45aa2c798d783aaee",
+                "reference": "144f14006aa9d646b1f8d9f45aa2c798d783aaee",
+                "shasum": ""
+            },
+            "require": {
+                "fabpot/goutte": "~2.0",
+                "instaclick/php-webdriver": "~1.4",
+                "laracasts/testdummy": "~2.1",
+                "symfony/css-selector": "~2.5|~2.6",
+                "symfony/dom-crawler": "~2.5|~2.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Laracasts\\Integrated\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JeffreyWay",
+                    "email": "jeffrey@laracasts.com"
+                }
+            ],
+            "description": "Simple, intuitive integration testing with PHPUnit.",
+            "keywords": [
+                "goutte",
+                "integration",
+                "laracasts",
+                "laravel",
+                "testing"
+            ],
+            "time": "2015-05-12 16:32:02"
+        },
+        {
             "name": "phpdocumentor/reflection-docblock",
             "version": "2.0.4",
             "source": {
@@ -3479,6 +3633,170 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2015-02-24 06:35:25"
+        },
+        {
+            "name": "symfony/browser-kit",
+            "version": "v2.6.7",
+            "target-dir": "Symfony/Component/BrowserKit",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/BrowserKit.git",
+                "reference": "cf950c42947ea2f29c36a1f443202b6134f5c303"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/BrowserKit/zipball/cf950c42947ea2f29c36a1f443202b6134f5c303",
+                "reference": "cf950c42947ea2f29c36a1f443202b6134f5c303",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/dom-crawler": "~2.0,>=2.0.5"
+            },
+            "require-dev": {
+                "symfony/css-selector": "~2.0,>=2.0.5",
+                "symfony/phpunit-bridge": "~2.7",
+                "symfony/process": "~2.0,>=2.0.5"
+            },
+            "suggest": {
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\BrowserKit\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony BrowserKit Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-05-02 15:18:45"
+        },
+        {
+            "name": "symfony/css-selector",
+            "version": "v2.6.7",
+            "target-dir": "Symfony/Component/CssSelector",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/CssSelector.git",
+                "reference": "189cf0f7f56d7c4be3b778df15a7f16a29f3680d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/189cf0f7f56d7c4be3b778df15a7f16a29f3680d",
+                "reference": "189cf0f7f56d7c4be3b778df15a7f16a29f3680d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\CssSelector\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jean-François Simon",
+                    "email": "jeanfrancois.simon@sensiolabs.com"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony CssSelector Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-05-02 15:18:45"
+        },
+        {
+            "name": "symfony/dom-crawler",
+            "version": "v2.6.7",
+            "target-dir": "Symfony/Component/DomCrawler",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/DomCrawler.git",
+                "reference": "adef13fb8d305d95e1fb8324d6b5895c8e79d332"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/adef13fb8d305d95e1fb8324d6b5895c8e79d332",
+                "reference": "adef13fb8d305d95e1fb8324d6b5895c8e79d332",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/css-selector": "~2.3",
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "suggest": {
+                "symfony/css-selector": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\DomCrawler\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony DomCrawler Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-05-02 15:18:45"
         },
         {
             "name": "symfony/yaml",

@@ -47,6 +47,7 @@
         serverSide: true,
         ajax: '{{ url("eloquent/row-num-data") }}',
         columns: [
+            // or just disable search since it's not really searchable. just add searchable:false
             {data: 'rownum', name: 'rownum'},
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},
