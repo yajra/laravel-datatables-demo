@@ -294,6 +294,7 @@ class EloquentController extends Controller
             'updated_at']);
         $datatables = Datatables::of($users);
 
+        // Column Search
         $columns = $request->get('columns');
         foreach ($columns as $column) {
             if ($column['searchable'] == 'true' and $column['search']['value'] != '' and $column['name'] == 'user_id') {
@@ -303,7 +304,7 @@ class EloquentController extends Controller
 
         // Global search function
         if ($keyword = $request->get('search')['value']) {
-            $datatables->filterColumn('user_id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ?", ["%{$column['search']['value']}%"]);
+            $datatables->filterColumn('user_id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ?", ["%{$keyword}%"]);
         }
 
         return $datatables->make(true);
