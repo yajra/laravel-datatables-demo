@@ -15,6 +15,19 @@
 @endsection
 
 @section('controller')
+    public function getTransformer()
+    {
+        return view('datatables.eloquent.transformer');
+    }
+
+    public function getTransformerData()
+    {
+        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
+
+        return Datatables::of($users)
+            ->setTransformer('App\Transformers\DatatablesTransformer')
+            ->make(true);
+    }
 @endsection
 
 @section('js')
