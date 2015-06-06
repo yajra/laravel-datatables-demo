@@ -18,7 +18,7 @@
 	<link href="{{ asset('/css/datatables.bootstrap.css') }}" rel="stylesheet">
 
 	<!-- Fonts -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="{{ asset('highlight/styles/zenburn.css') }}">
     <script src="{{ asset('highlight/highlight.pack.js')  }}"></script>
