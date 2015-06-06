@@ -17,6 +17,8 @@ class CollectionController extends Controller
     function __construct()
     {
         view()->share('controller', 'CollectionController.php');
+        view()->share('title', $this->getTitle('collection'));
+        view()->share('description', $this->getDescription('collection'));
     }
 
     public function getBasic()

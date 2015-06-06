@@ -13,6 +13,8 @@ class FluentController extends Controller
     function __construct()
     {
         view()->share('controller', 'FluentController.php');
+        view()->share('title', $this->getTitle('fluent'));
+        view()->share('description', $this->getDescription('fluent'));
     }
 
     public function getBasic()
