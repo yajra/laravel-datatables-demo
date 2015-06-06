@@ -13,6 +13,8 @@ class EloquentController extends Controller
     public function __construct()
     {
         view()->share('controller', 'EloquentController.php');
+        view()->share('title', $this->getTitle('eloquent'));
+        view()->share('description', $this->getDescription('eloquent'));
     }
 
     public function getBasic()
@@ -24,7 +26,9 @@ class EloquentController extends Controller
     {
         $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
 
-        return Datatables::of($users)->make();
+        return Datatables::of($users)
+            ->editColumn('name', '{{ $name."-name" }}')
+            ->make();
     }
 
     public function getBasicObject()

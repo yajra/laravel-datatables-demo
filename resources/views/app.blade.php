@@ -5,7 +5,13 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel Datatables Oracle Package Demo</title>
+	@if (isset($description))
+	<meta name="description" content="{{ $description }}">
+	@else
+	<meta name="description" content="jQuery Datatables API for Laravel 4 and Laravel 5">
+	@endif
+
+	<title>Laravel Datatables Demo {{ isset($title) ? " | $title" : "" }}</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/demo.css') }}" rel="stylesheet">
