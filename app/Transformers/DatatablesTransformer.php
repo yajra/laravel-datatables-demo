@@ -12,7 +12,7 @@ class DatatablesTransformer extends TransformerAbstract
     {
         return [
             'id'         => (int) $data['id'],
-            'name'       => $data['name'],
+            'name'       => $data['name'] . ' - fractal',
             'email'      => $data['email'],
             'created_at' => $this->dateFormatter($data['created_at']),
             'updated_at' => $this->dateFormatter($data['updated_at']),

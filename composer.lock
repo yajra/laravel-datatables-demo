@@ -2322,12 +2322,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "8f9a7e33b2401a5cd29eb2e5301be010d1608187"
+                "reference": "79b1df535ead88b45d8d27ed66f29980817b0110"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/8f9a7e33b2401a5cd29eb2e5301be010d1608187",
-                "reference": "8f9a7e33b2401a5cd29eb2e5301be010d1608187",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/79b1df535ead88b45d8d27ed66f29980817b0110",
+                "reference": "79b1df535ead88b45d8d27ed66f29980817b0110",
                 "shasum": ""
             },
             "require": {
@@ -2361,7 +2361,7 @@
                     "email": "aqangeles@gmail.com"
                 }
             ],
-            "description": "Server-side handler of DataTables jQuery Plugin for Laravel 4|5",
+            "description": "jQuery DataTables API for Laravel 4|5",
             "keywords": [
                 "datatable",
                 "datatables",
@@ -2370,7 +2370,7 @@
                 "laravel4",
                 "laravel5"
             ],
-            "time": "2015-05-20 02:30:37"
+            "time": "2015-06-16 07:02:05"
         },
         {
             "name": "yajra/laravel-oci8",
