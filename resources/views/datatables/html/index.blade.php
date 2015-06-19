@@ -12,6 +12,11 @@
                 <th>Datatables Package</th>
             </tr>
             <tr>
+                <td>Laravel 4.x</td>
+                <td>Not Applicable</td>
+                <td>Not Applicable</td>
+            </tr>
+            <tr>
                 <td>Laravel 5.0</td>
                 <td>laravelcollective/html: 5.0.*</td>
                 <td>yajra/laravel-datatables-oracle: ~5.4</td>
