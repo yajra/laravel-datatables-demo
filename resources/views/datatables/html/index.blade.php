@@ -3,7 +3,7 @@
 @section('content')
 <h3 class="page-header">{{$title}}</h3>
 <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-12">
         <h4>Requirements</h4>
         <table class="table">
             <tr>
@@ -20,6 +20,9 @@
                 <td>Laravel 5.1</td>
                 <td>laravelcollective/html: 5.1.*</td>
                 <td>yajra/laravel-datatables-oracle: ~5.4</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
             </tr>
         </table>
     </div>
