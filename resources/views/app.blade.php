@@ -101,6 +101,15 @@
 						</form>
 					</div>
 				</div>
+
+				.<div class="panel panel-danger">
+					  <div class="panel-heading">
+							<h3 class="panel-title"><i class="glyphicon glyphicon-bell"></i> Reminder</h3>
+					  </div>
+					  <div class="panel-body">
+							This package is designed to work side-by-side with <a href="https://datatables.net">DataTables.net</a> jQuery plugin. So make sure to also check out the plugins documentations.
+					  </div>
+				</div>
 			</div>
 		</div>
 	</div>
