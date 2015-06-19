@@ -13,8 +13,7 @@ use Illuminate\Support\Str;
 
 class CollectionController extends Controller
 {
-
-    function __construct()
+    public function __construct()
     {
         view()->share('controller', 'CollectionController.php');
         view()->share('title', $this->getTitle('collection'));
@@ -67,7 +66,7 @@ class CollectionController extends Controller
     public function getArrayData()
     {
         $faker = Faker::create();
-        $data = [];
+        $data  = [];
         for ($i = 0; $i < 100; $i++) {
             $data[] = [
                 'id'         => $i + 1,
@@ -178,9 +177,9 @@ class CollectionController extends Controller
 
     public function getGithubData(Request $request)
     {
-        $search = $request->get('search');
-        $keyword = $search['value']?: 'laravel';
-        $repositories = Cache::get($keyword, function() use($keyword) {
+        $search       = $request->get('search');
+        $keyword      = $search['value']?: 'laravel';
+        $repositories = Cache::get($keyword, function () use ($keyword) {
             $client = new \GuzzleHttp\Client();
             $response = $client->get('https://api.github.com/search/repositories', [
                     'query' => ['q' => $keyword]
@@ -194,19 +193,19 @@ class CollectionController extends Controller
         $data = new Collection($repositories['items']);
 
         return Datatables::of($data)
-            ->editColumn('stargazers_count', function($row) {
+            ->editColumn('stargazers_count', function ($row) {
                 return '<div class="input-group input-group-sm">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
-                            <input type="text" class="form-control" style="width:64px" readonly value="'. number_format($row['stargazers_count'] , 0) .'">
+                            <input type="text" class="form-control" style="width:64px" readonly value="'. number_format($row['stargazers_count'], 0) .'">
                         </div>';
             })
-            ->editColumn('full_name', function($row) {
+            ->editColumn('full_name', function ($row) {
                 return HTML::link($row['html_url'], $row['full_name']);
             })
-            ->editColumn('private', function($row) {
+            ->editColumn('private', function ($row) {
                 return $row['private'] ? 'Y' : 'N';
             })
-            ->filter(function(){}) // disable built-in search function
+            ->filter(function () {}) // disable built-in search function
             ->make(true);
     }
 
@@ -217,10 +216,9 @@ class CollectionController extends Controller
 
     public function getIocData()
     {
-        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at'])->get();
+        $users      = User::select(['id', 'name', 'email', 'created_at', 'updated_at'])->get();
         $datatables = app('datatables');
 
         return $datatables->usingCollection($users)->make(true);
     }
-
 }

@@ -5,42 +5,41 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Route;
 
-abstract class Controller extends BaseController {
-
-	use DispatchesCommands, ValidatesRequests;
+abstract class Controller extends BaseController
+{
+    use DispatchesCommands, ValidatesRequests;
 
     /**
      * @param $language
      * @return string
      */
     public function getTitle($language)
-	{
+    {
         $method = $this->extractRoute();
 
-		return trans($language . '.' . $method . '.title');
-	}
+        return trans($language . '.' . $method . '.title');
+    }
 
     /**
      * @param $language
      * @return string
      */
     public function getDescription($language)
-	{
+    {
         $method = $this->extractRoute();
 
-		return trans($language . '.' . $method . '.description');
-	}
+        return trans($language . '.' . $method . '.description');
+    }
 
     /**
      * @return mixed
      */
     protected function extractRoute()
     {
-        $route = Route::current();
-        $data = explode('@', $route->getActionName());
+        $route  = Route::current();
+        $data   = explode('@', $route->getActionName());
         $method = $data[1];
 
         return $method;
     }
-
 }

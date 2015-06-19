@@ -6,11 +6,9 @@ use Datatables;
 use DB;
 use Illuminate\Http\Request;
 
-
 class FluentController extends Controller
 {
-
-    function __construct()
+    public function __construct()
     {
         view()->share('controller', 'FluentController.php');
         view()->share('title', $this->getTitle('fluent'));
@@ -193,7 +191,7 @@ class FluentController extends Controller
                 DB::raw('count(posts.user_id) AS count'),
                 'users.created_at',
                 'users.updated_at'
-        ])->leftJoin('posts','posts.user_id','=','users.id')
+        ])->leftJoin('posts', 'posts.user_id', '=', 'users.id')
         ->groupBy('users.id');
 
         $datatables =  Datatables::of($users);
@@ -224,10 +222,9 @@ class FluentController extends Controller
 
     public function getIocData()
     {
-        $users = DB::table('users')->select(['id', 'name', 'email', 'created_at', 'updated_at']);
+        $users      = DB::table('users')->select(['id', 'name', 'email', 'created_at', 'updated_at']);
         $datatables = app('datatables');
 
         return $datatables->usingQueryBuilder($users)->make(true);
     }
-
 }

@@ -9,7 +9,6 @@ use DB;
 
 class EloquentController extends Controller
 {
-
     public function __construct()
     {
         view()->share('controller', 'EloquentController.php');
@@ -50,7 +49,7 @@ class EloquentController extends Controller
 
     public function getIocData()
     {
-        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
+        $users      = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
         $datatables = app('datatables');
 
         return $datatables->usingEloquent($users)->make(true);
@@ -70,7 +69,7 @@ class EloquentController extends Controller
                 \DB::raw('count(posts.user_id) as count'),
                 'users.created_at',
                 'users.updated_at'
-        ])->leftJoin('posts','posts.user_id','=','users.id')
+        ])->leftJoin('posts', 'posts.user_id', '=', 'users.id')
         ->groupBy('users.id');
 
         return Datatables::of($users)->make(true);
@@ -90,7 +89,7 @@ class EloquentController extends Controller
                 \DB::raw('count(posts.user_id) AS count'),
                 'users.created_at',
                 'users.updated_at'
-        ])->leftJoin('posts','posts.user_id','=','users.id')
+        ])->leftJoin('posts', 'posts.user_id', '=', 'users.id')
         ->groupBy('users.id');
 
         $datatables =  Datatables::of($users);
@@ -337,5 +336,4 @@ class EloquentController extends Controller
 
         return $datatables->make(true);
     }
-
 }
