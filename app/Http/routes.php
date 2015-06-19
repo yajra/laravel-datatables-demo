@@ -21,4 +21,5 @@ Route::controllers([
     'fluent'     => 'FluentController',
     'eloquent'   => 'EloquentController',
     'collection' => 'CollectionController',
+    'html' 		 => 'HtmlBuilderController',
 ]);

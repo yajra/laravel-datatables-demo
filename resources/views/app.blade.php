@@ -47,6 +47,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="{{ url('/') }}">Home</a></li>
+						@include('partials.menu')
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
@@ -66,10 +67,7 @@
 			</div>
 		</nav>
 		<div class="container-fluid">
-			<div class="col-sm-3 col-md-2 sidebar">
-				@include('partials.sidebar')
-			</div>
-			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<div class="col-sm-12 main">
 				@yield('content')
 				<div class="row">
 					<div class="col-sm-12">
