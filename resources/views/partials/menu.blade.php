@@ -58,6 +58,7 @@
 <li class="dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Html Builder [v5.4.++]<span class="caret"></span></a>
 	<ul class="dropdown-menu">
+    <li><a href="{!! url('html') !!}" class="{!! Request::is('html') ? 'active' : '' !!}">Html Builder Notes</a></li>
     <li><a href="{!! url('html/basic') !!}" class="{!! Request::is('html/basic') ? 'active' : '' !!}">Html Builder via Dependency Injection</a></li>
     <li><a href="{!! url('html/method') !!}" class="{!! Request::is('html/method') ? 'active' : '' !!}">Html Builder via Method Injection</a></li>
 </ul>

@@ -25,6 +25,11 @@ class HtmlBuilderController extends Controller
         view()->share('description', $this->getDescription('eloquent'));
     }
 
+    public function getIndex()
+    {
+        return view('datatables.html.index');
+    }
+
     public function getBasic(Request $request)
     {
         if ($request->ajax()) {
