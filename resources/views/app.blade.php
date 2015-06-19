@@ -27,66 +27,69 @@
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle Navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">Laravel Datatables Package</a>
-				</div>
-
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li><a href="{{ url('/') }}">Home</a></li>
-						@include('partials.menu')
-					</ul>
-
-					<ul class="nav navbar-nav navbar-right">
-						@if (Auth::guest())
-						<li><a href="{{ url('/auth/login') }}">Login</a></li>
-						<li><a href="{{ url('/auth/register') }}">Register</a></li>
-						@else
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
-							</ul>
-						</li>
-						@endif
-					</ul>
-				</div>
-			</div>
-		</nav>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-10 main">
-					@yield('content')
-					<div class="row">
-						<div class="col-sm-12">
-							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-							<!-- Datatables Demo 728 Footer -->
-							<ins class="adsbygoogle"
-							style="display:inline-block;width:728px;height:90px"
-							data-ad-client="ca-pub-2399525660597307"
-							data-ad-slot="2232727673"></ins>
-							<script>
-								(adsbygoogle = window.adsbygoogle || []).push({});
-							</script>
-						</div>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Laravel Datatables Package</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="{{ url('/') }}">Home</a></li>
+					@include('partials.menu')
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					@if (Auth::guest())
+					<li><a href="{{ url('/auth/login') }}">Login</a></li>
+					<li><a href="{{ url('/auth/register') }}">Register</a></li>
+					@else
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+						</ul>
+					</li>
+					@endif
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-9 main">
+				@yield('content')
+				<div class="row">
+					<div class="col-sm-12">
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- Datatables Demo 728 Footer -->
+						<ins class="adsbygoogle"
+						style="display:inline-block;width:728px;height:90px"
+						data-ad-client="ca-pub-2399525660597307"
+						data-ad-slot="2232727673"></ins>
+						<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
 					</div>
 				</div>
-				<div class="col-sm-2 main">
-					<div class="text-center well well-sm">
-					<h3 class="page-header">Donation Appreciated</h3>
+			</div>
+			<div class="col-sm-3 main">
+				<div class="panel panel-default text-center">
+					<div class="panel-heading">
+						<h3 class="panel-title">Donation Appreciated</h3>
+					</div>
+					<div class="panel-body">
 						<p>
 							Hosting and domain account is not free. So any amount donated will helped a lot in maintaining the package and site.
 						</p>
@@ -100,23 +103,23 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<!-- Scripts -->
-		<script src="{{ asset('js/jquery.min.js') }}"></script>
-		<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-		<script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
-		<script src="{{ asset('js/datatables.bootstrap.js') }}"></script>
-		<script src="{{ asset('js/handlebars.js') }}"></script>
+	<script src="{{ asset('js/jquery.min.js') }}"></script>
+	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ asset('js/datatables.bootstrap.js') }}"></script>
+	<script src="{{ asset('js/handlebars.js') }}"></script>
 
-		@stack('scripts')
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	@stack('scripts')
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			ga('create', 'UA-63183947-2', 'auto');
-			ga('send', 'pageview');
-		</script>
-	</body>
-	</html>
+		ga('create', 'UA-63183947-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
+</html>
