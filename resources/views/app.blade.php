@@ -20,9 +20,9 @@
 	<!-- Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="{{ asset('highlight/styles/zenburn.css') }}">
-    <script src="{{ asset('highlight/highlight.pack.js')  }}"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+	<link rel="stylesheet" href="{{ asset('highlight/styles/zenburn.css') }}">
+	<script src="{{ asset('highlight/highlight.pack.js')  }}"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -67,19 +67,35 @@
 			</div>
 		</nav>
 		<div class="container-fluid">
-			<div class="col-sm-12 main">
-				@yield('content')
-				<div class="row">
-					<div class="col-sm-12">
-						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<!-- Datatables Demo 728 Footer -->
-						<ins class="adsbygoogle"
-						style="display:inline-block;width:728px;height:90px"
-						data-ad-client="ca-pub-2399525660597307"
-						data-ad-slot="2232727673"></ins>
-						<script>
-						(adsbygoogle = window.adsbygoogle || []).push({});
-						</script>
+			<div class="row">
+				<div class="col-sm-10 main">
+					@yield('content')
+					<div class="row">
+						<div class="col-sm-12">
+							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+							<!-- Datatables Demo 728 Footer -->
+							<ins class="adsbygoogle"
+							style="display:inline-block;width:728px;height:90px"
+							data-ad-client="ca-pub-2399525660597307"
+							data-ad-slot="2232727673"></ins>
+							<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2 main">
+					<div class="text-center well well-sm">
+					<h3 class="page-header">Donation Appreciated</h3>
+						<p>
+							Hosting and domain account is not free. So any amount donated will helped a lot in maintaining the package and site.
+						</p>
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+							<input type="hidden" name="cmd" value="_s-xclick">
+							<input type="hidden" name="hosted_button_id" value="FG5S6KYHH8KP8">
+							<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
 					</div>
 				</div>
 			</div>
@@ -94,13 +110,13 @@
 
 		@stack('scripts')
 		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-63183947-2', 'auto');
-		  ga('send', 'pageview');
+			ga('create', 'UA-63183947-2', 'auto');
+			ga('send', 'pageview');
 		</script>
 	</body>
-</html>
+	</html>
