@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-<h3 class="page-header">DataTable Html Builder</h3>
+<h3 class="page-header">{{$title}}</h3>
 <div class="row">
     <div class="col-sm-6">
         <h4>Requirements</h4>
@@ -29,19 +29,20 @@
         <h4>Quick Start</h4>
         <ol>
             <li>
-                Import class <strong>use yajra\Datatables\Html\Builder;</strong> on your controller
+                Import builder class on your controller
+                <pre><code>use yajra\Datatables\Html\Builder;</code></pre>
             </li>
             <li>
                 Use it via <strong>Dependency or Method Injection</strong>.
                 <pre><code>
-                    protected $htmlBuilder;
+protected $htmlBuilder;
 
-                    public function __construct(Builder $htmlBuilder)
-                    {
-                        $this->htmlBuilder = $htmlBuilder;
-                    }
+public function __construct(Builder $htmlBuilder)
+{
+    $this->htmlBuilder = $htmlBuilder;
+}
 
-                    public function getIndex(Request $request, Builder $htmlBuilder){}
+public function getIndex(Request $request, Builder $htmlBuilder){}
                 </code></pre>
                 You can also use <strong>Service Injection</strong> on Laravel 5.1:
                 <pre><code>{{ "@inject('datatables', 'yajra/Datatables/Html/Builder')" }}</code></pre>
@@ -49,15 +50,15 @@
             <li>
                 Build your DataTable Html
                 <pre><code>
-                    $datatables = $htmlBuilder
-                        ->addColumn(['data' => 'id', 'name' => 'id', 'title' => 'Id'])
-                        ->addColumn(['data' => 'name', 'name' => 'name', 'title' => 'Name'])
-                        ->addColumn(['data' => 'email', 'name' => 'email', 'title' => 'Email'])
-                        ->addColumn(['data' => 'created_at', 'name' => 'created_at', 'title' => 'Created At'])
-                        ->addColumn(['data' => 'updated_at', 'name' => 'updated_at', 'title' => 'Updated At'])
-                        ->ajax(route('users.data'));
+$datatables = $htmlBuilder
+    ->addColumn(['data' => 'id', 'name' => 'id', 'title' => 'Id'])
+    ->addColumn(['data' => 'name', 'name' => 'name', 'title' => 'Name'])
+    ->addColumn(['data' => 'email', 'name' => 'email', 'title' => 'Email'])
+    ->addColumn(['data' => 'created_at', 'name' => 'created_at', 'title' => 'Created At'])
+    ->addColumn(['data' => 'updated_at', 'name' => 'updated_at', 'title' => 'Updated At'])
+    ->ajax(route('users.data'));
 
-                    return view('datatables.html.method', compact('datatables'));
+return view('datatables.html.method', compact('datatables'));
                 </code></pre>
             </li>
             <li>

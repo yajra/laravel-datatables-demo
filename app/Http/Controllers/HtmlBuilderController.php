@@ -21,8 +21,8 @@ class HtmlBuilderController extends Controller
         $this->htmlBuilder = $htmlBuilder;
 
         view()->share('controller', 'HtmlBuilderController.php');
-        view()->share('title', $this->getTitle('eloquent'));
-        view()->share('description', $this->getDescription('eloquent'));
+        view()->share('title', $this->getTitle('html'));
+        view()->share('description', $this->getDescription('html'));
     }
 
     public function getIndex()
