@@ -18,10 +18,10 @@
 		<li><a href="{!! url('eloquent/has-many') !!}" class="{!! Request::is('eloquent/has-many') ? 'active' : '' !!}">HasMany Relationship</a></li>
 		<li><a href="{!! url('eloquent/joins') !!}" class="{!! Request::is('eloquent/joins') ? 'active' : '' !!}">Join Queries</a></li>
 		<li><a href="{!! url('eloquent/ioc') !!}" class="{!! Request::is('eloquent/ioc') ? 'active' : '' !!}">IOC Container [v5.2++]</a></li>
+		<li class="divider"></li>
+		<li><a href="{!! url('eloquent') !!}" class="{!! Request::is('eloquent') ? 'active' : '' !!}"><i class="glyphicon glyphicon-book"></i> Eloquent ORM Notes</a></li>
 	</ul>
 </li>
-
-
 
 <li class="dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fluent Query Builder<span class="caret"></span></a>
@@ -37,6 +37,8 @@
 		<li><a href="{!! url('fluent/carbon') !!}" class="{!! Request::is('fluent/carbon') ? 'active' : '' !!}">DateTime/Carbon Objects</a></li>
 		<li><a href="{!! url('fluent/joins') !!}" class="{!! Request::is('fluent/joins') ? 'active' : '' !!}">Join Queries</a></li>
 		<li><a href="{!! url('fluent/ioc') !!}" class="{!! Request::is('fluent/ioc') ? 'active' : '' !!}">IOC Container [v5.2++]</a></li>
+		<li class="divider"></li>
+		<li><a href="{!! url('fluent') !!}" class="{!! Request::is('fluent') ? 'active' : '' !!}"><i class="glyphicon glyphicon-book"></i> Fluent Query Builder Notes</a></li>
 	</ul>
 </li>
 
@@ -53,15 +55,18 @@
 		<li><a href="{!! url('collection/custom-filter') !!}" class="{!! Request::is('collection/custom-filter') ? 'active' : '' !!}">Custom Filter</a></li>
 		<li><a href="{!! url('collection/carbon') !!}" class="{!! Request::is('collection/carbon') ? 'active' : '' !!}">DateTime/Carbon Objects</a></li>
 		<li><a href="{!! url('collection/ioc') !!}" class="{!! Request::is('collection/ioc') ? 'active' : '' !!}">IOC Container [v5.2++]</a></li>
+		<li class="divider"></li>
+		<li><a href="{!! url('collection') !!}" class="{!! Request::is('collection') ? 'active' : '' !!}"><i class="glyphicon glyphicon-book"></i> Collection Engine Notes</a></li>
 	</ul>
 </li>
 
 <li class="dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Html Builder [v5.4.++]<span class="caret"></span></a>
 	<ul class="dropdown-menu">
-		<li><a href="{!! url('html') !!}" class="{!! Request::is('html') ? 'active' : '' !!}">Html Builder Notes</a></li>
 		<li><a href="{!! url('html/basic') !!}" class="{!! Request::is('html/basic') ? 'active' : '' !!}">Html Builder via Dependency Injection</a></li>
 		<li><a href="{!! url('html/method') !!}" class="{!! Request::is('html/method') ? 'active' : '' !!}">Html Builder via Method Injection</a></li>
+		<li class="divider"></li>
+		<li><a href="{!! url('html') !!}" class="{!! Request::is('html') ? 'active' : '' !!}"><i class="glyphicon glyphicon-book"></i> Html Builder Notes</a></li>
 	</ul>
 </li>
 

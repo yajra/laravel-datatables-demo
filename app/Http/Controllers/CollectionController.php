@@ -20,6 +20,11 @@ class CollectionController extends Controller
         view()->share('description', $this->getDescription('collection'));
     }
 
+    public function getIndex()
+    {
+        return view('datatables.collection.index');
+    }
+
     public function getBasic()
     {
         return view('datatables.collection.basic');

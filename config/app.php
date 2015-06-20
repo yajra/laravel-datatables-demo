@@ -153,6 +153,7 @@ return [
 		'yajra\Datatables\DatatablesServiceProvider',
 		'Laracasts\Generators\GeneratorsServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
+        'Roumen\Sitemap\SitemapServiceProvider',
 	],
 
 	/*

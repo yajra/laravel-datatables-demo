@@ -2,58 +2,61 @@
 
 return [
 
-	'getArray.title' => 'Collection Demo using Array as data source',
-	'getArray.description' => 'Laravel Datatables Collection Demo using Array as data source',
+    'getIndex.title'       => 'Datatables using Collection',
+    'getIndex.description' => 'Laravel Datatables using Collection',
 
-	'getGithub.title' => 'Collection Demo using Github API as data source',
-	'getGithub.description' => 'Laravel Datatables Collection Demo using Github API as data source',
+    'getArray.title'       => 'Collection Demo using Array as data source',
+    'getArray.description' => 'Laravel Datatables Collection Demo using Array as data source',
 
-	'getBasic.title' => 'Basic Demo',
-	'getBasic.description' => 'Laravel Datatables basic demo',
+    'getGithub.title'       => 'Collection Demo using Github API as data source',
+    'getGithub.description' => 'Laravel Datatables Collection Demo using Github API as data source',
 
-	'getBasicObject.title' => 'Basic Demo with Object Data Source',
-	'getBasicObject.description' => 'Laravel Datatables basic demo with Object Data Source',
+    'getBasic.title'       => 'Basic Demo',
+    'getBasic.description' => 'Laravel Datatables basic demo',
 
-	'getIoc.title' => 'IoC container',
-	'getIoc.description' => 'Laravel Datatables demo using IoC container',
+    'getBasicObject.title'       => 'Basic Demo with Object Data Source',
+    'getBasicObject.description' => 'Laravel Datatables basic demo with Object Data Source',
 
-	'getCount.title' => 'Count Alias',
-	'getCount.description' => 'Laravel Datatables demo using count alias',
+    'getIoc.title'       => 'IoC container',
+    'getIoc.description' => 'Laravel Datatables demo using IoC container',
 
-	'getAdvanceFilter.title' => 'Advance Filtering',
-	'getAdvanceFilter.description' => 'Laravel Datatables demo showing advance method of filtering records',
+    'getCount.title'       => 'Count Alias',
+    'getCount.description' => 'Laravel Datatables demo using count alias',
 
-	'getAddEditRemoveColumn.title' => 'Add|Edit|Remove Column',
-	'getAddEditRemoveColumn.description' => 'Laravel Datatables demo for adding, editing, and removing column',
+    'getAdvanceFilter.title'       => 'Advance Filtering',
+    'getAdvanceFilter.description' => 'Laravel Datatables demo showing advance method of filtering records',
 
-	'getDtRow.title' => 'DT Row Objects',
-	'getDtRow.description' => 'Laravel Datatables demo showing how to use DT Row objects',
+    'getAddEditRemoveColumn.title'       => 'Add|Edit|Remove Column',
+    'getAddEditRemoveColumn.description' => 'Laravel Datatables demo for adding, editing, and removing column',
 
-	'getCustomFilter.title' => 'Overriding Global Search',
-	'getCustomFilter.description' => 'Laravel Datatables demo showing how to override global search',
+    'getDtRow.title'       => 'DT Row Objects',
+    'getDtRow.description' => 'Laravel Datatables demo showing how to use DT Row objects',
 
-	'getCarbon.title' => 'Carbon Demo',
-	'getCarbon.description' => 'Laravel Datatables demo showing how to use Carbon',
+    'getCustomFilter.title'       => 'Overriding Global Search',
+    'getCustomFilter.description' => 'Laravel Datatables demo showing how to override global search',
 
-	'getRelationships.title' => 'Eloquent Relationships',
-	'getRelationships.description' => 'Laravel Datatables demo showing how to use Eloquent with Relationships',
+    'getCarbon.title'       => 'Carbon Demo',
+    'getCarbon.description' => 'Laravel Datatables demo showing how to use Carbon',
 
-	'getMultiFilterSelect.title' => 'Column Search',
-	'getMultiFilterSelect.description' => 'Laravel Datatables demo showing how to do a column search',
+    'getRelationships.title'       => 'Eloquent Relationships',
+    'getRelationships.description' => 'Laravel Datatables demo showing how to use Eloquent with Relationships',
 
-	'getRowDetails.title' => 'Row Details',
-	'getRowDetails.description' => 'Laravel Datatables demo showing how to add a row details',
+    'getMultiFilterSelect.title'       => 'Column Search',
+    'getMultiFilterSelect.description' => 'Laravel Datatables demo showing how to do a column search',
 
-	'getRowDetails.title' => 'Eloquent HasMany',
-	'getRowDetails.description' => 'Laravel Datatables demo showing how to use HasMany relationships',
+    'getRowDetails.title'       => 'Row Details',
+    'getRowDetails.description' => 'Laravel Datatables demo showing how to add a row details',
 
-	'getTransformer.title' => 'Fractal Transformer',
-	'getTransformer.description' => 'Laravel Datatables demo showing how to use Fractal Transformer',
+    'getRowDetails.title'       => 'Eloquent HasMany',
+    'getRowDetails.description' => 'Laravel Datatables demo showing how to use HasMany relationships',
 
-	'getPostColumnSearch.title' => 'Search using Post Method',
-	'getPostColumnSearch.description' => 'Laravel Datatables demo showing how to use POST method',
+    'getTransformer.title'       => 'Fractal Transformer',
+    'getTransformer.description' => 'Laravel Datatables demo showing how to use Fractal Transformer',
 
-	'getRowNum.title' => 'MySQL RowNum demo',
-	'getRowNum.description' => 'Laravel Datatables demo showing how to use MySQL RowNum',
+    'getPostColumnSearch.title'       => 'Search using Post Method',
+    'getPostColumnSearch.description' => 'Laravel Datatables demo showing how to use POST method',
+
+    'getRowNum.title'       => 'MySQL RowNum demo',
+    'getRowNum.description' => 'Laravel Datatables demo showing how to use MySQL RowNum',
 
 ];

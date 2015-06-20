@@ -15,6 +15,11 @@ class FluentController extends Controller
         view()->share('description', $this->getDescription('fluent'));
     }
 
+    public function getIndex()
+    {
+        return view('datatables.fluent.index');
+    }
+
     public function getBasic()
     {
         return view('datatables.fluent.basic');

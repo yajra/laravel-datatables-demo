@@ -16,6 +16,11 @@ class EloquentController extends Controller
         view()->share('description', $this->getDescription('eloquent'));
     }
 
+    public function getIndex()
+    {
+        return view('datatables.eloquent.index');
+    }
+
     public function getBasic()
     {
         return view('datatables.eloquent.basic');
