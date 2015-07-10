@@ -45,7 +45,8 @@
 <li class="dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collection [v5.++]<span class="caret"></span></a>
 	<ul class="dropdown-menu">
-		<li><a href="{!! url('collection/array') !!}" class="{!! Request::is('collection/array') ? 'active' : '' !!}">Array Data Source</a></li>
+		<li><a href="{!! url('collection/array') !!}" class="{!! Request::is('collection/array') ? 'active' : '' !!}">Collection of Array Data Source</a></li>
+		<li><a href="{!! url('collection/object') !!}" class="{!! Request::is('collection/object') ? 'active' : '' !!}">Collection of Object Data Source</a></li>
 		<li><a href="{!! url('collection/github') !!}" class="{!! Request::is('collection/github') ? 'active' : '' !!}">Github API Data Source</a></li>
 		<li><a href="{!! url('collection/basic') !!}" class="{!! Request::is('collection/basic') ? 'active' : '' !!}">Basic</a></li>
 		<li><a href="{!! url('collection/basic-object') !!}" class="{!! Request::is('collection/basic-object') ? 'active' : '' !!}">Object Data Source</a></li>

@@ -5,8 +5,11 @@ return [
     'getIndex.title'       => 'Datatables using Collection',
     'getIndex.description' => 'Laravel Datatables using Collection',
 
-    'getArray.title'       => 'Collection Demo using Array as data source',
+    'getArray.title'       => 'Collection Demo using collection of array as data source',
     'getArray.description' => 'Laravel Datatables Collection Demo using Array as data source',
+
+    'getObject.title'       => 'Collection Demo using collection of object as data source',
+    'getObject.description' => 'Laravel Datatables Collection Demo using Array as data source',
 
     'getGithub.title'       => 'Collection Demo using Github API as data source',
     'getGithub.description' => 'Laravel Datatables Collection Demo using Github API as data source',

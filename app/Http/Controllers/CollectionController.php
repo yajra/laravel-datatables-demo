@@ -84,6 +84,28 @@ class CollectionController extends Controller
         return Datatables::of($users)->make(true);
     }
 
+    public function getObject()
+    {
+        return view('datatables.collection.object');
+    }
+
+    public function getObjectData()
+    {
+        $faker = Faker::create();
+        $data  = [];
+        for ($i = 0; $i < 100; $i++) {
+            $obj = new \stdClass;
+            $obj->id = $i + 1;
+            $obj->name = $faker->name;
+            $obj->email = $faker->email;
+            $obj->created_at = Carbon::now();
+            $obj->updated_at = Carbon::now();
+        }
+        $users = new Collection($data);
+
+        return Datatables::of($users)->make(true);
+    }
+
     public function getAddEditRemoveColumn()
     {
         return view('datatables.collection.add-edit-remove-column');
