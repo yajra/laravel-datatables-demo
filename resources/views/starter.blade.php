@@ -106,6 +106,9 @@ $ php artisan migrate</code></pre>
 		<p>
 			Browse <a href="http://datatables.app/datatables">http://datatables.app/datatables</a> and verify that your app is working.
 		</p>
+
+		<h4>Expected Output:</h4>
+		<img class="thumbnail" src="{!! asset('images/tuts.png') !!}" alt="Expected Output">
 	</li>
 </ol>
 @stop
