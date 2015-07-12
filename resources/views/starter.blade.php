@@ -1,3 +1,7 @@
+<?php
+	$title = 'Laravel 5.1 with Datatables Quick Starter Tutorial';
+	$description = 'Laravel 5.1 with Datatables Quick Starter Tutorial'
+?>
 @extends('app')
 
 @section('content')

@@ -11,7 +11,7 @@
 	<meta name="description" content="jQuery Datatables API for Laravel 4 and Laravel 5">
 	@endif
 
-	<title>Laravel Datatables Demo {{ isset($title) ? " | $title" : "" }}</title>
+	<title>Laravel Datatables {{ isset($title) ? " | $title" : "" }}</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/demo.css') }}" rel="stylesheet">
