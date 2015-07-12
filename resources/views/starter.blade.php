@@ -90,7 +90,7 @@ $ php artisan migrate</code></pre>
 	<li>
 		<h3 id="create-view"><a href="#create-view">Let's create our View</a></h3>
 			On this example, we our going to display records of our users with the following fields.
-			<pre><code>user: id, name, email, create_at, updated_at</code></pre>
+			<pre><code>users: id, name, email, create_at, updated_at</code></pre>
 		<p>
 			Let's create a new file for our view on <strong>resources\views\datatables\index.blade.php</strong>
 			<pre><code>{{{ view('tutorials.view')->render() }}}</code></pre>
