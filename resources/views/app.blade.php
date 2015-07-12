@@ -70,19 +70,6 @@
 		<div class="row">
 			<div class="col-sm-9 main">
 				@yield('content')
-				<div class="row">
-					<div class="col-sm-12">
-						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<!-- Datatables Demo 728 Footer -->
-						<ins class="adsbygoogle"
-						style="display:inline-block;width:728px;height:90px"
-						data-ad-client="ca-pub-2399525660597307"
-						data-ad-slot="2232727673"></ins>
-						<script>
-							(adsbygoogle = window.adsbygoogle || []).push({});
-						</script>
-					</div>
-				</div>
 			</div>
 			<div class="col-sm-3 main">
 				<div class="panel panel-default text-center">
