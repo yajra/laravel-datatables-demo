@@ -24,3 +24,11 @@ Route::controllers([
     'html'         => 'HtmlBuilderController',
     'sitemap'      => 'SitemapController',
 ]);
+
+Route::get('{view}', function($view) {
+	if (view()->exists($view)) {
+		return view($view);
+	}
+
+	return app()->abort(404, 'Page not found!');
+});
