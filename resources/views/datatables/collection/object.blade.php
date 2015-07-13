@@ -35,6 +35,7 @@
             $obj->email = $faker->email;
             $obj->created_at = Carbon::now();
             $obj->updated_at = Carbon::now();
+            $data[] = $obj;
         }
         $users = new Collection($data);
 
