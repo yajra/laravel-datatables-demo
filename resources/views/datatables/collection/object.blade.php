@@ -46,13 +46,13 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '{{ url("collection/array-data") }}',
+        ajax: '{{ url("collection/object-data") }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},
             {data: 'email', name: 'email'},
-            {data: 'created_at', name: 'created_at'},
-            {data: 'updated_at', name: 'updated_at'}
+            {data: 'created_at.date', name: 'created_at'},
+            {data: 'updated_at.date', name: 'updated_at'}
         ]
     });
 @endsection
