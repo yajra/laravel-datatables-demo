@@ -101,8 +101,8 @@ class EloquentController extends Controller
             ->filterColumn('users.id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ? ", ["$1"]);
 
         // having count search
-        if ($post = $datatables->request->get('post')) {
-            $datatables->having('count', $datatables->request->get('operator'), $post);
+        if ($datatables->request->get('post') <> '') {
+            $datatables->having('count', $datatables->request->get('operator'), $datatables->request->get('post'));
         }
 
         // additional users.name search
