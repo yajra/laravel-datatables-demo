@@ -52,31 +52,26 @@
     public function getAdvanceFilterData(Request $request)
     {
         $users = User::select([
-                \DB::raw("CONCAT(users.id,'-',users.id) as id"),
-                'users.name',
-                'users.email',
-                \DB::raw('count(posts.user_id) AS count'),
-                'users.created_at',
-                'users.updated_at'
-        ])->leftJoin('posts','posts.user_id','=','users.id')
+            DB::raw("CONCAT(users.id,'-',users.id) as id"),
+            'users.name',
+            'users.email',
+            DB::raw('count(posts.user_id) AS count'),
+            'users.created_at',
+            'users.updated_at'
+        ])->leftJoin('posts', 'posts.user_id', '=', 'users.id')
         ->groupBy('users.id');
 
-        $datatables =  Datatables::of($users);
-        if ($request->get('post')) {
-            $datatables->having('count', $request->get('operator'), $request->get('post')); // having count search
+        $datatables =  app('datatables')->of($users)
+            ->filterColumn('users.id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ? ", ["$1"]);
+
+        // having count search
+        if ($post = $datatables->request->get('post')) {
+            $datatables->having('count', $datatables->request->get('operator'), $post);
         }
 
-        if ($name = $request->get('name')) {
-            $datatables->where('users.name', 'like', "$name%"); // additional users.name search
-        }
-
-        // Global search function
-        if ($keyword = $request->get('search')['value']) {
-            // override users.name global search
-            $datatables->filterColumn('users.name', 'where', 'like', "$keyword%");
-
-            // override users.id global search - demo for concat
-            $datatables->filterColumn('users.id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ? ", ["%$keyword%"]);
+        // additional users.name search
+        if ($name = $datatables->request->get('name')) {
+            $datatables->where('users.name', 'like', "$name%");
         }
 
         return $datatables->make(true);
