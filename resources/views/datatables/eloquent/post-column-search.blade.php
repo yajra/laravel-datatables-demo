@@ -2,24 +2,24 @@
 
 @section('demo')
 <table id="users-table" class="table table-condensed">
-	<thead>
-		<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Created At</th>
-			<th>Updated At</th>
-		</tr>
-	</thead>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+        </tr>
+    </thead>
     <tfoot>
-		<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Created At</th>
-			<th>Updated At</th>
-		</tr>
-	</tfoot>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+        </tr>
+    </tfoot>
 </table>
 @endsection
 
@@ -36,21 +36,12 @@
             'name',
             'email',
             'created_at',
-            'updated_at']);
-        $datatables = Datatables::of($users);
+            'updated_at'
+        ]);
 
-        // Column Search
-        $columns = $request->get('columns');
-        foreach ($columns as $column) {
-            if ($column['searchable'] == 'true' and $column['search']['value'] != '' and $column['name'] == 'user_id') {
-                $datatables->filterColumn('user_id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ?", ["%{$column['search']['value']}%"]);
-            }
-        }
-
-        // Global search function
-        if ($keyword = $request->get('search')['value']) {
-            $datatables->filterColumn('user_id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ?", ["%{$keyword}%"]);
-        }
+        return Datatables::of($users)
+            ->filterColumn('user_id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ?", ["$1"])
+            ->make(true);
 
         return $datatables->make(true);
     }

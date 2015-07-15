@@ -292,7 +292,7 @@ class EloquentController extends Controller
         return view('datatables.eloquent.post-column-search');
     }
 
-    public function postColumnSearchData(Request $request)
+    public function anyColumnSearchData()
     {
         $users = User::select([
             DB::raw("CONCAT(users.id,'-',users.id) as user_id"),
@@ -300,22 +300,10 @@ class EloquentController extends Controller
             'email',
             'created_at',
             'updated_at']);
-        $datatables = Datatables::of($users);
 
-        // Column Search
-        $columns = $request->get('columns');
-        foreach ($columns as $column) {
-            if ($column['searchable'] == 'true' and $column['search']['value'] != '' and $column['name'] == 'user_id') {
-                $datatables->filterColumn('user_id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ?", ["%{$column['search']['value']}%"]);
-            }
-        }
-
-        // Global search function
-        if ($keyword = $request->get('search')['value']) {
-            $datatables->filterColumn('user_id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ?", ["%{$keyword}%"]);
-        }
-
-        return $datatables->make(true);
+        return Datatables::of($users)
+            ->filterColumn('user_id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ?", ["$1"])
+            ->make(true);
     }
 
     public function getRowNum()
