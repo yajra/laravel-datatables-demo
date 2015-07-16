@@ -11,4 +11,7 @@ return [
 	'getMethod.title' => 'Html Builder via Method Injection',
 	'getMethod.description' => 'Laravel Datatables Html Builde Demo',
 
+	'getColumns.title' => 'Html Builder with Plain Columns',
+	'getColumns.description' => 'Laravel Datatables Html Builde Demo',
+
 ];

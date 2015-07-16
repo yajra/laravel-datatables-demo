@@ -66,6 +66,7 @@
 	<ul class="dropdown-menu">
 		<li><a href="{!! url('html/basic') !!}" class="{!! Request::is('html/basic') ? 'active' : '' !!}">Html Builder via Dependency Injection</a></li>
 		<li><a href="{!! url('html/method') !!}" class="{!! Request::is('html/method') ? 'active' : '' !!}">Html Builder via Method Injection</a></li>
+		<li><a href="{!! url('html/columns') !!}" class="{!! Request::is('html/columns') ? 'active' : '' !!}">Html Builder with Plain Columns</a></li>
 		<li class="divider"></li>
 		<li><a href="{!! url('html') !!}" class="{!! Request::is('html') ? 'active' : '' !!}"><i class="glyphicon glyphicon-book"></i> Html Builder Notes</a></li>
 	</ul>

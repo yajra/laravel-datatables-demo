@@ -5,7 +5,7 @@
 @endsection
 
 @section('controller')
-@include('datatables.html.docs.basic-controller')
+@include('datatables.html.docs.columns-controller')
 @endsection
 
 @section('view')

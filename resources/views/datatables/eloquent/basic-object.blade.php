@@ -7,6 +7,7 @@
         <th>Id</th>
         <th>Name</th>
         <th>Email</th>
+        <th>Remember Token</th>
         <th>Created At</th>
         <th>Updated At</th>
     </tr>
@@ -22,9 +23,7 @@
 
     public function getBasicObjectData()
     {
-        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
-
-        return Datatables::of($users)->make(true);
+        return Datatables::of(User::select('*'))->make(true);
     }
 @endsection
 
@@ -37,6 +36,7 @@
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},
             {data: 'email', name: 'email'},
+            {data: 'remember_token', name: 'remember_token'},
             {data: 'created_at', name: 'created_at'},
             {data: 'updated_at', name: 'updated_at'}
         ]
