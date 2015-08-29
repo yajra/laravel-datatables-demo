@@ -35,6 +35,29 @@ class EloquentController extends Controller
             ->make();
     }
 
+    public function getMaster()
+    {
+        return view('datatables.eloquent.master');
+    }
+
+    public function getMasterData()
+    {
+        $users = User::select();
+
+        return Datatables::of($users)
+            ->addColumn('details_url', function($user) {
+                return url('eloquent/details-data/' . $user->id);
+            })
+            ->make(true);
+    }
+
+    public function getDetailsData($id)
+    {
+        $posts = User::find($id)->posts();
+
+        return Datatables::of($posts)->make(true);
+    }
+
     public function getBasicObject()
     {
         return view('datatables.eloquent.basic-object');

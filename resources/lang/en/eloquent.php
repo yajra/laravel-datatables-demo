@@ -5,6 +5,9 @@ return [
     'getIndex.title'       => 'Datatables using Eloquent ORM',
     'getIndex.description' => 'Laravel Datatables using Eloquent ORM',
 
+    'getMaster.title'       => 'Datatables using Eloquent ORM with Master and Details Table',
+    'getMaster.description' => 'Datatables using Eloquent ORM with Master and Details Table',
+
     'getBasic.title'       => 'Basic Demo',
     'getBasic.description' => 'Laravel Datatables basic demo',
 
