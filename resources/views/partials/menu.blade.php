@@ -4,6 +4,7 @@
 		<li><a href="{!! url('eloquent/basic') !!}" class="{!! Request::is('eloquent/basic') ? 'active' : '' !!}">Basic</a></li>
 		<li><a href="{!! url('eloquent/basic-object') !!}" class="{!! Request::is('eloquent/basic-object') ? 'active' : '' !!}">Object Data Source</a></li>
 		<li><a href="{!! url('eloquent/row-details') !!}" class="{!! Request::is('eloquent/row-details') ? 'active' : '' !!}">Row Details</a></li>
+		<li><a href="{!! url('eloquent/master') !!}" class="{!! Request::is('eloquent/master') ? 'active' : '' !!}">Master-Details Table</a></li>
 		<li><a href="{!! url('eloquent/count') !!}" class="{!! Request::is('eloquent/count') ? 'active' : '' !!}">Count Alias</a></li>
 		<li><a href="{!! url('eloquent/multi-filter-select') !!}" class="{!! Request::is('eloquent/multi-filter-select') ? 'active' : '' !!}">Column Search</a></li>
 		<li><a href="{!! url('eloquent/post-column-search') !!}" class="{!! Request::is('eloquent/post-column-search') ? 'active' : '' !!}">Filter Column Search [via POST]</a></li>
