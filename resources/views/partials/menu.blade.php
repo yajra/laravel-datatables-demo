@@ -1,5 +1,5 @@
 <li class="dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eloquent ORM <span class="caret"></span></a>
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eloquent<span class="caret"></span></a>
 	<ul class="dropdown-menu">
 		<li><a href="{!! url('eloquent/basic') !!}" class="{!! Request::is('eloquent/basic') ? 'active' : '' !!}">Basic</a></li>
 		<li><a href="{!! url('eloquent/basic-object') !!}" class="{!! Request::is('eloquent/basic-object') ? 'active' : '' !!}">Object Data Source</a></li>
@@ -25,7 +25,7 @@
 </li>
 
 <li class="dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fluent Query Builder<span class="caret"></span></a>
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Query Builder<span class="caret"></span></a>
 	<ul class="dropdown-menu">
 		<li><a href="{!! url('fluent/basic') !!}" class="{!! Request::is('fluent/basic') ? 'active' : '' !!}">Basic</a></li>
 		<li><a href="{!! url('fluent/basic-object') !!}" class="{!! Request::is('fluent/basic-object') ? 'active' : '' !!}">Object Data Source</a></li>
@@ -44,7 +44,7 @@
 </li>
 
 <li class="dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collection [v5.++]<span class="caret"></span></a>
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collection<span class="caret"></span></a>
 	<ul class="dropdown-menu">
 		<li><a href="{!! url('collection/array') !!}" class="{!! Request::is('collection/array') ? 'active' : '' !!}">Collection of Array Data Source</a></li>
 		<li><a href="{!! url('collection/object') !!}" class="{!! Request::is('collection/object') ? 'active' : '' !!}">Collection of Object Data Source</a></li>
@@ -63,7 +63,7 @@
 </li>
 
 <li class="dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Html Builder [v5.4.++]<span class="caret"></span></a>
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Html Builder<span class="caret"></span></a>
 	<ul class="dropdown-menu">
 		<li><a href="{!! url('html/basic') !!}" class="{!! Request::is('html/basic') ? 'active' : '' !!}">Html Builder via Dependency Injection</a></li>
 		<li><a href="{!! url('html/method') !!}" class="{!! Request::is('html/method') ? 'active' : '' !!}">Html Builder via Method Injection</a></li>

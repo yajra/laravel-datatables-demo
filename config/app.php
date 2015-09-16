@@ -154,6 +154,7 @@ return [
 		'Laracasts\Generators\GeneratorsServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
         'Roumen\Sitemap\SitemapServiceProvider',
+        'Maatwebsite\Excel\ExcelServiceProvider',
 	],
 
 	/*
@@ -208,6 +209,7 @@ return [
 		 * Third-party facades
 		 */
 		'Datatables'=> 'yajra\Datatables\Datatables',
+        'Excel' => 'Maatwebsite\Excel\Facades\Excel',
 
 	],
 

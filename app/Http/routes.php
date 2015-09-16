@@ -23,6 +23,7 @@ Route::controllers([
     'collection'   => 'CollectionController',
     'html'         => 'HtmlBuilderController',
     'sitemap'      => 'SitemapController',
+    'buttons'      => 'ButtonsController',
 ]);
 
 Route::get('{view}', function($view) {
