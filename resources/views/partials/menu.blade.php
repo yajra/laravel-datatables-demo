@@ -73,7 +73,7 @@
 	</ul>
 </li>
 
-<li><a href="https://github.com/yajra/laravel-datatables/wiki">WiKi</a></li>
+<li><a href="{{ url('buttons') }}">TableTools (Dev)</a></li>
 <li><a href="http://yajra.github.io/laravel-datatables/api/">API</a></li>
 <li><a href="https://github.com/yajra/laravel-datatables">Source</a></li>
 
