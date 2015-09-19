@@ -2,6 +2,11 @@
 
 @section('demo')
 <table id="posts-table" class="table table-condensed">
+    <caption>
+        <div class="alert alert-warning margin">
+            <p><strong>Heads Up!</strong> Searching/sorting on eager loaded models is not yet supported!</p>
+        </div>
+    </caption>
     <thead>
         <tr>
             <th>Id</th>
@@ -13,6 +18,7 @@
         </tr>
     </thead>
 </table>
+
 @endsection
 
 @section('controller')

@@ -2,24 +2,24 @@
 
 @section('demo')
 <table id="users-table" class="table table-condensed">
-	<thead>
-		<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Created At</th>
-			<th>Updated At</th>
-		</tr>
-	</thead>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+        </tr>
+    </thead>
     <tfoot>
-		<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Created At</th>
-			<th>Updated At</th>
-		</tr>
-	</tfoot>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+        </tr>
+    </tfoot>
 </table>
 @endsection
 
@@ -55,9 +55,7 @@
                 var input = document.createElement("input");
                 $(input).appendTo($(column.footer()).empty())
                 .on('change', function () {
-                    var val = $.fn.dataTable.util.escapeRegex($(this).val());
-
-                    column.search(val ? val : '', true, false).draw();
+                    column.search($(this).val(), false, false, true).draw();
                 });
             });
         }

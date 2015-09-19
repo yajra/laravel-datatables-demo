@@ -2,6 +2,17 @@
 
 @section('demo')
 <table id="posts-table" class="table table-condensed">
+    <caption>
+        <div class="alert alert-warning margin">
+            <p>
+                <strong>Heads Up!</strong> When using join statements, you must follow the <strong>table.column</strong> approach on your js columns definition.
+            </p>
+            <p>
+                Example columns definition:
+                <pre><code>columns: [{data: 'id', name: 'posts.id'}, {data: 'name', name: 'users.name'}]</code></pre>
+            </p>
+        </div>
+    </caption>
     <thead>
         <tr>
             <th>Id</th>
