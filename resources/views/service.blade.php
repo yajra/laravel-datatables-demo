@@ -19,7 +19,7 @@
 
     <h3>Requirements</h3>
     <ul>
-        <li>yajra/laravel-datatables-oracle:v6.0.0-alpha</li>
+        <li>yajra/laravel-datatables-oracle:dev-develop</li>
         <li><a href="https://github.com/Maatwebsite/Laravel-Excel">maatwebsite/excel:^2.0</a></li>
         <li><a href="https://github.com/dompdf/dompdf">dompdf/dompdf:^0.6.1</a></li>
         <li>DataTables Buttons assets: <a href="http://datatables.net/extensions/buttons/">http://datatables.net/extensions/buttons/</a></li>
