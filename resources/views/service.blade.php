@@ -1,7 +1,17 @@
 @extends('app')
 
 @section('content')
-    <h1>DataTable as a Service Implementation</h1>
+    <h1>DataTables as a Service Implementation</h1>
+    <p>
+        <h3>Why use this approach?</h3>
+        <p>Some of the reasons are:</p>
+        <ul>
+            <li>Built-in support for DataTables Buttons (server-side processing).</li>
+            <li>Smaller footprint for our controller.</li>
+            <li>Artisan command available for creating our service.</li>
+            <li>etc...</li>
+        </ul>
+    </p>
     <div class="alert alert-warning">
         <strong>Note:</strong> This tutorial assumes that you are already familiar with the basic setup/usage of the package.
         If not, it is recommended that you check <a href="/start">Quick Start</a> tutorial first.
