@@ -3,14 +3,13 @@
 namespace App\DataTables;
 
 use App\User;
-use yajra\Datatables\Services\DataTableAbstract;
-use yajra\Datatables\Services\DataTableInterface;
+use yajra\Datatables\Services\DataTable;
 
-class UsersDataTable extends DataTableAbstract implements DataTableInterface
+class UsersDataTable extends DataTable
 {
 
-//    protected $printPreview = 'print-users-table';
-//    protected $exportColumns = ['id', 'name'];
+    //    protected $printPreview = 'print-users-table';
+    //    protected $exportColumns = ['id', 'name'];
 
     /**
      * Display ajax response.
@@ -20,7 +19,7 @@ class UsersDataTable extends DataTableAbstract implements DataTableInterface
     public function ajax()
     {
         return $this->datatables
-            ->eloquent($this->query())
+            ->of($this->query())
             ->editColumn('created_at', '{{ $created_at->diffForHumans() }}')
             ->make(true);
     }
@@ -34,13 +33,17 @@ class UsersDataTable extends DataTableAbstract implements DataTableInterface
     {
         $users = User::select();
 
-        return $users;
+        return $this->applyScopes($users);
     }
 
+    /**
+     * Get html builder.
+     *
+     * @return \yajra\Datatables\Html\Builder
+     */
     public function html()
     {
-        return $this->datatables
-            ->getHtmlBuilder()
+        return $this->builder()
             ->columns([
                 'id',
                 'name',

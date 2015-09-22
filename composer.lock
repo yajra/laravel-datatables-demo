@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f72ea1ec8ab57fc41772864933b4f276",
-    "content-hash": "c8c423c8c9d729d150b0963e0789ec58",
+    "hash": "9d7eb33847c114978bcd5ec16a1d95b3",
+    "content-hash": "f02b14def49f5b61af66eee6f280111a",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -2675,16 +2675,16 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "dev-feature/datatables-buttons",
+            "version": "v6.0.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "49b3c8e5c2178f9bb219c44fa085d3dbda687e48"
+                "reference": "41e62d7febf28f901b10d68b953c4dadbb37b1e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/49b3c8e5c2178f9bb219c44fa085d3dbda687e48",
-                "reference": "49b3c8e5c2178f9bb219c44fa085d3dbda687e48",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/41e62d7febf28f901b10d68b953c4dadbb37b1e3",
+                "reference": "41e62d7febf28f901b10d68b953c4dadbb37b1e3",
                 "shasum": ""
             },
             "require": {
@@ -2694,12 +2694,16 @@
                 "illuminate/support": "~5.0",
                 "illuminate/view": "~5.0",
                 "laravelcollective/html": "~5.0",
-                "league/fractal": "0.12.*",
                 "php": ">=5.4.0"
             },
             "require-dev": {
                 "mockery/mockery": "~0.9",
                 "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "dompdf/dompdf": "^0.6.1 for exporting to PDF files.",
+                "league/fractal": "0.12.* for transforming of ajax response",
+                "maatwebsite/excel": "^2.0 for DataTables server-side buttons implementation."
             },
             "type": "library",
             "autoload": {
@@ -2726,7 +2730,7 @@
                 "laravel4",
                 "laravel5"
             ],
-            "time": "2015-09-16 09:01:37"
+            "time": "2015-09-22 02:52:57"
         },
         {
             "name": "yajra/laravel-oci8",
@@ -4146,7 +4150,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "yajra/laravel-datatables-oracle": 20
+        "yajra/laravel-datatables-oracle": 15
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -8,7 +8,7 @@
 		"laravel/framework": "5.0.*",
 		"laravelcollective/html": "~5.0",
 		"yajra/laravel-oci8": "~2.0",
-		"yajra/laravel-datatables-oracle": "dev-feature/datatables-buttons",
+		"yajra/laravel-datatables-oracle": "v6.0.0-alpha",
 		"laracasts/generators": "~1.1",
 		"laracasts/testdummy": "~2.0",
 		"barryvdh/laravel-debugbar": "~2.0",
