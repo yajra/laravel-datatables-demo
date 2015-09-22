@@ -7,9 +7,8 @@ use yajra\Datatables\Services\DataTable;
 
 class UsersDataTable extends DataTable
 {
-
-    //    protected $printPreview = 'print-users-table';
-    //    protected $exportColumns = ['id', 'name'];
+    // protected $printPreview = 'path-to-print-preview-view';
+    // protected $exportColumns = ['id', 'name'];
 
     /**
      * Display ajax response.
@@ -20,14 +19,13 @@ class UsersDataTable extends DataTable
     {
         return $this->datatables
             ->of($this->query())
-            ->editColumn('created_at', '{{ $created_at->diffForHumans() }}')
             ->make(true);
     }
 
     /**
      * Get the query object to be processed by datatables.
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder
      */
     public function query()
     {
@@ -37,7 +35,7 @@ class UsersDataTable extends DataTable
     }
 
     /**
-     * Get html builder.
+     * Optional method if you want to use html builder.
      *
      * @return \yajra\Datatables\Html\Builder
      */
@@ -52,7 +50,7 @@ class UsersDataTable extends DataTable
                 'updated_at',
             ])
             ->parameters([
-                'dom'     => 'Bfrtip',
+                'dom' => 'Bfrtip',
                 'buttons' => ['csv', 'excel', 'pdf', 'print'],
             ]);
     }

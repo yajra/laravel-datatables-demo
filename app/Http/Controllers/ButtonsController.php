@@ -2,7 +2,6 @@
 
 use App\DataTables\UsersDataTable;
 use App\Http\Requests;
-use Illuminate\Http\Request;
 
 class ButtonsController extends Controller
 {
@@ -12,4 +11,8 @@ class ButtonsController extends Controller
         return $dataTable->render('datatables.buttons.basic');
     }
 
+    public function getTutorial()
+    {
+        return view('datatables.buttons.tutorial');
+    }
 }

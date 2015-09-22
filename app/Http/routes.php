@@ -26,6 +26,8 @@ Route::controllers([
     'buttons'      => 'ButtonsController',
 ]);
 
+Route::resource('users', 'UsersController');
+
 Route::get('{view}', function($view) {
 	if (view()->exists($view)) {
 		return view($view);
@@ -33,3 +35,4 @@ Route::get('{view}', function($view) {
 
 	return app()->abort(404, 'Page not found!');
 });
+
