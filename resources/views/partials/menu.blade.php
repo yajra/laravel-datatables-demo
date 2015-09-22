@@ -1,3 +1,14 @@
+<li><a href="{{ url('/') }}">Home</a></li>
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tutorials<span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        <li><a href="{{ url('starter') }}">Quick Start</a></li>
+        <li><a href="{{ url('service') }}">DataTables as a Service</a></li>
+    </ul>
+</li>
+
+
 <li class="dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eloquent<span class="caret"></span></a>
 	<ul class="dropdown-menu">

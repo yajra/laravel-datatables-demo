@@ -4,7 +4,7 @@
     <h1>DataTable as a Service Implementation</h1>
     <div class="alert alert-warning">
         <strong>Note:</strong> This tutorial assumes that you are already familiar with the basic setup/usage of the package.
-        If not, it is recommended that you check <a href="/start">Quick Start</a> tutorial for first.
+        If not, it is recommended that you check <a href="/start">Quick Start</a> tutorial first.
     </div>
 
     <h3>Requirements</h3>
@@ -16,7 +16,7 @@
     </ul>
 
     <div class="alert alert-info">
-        <p>After package installation, don't forget to execute: <strong>php artisan vendor:publish to publish the assets.</strong></p>
+        <p>After package installation, don't forget to execute: <strong>php artisan vendor:publish</strong> to publish the assets.</p>
 
         <p>For datatables, these files will be published:</p>
         <ol>
@@ -114,7 +114,7 @@
             <p>
                 Create a file on <strong>resources/views/users.blade.php</strong>
             </p>
-            <p><strong>Note</strong>: Server-side button assets is included in the package.</p>
+            <p><strong>Note</strong>: <em>buttons.server-side.js</em> is included in the package.</p>
             <pre><code>{{ view('service.view')->render() }}</code></pre>
         </li>
 
