@@ -2679,12 +2679,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "faf6926b74c8b36afb2f9ef7a7a7fcbdfb643721"
+                "reference": "9dc7fce4cbb038732eedfa257f84bb056603b55e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/faf6926b74c8b36afb2f9ef7a7a7fcbdfb643721",
-                "reference": "faf6926b74c8b36afb2f9ef7a7a7fcbdfb643721",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/9dc7fce4cbb038732eedfa257f84bb056603b55e",
+                "reference": "9dc7fce4cbb038732eedfa257f84bb056603b55e",
                 "shasum": ""
             },
             "require": {
@@ -2707,8 +2707,8 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "yajra\\Datatables": "src/"
+                "psr-4": {
+                    "yajra\\Datatables\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2730,7 +2730,7 @@
                 "laravel4",
                 "laravel5"
             ],
-            "time": "2015-09-22 06:45:02"
+            "time": "2015-09-24 04:55:51"
         },
         {
             "name": "yajra/laravel-oci8",

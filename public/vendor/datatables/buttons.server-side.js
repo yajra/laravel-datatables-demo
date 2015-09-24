@@ -61,5 +61,41 @@
         }
     };
 
+    DataTable.ext.buttons.reset = {
+        className: 'buttons-reset',
+
+        text: function (dt) {
+            return dt.i18n('buttons.reset', 'Reset');
+        },
+
+        action: function (e, dt, button, config) {
+            dt.search('').draw();
+        }
+    };
+
+    DataTable.ext.buttons.reload = {
+        className: 'buttons-reload',
+
+        text: function (dt) {
+            return dt.i18n('buttons.reload', 'Reload');
+        },
+
+        action: function (e, dt, button, config) {
+            dt.draw(false);
+        }
+    };
+
+    DataTable.ext.buttons.create = {
+        className: 'buttons-create',
+
+        text: function (dt) {
+            return dt.i18n('buttons.create', 'Create');
+        },
+
+        action: function (e, dt, button, config) {
+            window.location = window.location.href.replace(/\/+$/, "") + '/create';
+        }
+    };
+
 
 })(jQuery, jQuery.fn.dataTable);

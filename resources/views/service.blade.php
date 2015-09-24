@@ -12,6 +12,9 @@
             <li>etc...</li>
         </ul>
     </p>
+    <div class="alert alert-danger">
+        <p><strong>Important:</strong> This implementation is still under development and may change wihtout prior notice.</p>
+    </div>
     <div class="alert alert-warning">
         <strong>Note:</strong> This tutorial assumes that you are already familiar with the basic setup/usage of the package.
         If not, it is recommended that you check <a href="/start">Quick Start</a> tutorial first.
@@ -102,10 +105,9 @@
             'created_at',
             'updated_at',
         ])
-        ->ajax('')
         ->parameters([
             'dom' => 'Bfrtip',
-            'buttons' => ['csv', 'excel', 'pdf', 'print'],
+            'buttons' => ['csv', 'excel', 'pdf', 'print', 'reset', 'reload'],
         ]);
 }
 </code></pre>
