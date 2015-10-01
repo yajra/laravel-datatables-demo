@@ -17,7 +17,7 @@
     </div>
     <div class="alert alert-warning">
         <strong>Note:</strong> This tutorial assumes that you are already familiar with the basic setup/usage of the package.
-        If not, it is recommended that you check <a href="/start">Quick Start</a> tutorial first.
+        If not, it is recommended that you check <a href="/starter">Quick Start</a> tutorial first.
     </div>
 
     <h3>Requirements</h3>
