@@ -29,7 +29,7 @@
         return view('datatables.eloquent.post-column-search');
     }
 
-    public function postColumnSearchData(Request $request)
+    public function anyColumnSearchData(Request $request)
     {
         $users = User::select([
             DB::raw("CONCAT(users.id,'-',users.id) as user_id"),
