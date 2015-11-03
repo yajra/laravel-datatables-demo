@@ -317,7 +317,8 @@ class EloquentController extends Controller
             'name',
             'email',
             'created_at',
-            'updated_at']);
+            'updated_at',
+        ]);
 
         return Datatables::of($users)
             ->filterColumn('user_id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ?", ["$1"])
