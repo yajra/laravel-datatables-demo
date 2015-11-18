@@ -18,7 +18,7 @@ class UsersDataTable extends DataTable
     public function ajax()
     {
         return $this->datatables
-            ->of($this->query())
+            ->eloquent($this->query())
             ->make(true);
     }
 
