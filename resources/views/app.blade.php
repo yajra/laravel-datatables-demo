@@ -77,7 +77,7 @@
                                 Please be aware that future releases of the package will
                                 now use<br> <strong>Yajra\Datatables</strong> (capital <strong>Y</strong>) <br>
                                 namespace instead of <br><strong>yajra\Datatables</strong>
-                                to match the proper naming convetion for vendor name.
+                                to match the proper naming convention for vendor name.
 
                                 <br>
                                 <br>
