@@ -150,7 +150,7 @@ return [
 		 * Third Party Service Providers
 		 */
 		'yajra\Oci8\Oci8ServiceProvider', // Oracle DB Driver
-		'yajra\Datatables\DatatablesServiceProvider',
+		'Yajra\Datatables\DatatablesServiceProvider',
 		'Laracasts\Generators\GeneratorsServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
         'Roumen\Sitemap\SitemapServiceProvider',
@@ -208,7 +208,7 @@ return [
 		/**
 		 * Third-party facades
 		 */
-		'Datatables'=> 'yajra\Datatables\Datatables',
+		'Datatables'=> 'Yajra\Datatables\Datatables',
         'Excel' => 'Maatwebsite\Excel\Facades\Excel',
 
 	],

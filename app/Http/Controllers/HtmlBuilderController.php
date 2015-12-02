@@ -6,7 +6,7 @@ use App\User;
 use Datatables;
 use Illuminate\Http\Request;
 use DB;
-use yajra\Datatables\Html\Builder;
+use Yajra\Datatables\Html\Builder;
 
 class HtmlBuilderController extends Controller
 {

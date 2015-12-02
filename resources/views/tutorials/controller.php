@@ -2,7 +2,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\User;
-use yajra\Datatables\Datatables;
+use Yajra\Datatables\Datatables;
 
 class DatatablesController extends Controller
 {

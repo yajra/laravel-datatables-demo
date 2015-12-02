@@ -1,4 +1,4 @@
-use yajra\Datatables\Html\Builder; // import class on controller
+use Yajra\Datatables\Html\Builder; // import class on controller
 
 /**
  * Datatables Html Builder

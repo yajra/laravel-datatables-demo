@@ -39,8 +39,8 @@ $ php artisan migrate</code></pre>
             <pre><code>$ composer require yajra/laravel-datatables-oracle</code></pre>
 
             <h4>Add Datatables Service Provider and Facade on <strong>config/app.php</strong>.</h4>
-            <pre><code>yajra\Datatables\DatatablesServiceProvider::class,</code></pre>
-            <pre><code>'Datatables' => yajra\Datatables\Datatables::class,</code></pre>
+            <pre><code>Yajra\Datatables\DatatablesServiceProvider::class,</code></pre>
+            <pre><code>'Datatables' => Yajra\Datatables\Datatables::class,</code></pre>
 
             <h4>Lastly, publish the configuration file.</h4>
             <pre><code>$ php artisan vendor:publish</code></pre>
@@ -78,7 +78,7 @@ $ php artisan migrate</code></pre>
             You can import the <strong>Datatables</strong> facade.
             <pre><code>use Datatables;</code></pre>
             Or, directly import the class to make it more IDE friendly.
-            <pre><code>use yajra\Datatables\Datatables;</code></pre>
+            <pre><code>use Yajra\Datatables\Datatables;</code></pre>
         </p>
         <h3>Now, let's create a method to display our view and a method that will process our datatables ajax request.</h3>
         <p>

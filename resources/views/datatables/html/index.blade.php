@@ -38,7 +38,7 @@
         <ol>
             <li>
                 Import builder class on your controller
-                <pre><code>use yajra\Datatables\Html\Builder;</code></pre>
+                <pre><code>use Yajra\Datatables\Html\Builder;</code></pre>
             </li>
             <li>
                 Use it via <strong>Dependency or Method Injection</strong>.

@@ -3,7 +3,7 @@
 namespace App\DataTables;
 
 use App\User;
-use yajra\Datatables\Services\DataTable;
+use Yajra\Datatables\Services\DataTable;
 
 class UsersDataTable extends DataTable
 {
@@ -37,7 +37,7 @@ class UsersDataTable extends DataTable
     /**
      * Optional method if you want to use html builder.
      *
-     * @return \yajra\Datatables\Html\Builder
+     * @return \Yajra\Datatables\Html\Builder
      */
     public function html()
     {

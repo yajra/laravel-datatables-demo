@@ -68,8 +68,34 @@
                 @yield('content')
             </div>
             <div class="col-sm-3 main">
-                @include('donate')
-                <br />
+                <div class="panel panel-danger">
+                      <div class="panel-heading">
+                            <h3 class="panel-title">IMPORTANT! HEADS UP!</h3>
+                      </div>
+                      <div class="panel-body">
+                            <p class="text-center">
+                                Please be aware that future releases of the package will
+                                now use<br> <strong>Yajra\Datatables</strong> (capital <strong>Y</strong>) <br>
+                                namespace instead of <br><strong>yajra\Datatables</strong>
+                                to match the proper naming convetion for vendor name.
+
+                                <br>
+                                <br>
+
+                                Change of namespace will be implemented on <strong>develop</strong> branch and
+                                will take effect once v6.0 is released.
+
+                                <br><br>
+                                Users of v5.x and below will still be using the old namespace <strong>yajra\Datatables</strong>.
+
+                                <br><br>
+                                Thanks! - @yajra
+                            </p>
+                      </div>
+                </div>
+
+                <br>
+
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <h3 class="panel-title"><i class="glyphicon glyphicon-bell"></i> Heads Up!</h3>
@@ -89,6 +115,9 @@
                         </ul>
                     </div>
                 </div>
+
+                <br>
+                @include('donate')
 
             </div>
         </div>
