@@ -22,15 +22,13 @@
 
     <h3>Requirements</h3>
     <ul>
-        <li>Laravel 5.1</li>
-        <li>yajra/laravel-datatables-oracle:dev-develop</li>
-        <li><a href="https://github.com/Maatwebsite/Laravel-Excel">maatwebsite/excel:^2.0</a></li>
-        <li><a href="https://github.com/dompdf/dompdf">dompdf/dompdf:^0.6.1</a></li>
+        <li>Laravel 5.0 | 5.1 | 5.2</li>
+        <li><a href="https://github.com/yajra/laravel-datatables/tree/6.0">yajra/laravel-datatables-oracle:6.*</a></li>
         <li>DataTables Buttons assets: <a href="http://datatables.net/extensions/buttons/">http://datatables.net/extensions/buttons/</a></li>
     </ul>
 
     <div class="alert alert-info">
-        <p>After package installation, don't forget to execute: <strong>php artisan vendor:publish</strong> to publish the assets.</p>
+        <p>After package installation, don't forget to execute: <strong>php artisan vendor:publish --tag=datatables</strong> to publish the assets.</p>
 
         <p>For datatables, these files will be published:</p>
         <ol>

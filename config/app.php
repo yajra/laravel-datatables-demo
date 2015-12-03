@@ -135,7 +135,6 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
-		'Collective\Html\HtmlServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -154,7 +153,6 @@ return [
 		'Laracasts\Generators\GeneratorsServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
         'Roumen\Sitemap\SitemapServiceProvider',
-        'Maatwebsite\Excel\ExcelServiceProvider',
 	],
 
 	/*
@@ -202,15 +200,6 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-		'Form'		=> 'Illuminate\Html\FormFacade',
-		'HTML'		=> 'Collective\Html\HtmlFacade',
-
-		/**
-		 * Third-party facades
-		 */
-		'Datatables'=> 'Yajra\Datatables\Datatables',
-        'Excel' => 'Maatwebsite\Excel\Facades\Excel',
-
 	],
 
 ];
