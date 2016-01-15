@@ -12,9 +12,6 @@
             <li>etc...</li>
         </ul>
     </p>
-    <div class="alert alert-danger">
-        <p><strong>Important:</strong> This implementation is still under development and may change wihtout prior notice.</p>
-    </div>
     <div class="alert alert-warning">
         <strong>Note:</strong> This tutorial assumes that you are already familiar with the basic setup/usage of the package.
         If not, it is recommended that you check <a href="/starter">Quick Start</a> tutorial first.
@@ -23,7 +20,7 @@
     <h3>Requirements</h3>
     <ul>
         <li>Laravel 5.0 | 5.1 | 5.2</li>
-        <li><a href="https://github.com/yajra/laravel-datatables/tree/6.0">yajra/laravel-datatables-oracle:6.*</a></li>
+        <li><a href="https://github.com/yajra/laravel-datatables/tree/6.0">yajra/laravel-datatables-oracle:~6.0</a></li>
         <li>DataTables Buttons assets: <a href="http://datatables.net/extensions/buttons/">http://datatables.net/extensions/buttons/</a></li>
     </ul>
 
