@@ -46,7 +46,11 @@ class CollectionController extends Controller
     {
         $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at'])->get();
 
-        return Datatables::of($users)->make(true);
+        return Datatables::collection($users)
+                ->order(function($instance) {
+                    dd($instance);
+                })
+                ->make(true);
     }
 
     public function getMultiFilterSelect()
