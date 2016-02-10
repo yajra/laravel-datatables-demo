@@ -7,8 +7,9 @@
             <p><strong>Heads Up!</strong> Sorting on eager loaded models is not yet supported!</p>
         </div>
         <div class="alert alert-success margin">
-            <p><strong>Heads Up!</strong> When searching for eager loaded models, your column name must be declared like <strong>relation.column</strong>
+            <p><strong>Heads Up!</strong>When searching for eager loaded models, your column name must be declared like <strong>relation.column</strong>
             <pre><code>columns: [{data: 'id', name: 'id'}, {data: 'user.name', name: 'user.name'}]</code></pre>
+            Available since <strong>v6.4.0</strong>.
         </div>
 
     </caption>
