@@ -8,7 +8,7 @@
         </div>
         <div class="alert alert-success margin">
             <p><strong>Heads Up!</strong> When searching for eager loaded models, your column name must be declared like <strong>relation.column</strong>
-            <pre><code>columns: [{data: 'id', name: 'posts.id'}, {data: 'name', name: 'user.name'}]</code></pre>
+            <pre><code>columns: [{data: 'id', name: 'id'}, {data: 'user.name', name: 'user.name'}]</code></pre>
         </div>
 
     </caption>
