@@ -13,6 +13,7 @@
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eloquent<span class="caret"></span></a>
 	<ul class="dropdown-menu">
 		<li><a href="{!! url('eloquent/basic') !!}" class="{!! Request::is('eloquent/basic') ? 'active' : '' !!}">Basic</a></li>
+		<li><a href="{!! url('eloquent/basic-columns') !!}" class="{!! Request::is('eloquent/basic-columns') ? 'active' : '' !!}">Basic with Column Definition</a></li>
 		<li><a href="{!! url('eloquent/basic-object') !!}" class="{!! Request::is('eloquent/basic-object') ? 'active' : '' !!}">Object Data Source</a></li>
 		<li><a href="{!! url('eloquent/row-details') !!}" class="{!! Request::is('eloquent/row-details') ? 'active' : '' !!}">Row Details</a></li>
 		<li><a href="{!! url('eloquent/master') !!}" class="{!! Request::is('eloquent/master') ? 'active' : '' !!}">Master-Details Table</a></li>

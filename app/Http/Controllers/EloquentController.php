@@ -65,9 +65,21 @@ class EloquentController extends Controller
 
     public function getBasicObjectData()
     {
-        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
+        $users = User::query();
 
         return Datatables::of($users)->make(true);
+    }
+
+    public function getBasicColumns()
+    {
+        return view('datatables.eloquent.basic-columns');
+    }
+
+    public function getBasicColumnsData()
+    {
+        $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
+
+        return Datatables::of($users)->make();
     }
 
     public function getIoc()

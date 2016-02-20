@@ -14,6 +14,9 @@ return [
     'getBasicObject.title'       => 'Basic Demo with Object Data Source',
     'getBasicObject.description' => 'Laravel Datatables basic demo with Object Data Source',
 
+    'getBasicColumns.title'       => 'Basic Demo with Column Definition',
+    'getBasicColumns.description' => 'Laravel Datatables basic demo with Column Definition',
+
     'getIoc.title'       => 'IoC container',
     'getIoc.description' => 'Laravel Datatables demo using IoC container',
 

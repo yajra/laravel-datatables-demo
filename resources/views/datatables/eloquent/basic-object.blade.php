@@ -2,6 +2,13 @@
 
 @section('demo')
 <table id="users-table" class="table table-condensed">
+    <caption class="alert alert-success">
+        Since v6.0, you can now optionally set <strong>column.name</strong> value to null.
+        The package will automatically use <strong>column.data</strong> value as column name when filtering and sorting records.
+        <br>
+        <br>
+        <strong>NOTE: </strong>This is only applicable if your column name is the same with the data to display. If not, you need to specify <strong>column.name</strong> on your script.
+    </caption>
     <thead>
     <tr>
         <th>Id</th>
@@ -32,8 +39,8 @@
         serverSide: true,
         ajax: '{{ url("eloquent/basic-object-data") }}',
         columns: [
-            {data: 'id', name: 'id'},
-            {data: 'name', name: 'name'},
+            {data: 'id'},
+            {data: 'name'},
             {data: 'email', name: 'email'},
             {data: 'created_at', name: 'created_at'},
             {data: 'updated_at', name: 'updated_at'}
