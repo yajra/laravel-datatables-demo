@@ -23,6 +23,6 @@ class DatatablesController extends Controller
      */
     public function anyData()
     {
-        return Datatables::of(User::select('*'))->make(true);
+        return Datatables::of(User::query())->make(true);
     }
 }

@@ -29,7 +29,7 @@
 
     public function getBasicObjectData()
     {
-        return Datatables::of(User::select('*'))->make(true);
+        return Datatables::of(User::query())->make(true);
     }
 @endsection
 
