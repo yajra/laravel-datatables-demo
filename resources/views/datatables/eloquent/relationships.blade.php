@@ -60,7 +60,7 @@
         serverSide: true,
         ajax: '{{ url("eloquent/relationships-data") }}',
         columns: [
-            {data: 'id', name: 'id'},
+            {data: 'id', name: 'posts.id'},
             {data: 'title', name: 'posts.title'},
             {data: 'user.name', name: 'user.name'},
             {data: 'user.email', name: 'user.email'},
