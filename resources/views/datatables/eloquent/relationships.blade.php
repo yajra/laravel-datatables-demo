@@ -3,15 +3,26 @@
 @section('demo')
 <table id="posts-table" class="table table-condensed">
     <caption>
-        <div class="alert alert-danger margin">
-            <p><strong>Heads Up!</strong> Sorting on eager loaded models is not yet supported!</p>
-        </div>
         <div class="alert alert-success margin">
-            <p><strong>Heads Up!</strong> When searching for eager loaded models, your column name must be declared like <strong>relation.column</strong>
-            <pre><code>columns: [{data: 'id', name: 'id'}, {data: 'user.name', name: 'user.name'}]</code></pre>
-            Available since <strong>v6.4.0</strong>.
-        </div>
+            <p><strong>Heads Up!</strong> When searching/sorting for eager loaded models, your column name must be declared like <strong>relation.column</strong>
+            <pre><code>columns: [{data: 'id', name: 'posts.id'}, {data: 'user.name', name: 'user.name'}]</code></pre>
 
+            <p><strong>Important!</strong> To avoid ambiguous column name error, it is advised to declare your column name as <strong>table.column</strong> just like on how you declare it when using a join statements.</p>
+            <pre><code>columns: [
+    {data: 'id', name: 'posts.id'},
+    {data: 'title', name: 'posts.title'},
+    {data: 'user.name', name: 'user.name'},
+    {data: 'user.email', name: 'user.email'},
+    {data: 'created_at', name: 'posts.created_at'},
+    {data: 'updated_at', name: 'posts.updated_at'}
+]
+</code></pre>
+            <br>
+
+            Searching available since <strong>v6.4.0</strong>.
+            <br>
+            Sorting available since <strong>v6.7.0</strong>.
+        </div>
     </caption>
     <thead>
         <tr>
@@ -50,11 +61,11 @@
         ajax: '{{ url("eloquent/relationships-data") }}',
         columns: [
             {data: 'id', name: 'id'},
-            {data: 'title', name: 'title'},
-            {data: 'user.name', name: 'user.name', orderable: false},
-            {data: 'user.email', name: 'user.email', orderable: false},
-            {data: 'created_at', name: 'created_at'},
-            {data: 'updated_at', name: 'updated_at'}
+            {data: 'title', name: 'posts.title'},
+            {data: 'user.name', name: 'user.name'},
+            {data: 'user.email', name: 'user.email'},
+            {data: 'created_at', name: 'posts.created_at'},
+            {data: 'updated_at', name: 'posts.updated_at'}
         ]
     });
 @endsection
