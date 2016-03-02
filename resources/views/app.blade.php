@@ -74,15 +74,15 @@
                       </div>
                       <div class="panel-body">
                             <p class="text-center">
-                                Please be aware that future releases of the package will
-                                now use<br> <strong>Yajra\Datatables</strong> (capital <strong>Y</strong>) <br>
+                                Since <strong>v6.0</strong>, the package
+                                now uses<br> <strong>Yajra\Datatables</strong> (capital <strong>Y</strong>) <br>
                                 namespace instead of <br><strong>yajra\Datatables</strong>
                                 to match the proper naming convention for vendor name.
 
                                 <br>
                                 <br>
 
-                                Users of v5.x and below will still be using the old namespace <strong>yajra\Datatables</strong>.
+                                Users of <strong>v5.x</strong> and below will still be using the old namespace <strong>yajra\Datatables</strong>.
 
                                 <br><br>
                                 Thanks! - @yajra
