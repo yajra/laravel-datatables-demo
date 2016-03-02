@@ -1,4 +1,6 @@
-<?php namespace App\Transformers;
+<?php
+
+namespace App\Transformers;
 
 use League\Fractal\TransformerAbstract;
 use Carbon\Carbon;

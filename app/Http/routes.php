@@ -28,11 +28,10 @@ Route::controllers([
 
 Route::resource('users', 'UsersController');
 
-Route::get('{view}', function($view) {
-	if (view()->exists($view)) {
-		return view($view);
-	}
+Route::get('{view}', function ($view) {
+    if (view()->exists($view)) {
+        return view($view);
+    }
 
-	return app()->abort(404, 'Page not found!');
+    return app()->abort(404, 'Page not found!');
 });
-

@@ -1,4 +1,6 @@
-<?php namespace App\Http\Controllers;
+<?php
+
+namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Post;
@@ -45,7 +47,7 @@ class EloquentController extends Controller
         $users = User::select();
 
         return Datatables::of($users)
-            ->addColumn('details_url', function($user) {
+            ->addColumn('details_url', function ($user) {
                 return url('eloquent/details-data/' . $user->id);
             })
             ->make(true);
