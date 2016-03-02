@@ -82,10 +82,6 @@
                                 <br>
                                 <br>
 
-                                Change of namespace will be implemented on <strong>develop</strong> branch and
-                                will take effect once v6.0 is released.
-
-                                <br><br>
                                 Users of v5.x and below will still be using the old namespace <strong>yajra\Datatables</strong>.
 
                                 <br><br>
