@@ -49,7 +49,7 @@
 				</ul>
 			</li>
 			<li>
-				<h3>Step: 4 Configure your database</h3>
+				<h3>Step 4: Configure your database</h3>
 				<ul>
 					<li>Check {!! link_to('https://laravel.com/docs/5.1/database#configuration', 'Laravel\'s Documentation') !!} for setting up the database configuration</li>
 				</ul>
