@@ -18,7 +18,8 @@
 ]
 </code></pre>
             <br>
-
+            <p>If your relations consists of (2) two or more words, the convention to use is as follows:</p>
+            <pre><code>{data: 'relation_name.column', name: 'relationName.column'}</code></pre>
             Searching available since <strong>v6.4.0</strong>.
             <br>
             Sorting available since <strong>v6.7.0</strong>.
