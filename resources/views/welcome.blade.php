@@ -42,20 +42,27 @@
 				</ul>
 			</li>
 			<li>
-				<h3>Step: 3 Configure your database</h3>
+				<h3>Step 3: Perform deafult commands for new projects</h3>
 				<ul>
-					<li>Check {!! link_to('http://laravel.com/docs/5.0/configuration', 'Laravel\'s Documentation') !!} for setting up the database configuration</li>
+					<li>php -r "copy('.env.example', '.env');"</li>
+					<li>php artisan key:generate</li>
 				</ul>
 			</li>
 			<li>
-				<h3>Step: 4 Run migrations and seeders</h3>
+				<h3>Step: 4 Configure your database</h3>
+				<ul>
+					<li>Check {!! link_to('https://laravel.com/docs/5.1/database#configuration', 'Laravel\'s Documentation') !!} for setting up the database configuration</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Step: 5 Run migrations and seeders</h3>
 				<ul>
 					<li>cd /path/to/laravel</li>
 					<li>php artisan migrate --seed</li>
 				</ul>
 			</li>
 			<li>
-				<h3>Step 5: Start Accessing the Demo Site</h3>
+				<h3>Step 6: Start Accessing the Demo Site</h3>
 			</li>
 		</ul>
 
