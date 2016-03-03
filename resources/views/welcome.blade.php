@@ -55,7 +55,7 @@
 				</ul>
 			</li>
 			<li>
-				<h3>Step: 5 Run migrations and seeders</h3>
+				<h3>Step 5: Run migrations and seeders</h3>
 				<ul>
 					<li>cd /path/to/laravel</li>
 					<li>php artisan migrate --seed</li>
