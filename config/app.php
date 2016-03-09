@@ -153,7 +153,6 @@ return [
         // Yajra\Oci8\Oci8ServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
         Laracasts\Generators\GeneratorsServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
         Roumen\Sitemap\SitemapServiceProvider::class,
     ],
 
