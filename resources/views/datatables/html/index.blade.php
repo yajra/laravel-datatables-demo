@@ -53,7 +53,7 @@ public function __construct(Builder $htmlBuilder)
 public function getIndex(Request $request, Builder $htmlBuilder){}
                 </code></pre>
                 You can also use <strong>Service Injection</strong> on Laravel 5.1:
-                <pre><code>{{ "@inject('datatables', 'yajra/Datatables/Html/Builder')" }}</code></pre>
+                <pre><code>{{ "@inject('datatables', 'Yajra/Datatables/Html/Builder')" }}</code></pre>
             </li>
             <li>
                 Build your DataTable Html
