@@ -364,4 +364,15 @@ class EloquentController extends Controller
 
         return $datatables->make(true);
     }
+
+    public function getBlacklist(Request $request)
+    {
+        if ($request->ajax()) {
+            return Datatables::of(User::query())
+                ->blacklist(['password', 'name'])
+                ->make(true);
+        }
+
+        return view('datatables.eloquent.blacklist', ['title' => 'Blacklist Columns']);
+    }
 }
