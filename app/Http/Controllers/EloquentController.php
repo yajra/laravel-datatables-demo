@@ -335,7 +335,9 @@ class EloquentController extends Controller
         ]);
 
         return Datatables::of($users)
-            ->filterColumn('user_id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ?", ["$1"])
+            ->filterColumn('user_id', function($query, $keyword) {
+                $query->whereRaw("CONCAT(users.id,'-',users.id) like ?", ["%{$keyword}%"]);
+            })
             ->make(true);
     }
 
