@@ -17,7 +17,7 @@
 		<li><a href="{!! url('eloquent/master') !!}" class="{!! Request::is('eloquent/master') ? 'active' : '' !!}">Master-Details Table</a></li>
 		<li><a href="{!! url('eloquent/count') !!}" class="{!! Request::is('eloquent/count') ? 'active' : '' !!}">Count Alias</a></li>
 		<li><a href="{!! url('eloquent/multi-filter-select') !!}" class="{!! Request::is('eloquent/multi-filter-select') ? 'active' : '' !!}">Column Search</a></li>
-		<li><a href="{!! url('eloquent/post-column-search') !!}" class="{!! Request::is('eloquent/post-column-search') ? 'active' : '' !!}">Filter Column Search [via POST]</a></li>
+		<li><a href="{!! url('eloquent/post-column-search') !!}" class="{!! Request::is('eloquent/post-column-search') ? 'active' : '' !!}"><strong style="color: red">[UPDATED]</strong> Filter Column Search [via POST]</a></li>
 		<li><a href="{!! url('eloquent/add-edit-remove-column') !!}" class="{!! Request::is('eloquent/add-edit-remove-column') ? 'active' : '' !!}">Add/Edit/Remove Column</a></li>
 		<li><a href="{!! url('eloquent/dt-row') !!}" class="{!! Request::is('eloquent/dt-row') ? 'active' : '' !!}">DT Row Option</a></li>
 		<li><a href="{!! url('eloquent/row-num') !!}" class="{!! Request::is('eloquent/row-num') ? 'active' : '' !!}">MySQL Row Num</a></li>
@@ -30,6 +30,7 @@
 		<li><a href="{!! url('eloquent/joins') !!}" class="{!! Request::is('eloquent/joins') ? 'active' : '' !!}">Join Queries</a></li>
 		<li><a href="{!! url('eloquent/ioc') !!}" class="{!! Request::is('eloquent/ioc') ? 'active' : '' !!}">IOC Container [v5.2++]</a></li>
 		<li><a href="{!! url('eloquent/blacklist') !!}" class="{!! Request::is('eloquent/blacklist') ? 'active' : '' !!}"><strong style="color: red">[NEW]</strong> Blacklist Columns [v6.9++]</a></li>
+		<li><a href="{!! url('eloquent/whitelist') !!}" class="{!! Request::is('eloquent/whitelist') ? 'active' : '' !!}"><strong style="color: red">[NEW]</strong> Whitelist Columns [v6.9++]</a></li>
 		<li class="divider"></li>
 		<li><a href="{!! url('eloquent') !!}" class="{!! Request::is('eloquent') ? 'active' : '' !!}"><i class="glyphicon glyphicon-book"></i> Eloquent ORM Notes</a></li>
 	</ul>

@@ -375,4 +375,15 @@ class EloquentController extends Controller
 
         return view('datatables.eloquent.blacklist', ['title' => 'Blacklist Columns']);
     }
+
+    public function getWhitelist(Request $request)
+    {
+        if ($request->ajax()) {
+            return Datatables::of(User::query())
+                ->whitelist(['name', 'email'])
+                ->make(true);
+        }
+
+        return view('datatables.eloquent.whitelist', ['title' => 'Whitelist Columns']);
+    }
 }
