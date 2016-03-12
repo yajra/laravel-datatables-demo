@@ -85,7 +85,14 @@
 	</ul>
 </li>
 
-<li><a href="{{ url('buttons') }}">TableTools (v6++)</a></li>
+<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service Implementation<span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="{!! url('services/basic') !!}" class="{!! Request::is('services/basic') ? 'active' : '' !!}">Basic Implementation</a></li>
+		<li><a href="{!! url('services/scope') !!}" class="{!! Request::is('services/scope') ? 'active' : '' !!}">DataTables Scoping</a></li>
+	</ul>
+</li>
+
 <li><a href="http://yajra.github.io/laravel-datatables/api/">API</a></li>
 <li><a href="https://github.com/yajra/laravel-datatables">Github</a></li>
 
