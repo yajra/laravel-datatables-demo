@@ -3,7 +3,7 @@
 use App\Http\Requests;
 use App\Post;
 use App\User;
-use Datatables;
+use Yajra\Datatables\Datatables;
 use Illuminate\Http\Request;
 use DB;
 use Yajra\Datatables\Html\Builder;
