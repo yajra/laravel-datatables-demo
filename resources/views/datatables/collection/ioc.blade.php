@@ -34,9 +34,6 @@
         processing: true,
         serverSide: true,
         ajax: '{{ url("collection/ioc-data") }}',
-        search: {
-            caseInsensitive: true
-        },
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},
