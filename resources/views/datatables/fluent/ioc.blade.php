@@ -25,7 +25,7 @@
         $users = DB::table('users')->select(['id', 'name', 'email', 'created_at', 'updated_at']);
         $datatables = app('datatables');
 
-        return $datatables->usingQueryBuilder($users)->make(true);
+        return $datatables->queryBuilder($users)->make(true);
     }
 @endsection
 
@@ -34,9 +34,6 @@
         processing: true,
         serverSide: true,
         ajax: '{{ url("fluent/ioc-data") }}',
-        search: {
-            caseInsensitive: true
-        },
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

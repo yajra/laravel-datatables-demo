@@ -94,7 +94,7 @@ class EloquentController extends Controller
         $users      = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
         $datatables = app('datatables');
 
-        return $datatables->usingEloquent($users)->make(true);
+        return $datatables->eloquent($users)->make(true);
     }
 
     public function getCount()

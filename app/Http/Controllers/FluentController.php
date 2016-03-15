@@ -232,6 +232,6 @@ class FluentController extends Controller
         $users      = DB::table('users')->select(['id', 'name', 'email', 'created_at', 'updated_at']);
         $datatables = app('datatables');
 
-        return $datatables->usingQueryBuilder($users)->make(true);
+        return $datatables->queryBuilder($users)->make(true);
     }
 }

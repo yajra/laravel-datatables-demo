@@ -25,7 +25,7 @@
         $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
         $datatables = app('datatables');
 
-        return $datatables->usingEloquent($users)->make(true);
+        return $datatables->eloquent($users)->make(true);
     }
 
     // OR via dependency injection
@@ -33,7 +33,7 @@
     {
         $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
 
-        return $datatables->usingEloquent($users)->make(true);
+        return $datatables->eloquent($users)->make(true);
     }
 @endsection
 
@@ -42,9 +42,6 @@
         processing: true,
         serverSide: true,
         ajax: '{{ url("eloquent/ioc-data") }}',
-        search: {
-            caseInsensitive: true
-        },
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},
