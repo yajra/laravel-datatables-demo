@@ -244,9 +244,9 @@ class CollectionController extends Controller
 
     public function getIocData()
     {
-        $users      = User::select(['id', 'name', 'email', 'created_at', 'updated_at'])->get();
         $datatables = app('datatables');
+        $users      = User::select(['id', 'name', 'email', 'created_at', 'updated_at'])->get();
 
-        return $datatables->usingCollection($users)->make(true);
+        return $datatables->collection($users)->make(true);
     }
 }
