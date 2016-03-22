@@ -42,7 +42,7 @@
 				</ul>
 			</li>
 			<li>
-				<h3>Step 3: Perform deafult commands for new projects</h3>
+				<h3>Step 3: Perform default commands for new projects</h3>
 				<ul>
 					<li>php -r "copy('.env.example', '.env');"</li>
 					<li>php artisan key:generate</li>
