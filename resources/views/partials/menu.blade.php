@@ -31,6 +31,7 @@
 		<li><a href="{!! url('eloquent/ioc') !!}" class="{!! Request::is('eloquent/ioc') ? 'active' : '' !!}">IOC Container [v5.2++]</a></li>
 		<li><a href="{!! url('eloquent/blacklist') !!}" class="{!! Request::is('eloquent/blacklist') ? 'active' : '' !!}"><strong style="color: red">[NEW]</strong> Blacklist Columns [v6.9++]</a></li>
 		<li><a href="{!! url('eloquent/whitelist') !!}" class="{!! Request::is('eloquent/whitelist') ? 'active' : '' !!}"><strong style="color: red">[NEW]</strong> Whitelist Columns [v6.9++]</a></li>
+		<li><a href="{!! url('eloquent/order-column') !!}" class="{!! Request::is('eloquent/order-column') ? 'active' : '' !!}"><strong style="color: red">[NEW]</strong> Order Column API</a></li>
 		<li class="divider"></li>
 		<li><a href="{!! url('eloquent') !!}" class="{!! Request::is('eloquent') ? 'active' : '' !!}"><i class="glyphicon glyphicon-book"></i> Eloquent ORM Notes</a></li>
 	</ul>
