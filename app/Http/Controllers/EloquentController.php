@@ -386,4 +386,15 @@ class EloquentController extends Controller
 
         return view('datatables.eloquent.whitelist', ['title' => 'Whitelist Columns']);
     }
+
+    public function getOrderColumn(Request $request)
+    {
+        if ($request->ajax()) {
+            return Datatables::of(User::query())
+                ->orderColumn('name', 'email $1')
+                ->make(true);
+        }
+
+        return view('datatables.eloquent.order-column', ['title' => 'Order Column API']);
+    }
 }
