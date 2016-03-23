@@ -6,6 +6,7 @@
         <div class="alert alert-success">
             <p>Order column has a special variable <strong>$1</strong> which is being replace as the order direction value of the request.</p>
             <pre><code>->orderColumn('name', 'email $1')</code></pre>
+            <p>In this demo, when name column is sorted, it will be sorted by email instead.</p>
         </div>
     </caption>
     <thead>
