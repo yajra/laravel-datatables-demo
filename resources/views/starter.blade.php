@@ -40,7 +40,7 @@ $ php artisan migrate</code></pre>
 
             <h4>Add Datatables Service Provider and Facade on <strong>config/app.php</strong>.</h4>
             <pre><code>Yajra\Datatables\DatatablesServiceProvider::class,</code></pre>
-            <pre><code>'Datatables' => Yajra\Datatables\Datatables::class,</code></pre>
+            <pre><code>'Datatables' => Yajra\Datatables\Facades\Datatables::class,</code></pre>
 
             <h4>Lastly, publish the configuration file.</h4>
             <pre><code>$ php artisan vendor:publish</code></pre>
