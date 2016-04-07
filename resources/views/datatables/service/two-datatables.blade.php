@@ -128,7 +128,6 @@ public function ajax()
             <pre><code>function postsDataTables() {
     if (!$.fn.dataTable.isDataTable('#postsTable')) {
         $('#postsTable').DataTable({
-            destroy: true,
             dom: 'Bfrtip',
             processing: true,
             serverSide: true,
@@ -167,7 +166,6 @@ public function ajax()
     function postsDataTables() {
         if (!$.fn.dataTable.isDataTable('#postsTable')) {
             $('#postsTable').DataTable({
-                destroy: true,
                 dom: 'Bfrtip',
                 processing: true,
                 serverSide: true,
