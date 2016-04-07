@@ -90,7 +90,8 @@
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service Implementation<span class="caret"></span></a>
 	<ul class="dropdown-menu">
 		<li><a href="{!! url('services/basic') !!}" class="{!! Request::is('services/basic') ? 'active' : '' !!}">Basic Implementation</a></li>
-		<li><a href="{!! url('services/scope') !!}" class="{!! Request::is('services/scope') ? 'active' : '' !!}">DataTables Scoping</a></li>
+        <li><a href="{!! url('services/scope') !!}" class="{!! Request::is('services/scope') ? 'active' : '' !!}">DataTables Scoping</a></li>
+        <li><a href="{!! url('services/two-datatables') !!}" class="{!! Request::is('services/two-datatables') ? 'active' : '' !!}">Two DataTables</a></li>
 	</ul>
 </li>
 
