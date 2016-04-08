@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\PostsDataTable;
 use App\DataTables\Scopes\UserDataTableScope;
 use App\DataTables\UsersDataTable;
 use App\Http\Requests;
@@ -16,5 +17,15 @@ class ServiceController extends Controller
     public function getScope(UsersDataTable $dataTable)
     {
         return $dataTable->addScope(new UserDataTableScope)->render('datatables.service.scope');
+    }
+
+    public function getUsersDataTables(UsersDataTable $dataTable)
+    {
+        return $dataTable->render('datatables.service.two-datatables');
+    }
+
+    public function getPostsDataTables(PostsDataTable $postsDataTable)
+    {
+        return $postsDataTable->render('datatables.service.two-datatables');
     }
 }
