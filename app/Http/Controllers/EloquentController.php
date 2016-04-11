@@ -242,7 +242,7 @@ class EloquentController extends Controller
 
     public function getRelationshipsData()
     {
-        $posts = Post::with('user');
+        $posts = Post::with('user')->select('posts.*');
 
         return Datatables::of($posts)
             ->editColumn('title', '{!! str_limit($title, 60) !!}')

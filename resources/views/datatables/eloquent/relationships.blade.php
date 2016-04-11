@@ -24,6 +24,10 @@
             <br>
             Sorting available since <strong>v6.7.0</strong>.
         </div>
+        <div class="alert alert-danger">
+            It is advised that you include <strong>select('table.*')</strong> on query to avoid weird issues where id from related model replaces the id of the main model.
+            <pre><code>$posts = Post::with('user')->select('posts.*');</code></pre>
+        </div>
     </caption>
     <thead>
         <tr>
@@ -47,7 +51,7 @@
 
     public function getRelationshipsData()
     {
-        $posts = Post::with('user');
+        $posts = Post::with('user')->select('posts.*');
 
         return Datatables::of($posts)
             ->editColumn('title', '@{!! str_limit($title, 60) !!}')
