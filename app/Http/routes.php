@@ -15,6 +15,10 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('services/two-datatables', 'ServiceController@getUsersDataTables');
+
+Route::get('services/two-datatables/posts', 'ServiceController@getPostsDataTables');
+
 Route::controllers([
     'auth'       => 'Auth\AuthController',
     'password'   => 'Auth\PasswordController',
