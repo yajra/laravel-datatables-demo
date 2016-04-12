@@ -63,31 +63,31 @@ Route::get('services/two-datatables/posts','ServiceController@getPostsDataTables
 public function ajax()
 {
     return $this->datatables
-                ->eloquent($this->query())
-                ->make(true);
+    ->eloquent($this->query())
+    ->make(true);
 }</code></pre>
 <pre><code>public function query(){
     $users = Post::query()
-                  ->select([
-                    'posts.id as id',
-                    'posts.title as title',
-                    'posts.created_at as created_at',
-                    'posts.updated_at as updated_at',
-                    'users.name as created_by'
-                  ])
-                  ->leftJoin('users', 'posts.user_id', '=', 'users.id');
+            ->select([
+                'posts.id as id',
+                'posts.title as title',
+                'posts.created_at as created_at',
+                'posts.updated_at as updated_at',
+                'users.name as created_by'
+            ])
+            ->leftJoin('users', 'posts.user_id', '=', 'users.id');
 
     return $users;
 }</code></pre>
 <pre><code>public function html(){
     return $this->builder()
-                ->columns([
-                    'id',
-                    'title',
-                    'created_by',
-                    'created_at',
-                    'updated_at',
-                ]);
+    ->columns([
+        'id',
+        'title',
+        'created_by',
+        'created_at',
+        'updated_at',
+    ]);
 }</code></pre>
             <h3 class="lead">two-datatables.blade.php</h3>
             <pre><code>{{
@@ -133,12 +133,7 @@ public function ajax()
             serverSide: true,
             order: [[0, 'desc']],
             buttons: [
-                {extend: 'csv'},
-                {extend: 'excel'},
-                {extend: 'pdf'},
-                {extend: 'print'},
-                {extend: 'reset'},
-                {extend: 'reload'},
+                'csv', 'excel', 'pdf', 'print', 'reset', 'reload'
             ],
             ajax: '/services/two-datatables/posts',
             columns: [
@@ -171,12 +166,7 @@ public function ajax()
                 serverSide: true,
                 order: [[0, 'desc']],
                 buttons: [
-                    {extend: 'csv'},
-                    {extend: 'excel'},
-                    {extend: 'pdf'},
-                    {extend: 'print'},
-                    {extend: 'reset'},
-                    {extend: 'reload'},
+                    'csv', 'excel', 'pdf', 'print', 'reset', 'reload'
                 ],
                 ajax: '/services/two-datatables/posts',
                 columns: [
