@@ -78,6 +78,7 @@ public function getDetailsData($id)
             {
                 "className":      'details-control',
                 "orderable":      false,
+                "searchable":      false,
                 "data":           null,
                 "defaultContent": ''
             },
