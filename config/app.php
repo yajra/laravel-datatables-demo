@@ -154,6 +154,7 @@ return [
         Yajra\Datatables\DatatablesServiceProvider::class,
         Laracasts\Generators\GeneratorsServiceProvider::class,
         Roumen\Sitemap\SitemapServiceProvider::class,
+        Barryvdh\Snappy\ServiceProvider::class,
     ],
 
     /*
