@@ -3,38 +3,21 @@
 namespace App\Transformers;
 
 use League\Fractal\TransformerAbstract;
-use Carbon\Carbon;
+use App\User;
 
 class DatatablesTransformer extends TransformerAbstract
 {
     /**
      * @return array
      */
-    public function transform(array $data)
+    public function transform(User $user)
     {
         return [
-            'id'         => (int) $data['id'],
-            'name'       => $data['name'] . ' - fractal',
-            'email'      => $data['email'],
-            'created_at' => $this->dateFormatter($data['created_at']),
-            'updated_at' => $this->dateFormatter($data['updated_at']),
+            'id'         => (int) $user->id,
+            'name'       => $user->name,
+            'email'      => $user->email,
+            'created_at' => (string) $user->created_at,
+            'updated_at' => (string) $user->updated_at,
         ];
-    }
-
-    /**
-     * @param null|DateTime $dateTime
-     * @return string
-     */
-    public function dateFormatter($dateTime)
-    {
-        return $dateTime ? with(new Carbon($dateTime))->format($this->getDateFormat()) : null;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDateFormat()
-    {
-        return 'Y-m-d';
     }
 }
