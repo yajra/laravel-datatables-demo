@@ -64,8 +64,8 @@ class DatatablesTransformer extends TransformerAbstract
             'id'         => (int) $user->id,
             'name'       => $user->name,
             'email'      => $user->email,
-            'created_at' => $user->created_at,
-            'updated_at' => $user->updated_at,
+            'created_at' => (string) $user->created_at,
+            'updated_at' => (string) $user->updated_at,
         ];
     }
 }
