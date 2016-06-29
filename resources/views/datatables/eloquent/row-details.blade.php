@@ -77,6 +77,7 @@
             {
                 "className":      'details-control',
                 "orderable":      false,
+                "searchable":     false,
                 "data":           null,
                 "defaultContent": ''
             },
