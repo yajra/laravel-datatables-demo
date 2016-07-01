@@ -8,6 +8,9 @@ return [
     'getMaster.title'       => 'Datatables using Eloquent ORM with Master and Details Table',
     'getMaster.description' => 'Datatables using Eloquent ORM with Master and Details Table',
 
+    'getManualCount.title'       => 'DataTables with manual count query.',
+    'getManualCount.description' => 'DataTables with manual count query.',
+
     'getBasic.title'       => 'Basic Demo',
     'getBasic.description' => 'Laravel Datatables basic demo',
 

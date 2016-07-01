@@ -72,6 +72,19 @@ class EloquentController extends Controller
         return Datatables::of($users)->make(true);
     }
 
+    public function getManualCount(Request $request)
+    {
+        if ($request->ajax()) {
+            $users = User::query();
+
+            return Datatables::of($users)
+                ->setTotalRecords(100)
+                ->make(true);
+        }
+
+        return view('datatables.eloquent.manual-count');
+    }
+
     public function getBasicColumns()
     {
         return view('datatables.eloquent.basic-columns');
