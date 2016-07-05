@@ -23,7 +23,7 @@
 
     public function getHasManyData()
     {
-        $posts = User::find(1)->posts()->with('user');
+        $posts = User::first()->posts()->with('user');
 
         return Datatables::of($posts)
             ->editColumn('title', '@{!! str_limit($title, 60) !!}')
