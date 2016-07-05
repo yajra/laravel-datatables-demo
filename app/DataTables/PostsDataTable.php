@@ -50,9 +50,9 @@ class PostsDataTable extends DataTable
     {
         return $this->builder()
                     ->columns([
-                        'id',
-                        'title',
-                        'created_by',
+                        'posts.id' => ['title' => 'Id'],
+                        'posts.title' => ['title' => 'Title'],
+                        'created_by' => ['name' => 'users.name'],
                         'posts.created_at' => ['title' => 'Created At'],
                         'posts.updated_at' => ['title' => 'Updated At'],
                     ]);

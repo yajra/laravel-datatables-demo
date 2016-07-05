@@ -79,16 +79,6 @@ public function ajax()
 
     return $users;
 }</code></pre>
-<pre><code>public function html(){
-    return $this->builder()
-    ->columns([
-        'id',
-        'title',
-        'created_by',
-        'posts.created_at' => ['title' => 'Created At'],
-        'posts.updated_at' => ['title' => 'Updated At'],
-    ]);
-}</code></pre>
             <h3 class="lead">two-datatables.blade.php</h3>
             <pre><code>{{
 '<div class="tabs">
