@@ -42,16 +42,26 @@ class UsersDataTable extends DataTable
     public function html()
     {
         return $this->builder()
-            ->columns([
-                'id',
-                'name',
-                'email',
-                'created_at',
-                'updated_at',
-            ])
-            ->parameters([
-                'dom' => 'Bfrtip',
-                'buttons' => ['csv', 'excel', 'pdf', 'print', 'reset', 'reload'],
-            ]);
+                    ->columns([
+                        'id',
+                        'name',
+                        'email',
+                        'created_at',
+                        'updated_at',
+                    ])
+                    ->parameters([
+                        'dom'          => 'Bfrtip',
+                        'buttons'      => ['export', 'print', 'reset', 'reload'],
+                        'initComplete' => "function () {
+                            this.api().columns().every(function () {
+                                var column = this;
+                                var input = document.createElement(\"input\");
+                                $(input).appendTo($(column.footer()).empty())
+                                .on('change', function () {
+                                    column.search($(this).val(), false, false, true).draw();
+                                });
+                            });
+                        }",
+                    ]);
     }
 }

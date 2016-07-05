@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-{!! $dataTable->table() !!}
+{!! $dataTable->table([], true) !!}
 @endsection
 
 @push('scripts')
