@@ -53,8 +53,8 @@ class PostsDataTable extends DataTable
                         'id',
                         'title',
                         'created_by',
-                        'created_at',
-                        'updated_at',
+                        'posts.created_at' => ['title' => 'Created At'],
+                        'posts.updated_at' => ['title' => 'Updated At'],
                     ]);
     }
 }

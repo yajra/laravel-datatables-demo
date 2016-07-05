@@ -173,8 +173,8 @@ public function ajax()
                     {data: 'id', name: 'posts.id'},
                     {data: 'title', name: 'posts.title'},
                     {data: 'created_by', name: 'users.name', width: '110px'},
-                    {data: 'created_at', name: 'created_at', width: '120px'},
-                    {data: 'updated_at', name: 'updated_at', width: '120px'},
+                    {data: 'created_at', name: 'posts.created_at', width: '120px'},
+                    {data: 'updated_at', name: 'posts.updated_at', width: '120px'},
                 ],
                 order: [[0, 'desc']]
             });
