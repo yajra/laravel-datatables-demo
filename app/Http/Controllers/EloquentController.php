@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Post;
 use App\User;
-use Datatables;
+use Collective\Html\FormBuilder;
 use Illuminate\Http\Request;
 use DB;
+use Yajra\Datatables\Facades\Datatables;
 
 class EloquentController extends Controller
 {
@@ -328,7 +329,7 @@ class EloquentController extends Controller
         $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
 
         return Datatables::of($users)
-            ->setTransformer('App\Transformers\DatatablesTransformer')
+            ->setTransformer('App\Transformers\UserTransformer')
             ->make(true);
     }
 
