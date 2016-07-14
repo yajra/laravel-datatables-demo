@@ -242,7 +242,7 @@ class EloquentController extends Controller
         $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
 
         return Datatables::of($users)
-            ->editColumn('created_at', '{!! $created_at->diffForHumans() !!}')
+            ->editColumn('created_at', '{!! $created_at !!}')
             ->editColumn('updated_at', function ($user) {
                 return $user->updated_at->format('Y/m/d');
             })
