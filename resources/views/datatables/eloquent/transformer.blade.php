@@ -53,7 +53,7 @@ namespace App\Transformers;
 use League\Fractal\TransformerAbstract;
 use App\User;
 
-class DatatablesTransformer extends TransformerAbstract
+class UserTransformer extends TransformerAbstract
 {
     /**
      * @return array
