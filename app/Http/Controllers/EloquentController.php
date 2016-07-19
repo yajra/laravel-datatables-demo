@@ -329,7 +329,7 @@ class EloquentController extends Controller
         $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at']);
 
         return Datatables::of($users)
-            ->setTransformer('App\Transformers\UserTransformer')
+            ->setTransformer(new \App\Transformers\UserTransformer)
             ->make(true);
     }
 
