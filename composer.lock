@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "59cdeab3d3ccba746803c06f405431dc",
-    "content-hash": "f02997c7f003b5d9116b63ae11b26a27",
+    "hash": "469d8bfea52271d4001493a5e9a72ab2",
+    "content-hash": "652997273b0ce1f092775dddd49a48f3",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -2979,6 +2979,61 @@
                 "laravel5"
             ],
             "time": "2016-07-19 05:43:32"
+        },
+        {
+            "name": "yajra/laravel-disqus",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/laravel-disqus.git",
+                "reference": "b7b422107ee34e0af71f410334e9a9036713d253"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yajra/laravel-disqus/zipball/b7b422107ee34e0af71f410334e9a9036713d253",
+                "reference": "b7b422107ee34e0af71f410334e9a9036713d253",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "5.*",
+                "illuminate/support": "5.*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yajra\\Disqus\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arjay Angeles",
+                    "email": "aqangeles@gmail.com",
+                    "homepage": "http://yajrabox.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple Disqus platform integration with Laravel.",
+            "homepage": "https://github.com/yajra/laravel-disqus",
+            "keywords": [
+                "disqus",
+                "laravel",
+                "yajra"
+            ],
+            "time": "2016-07-22 05:01:58"
         },
         {
             "name": "yajra/laravel-oci8",

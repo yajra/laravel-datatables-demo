@@ -66,6 +66,9 @@
         <div class="row">
             <div class="col-sm-9 main">
                 @yield('content')
+
+                <hr>
+                <div id="disqus_thread"></div>
             </div>
             <div class="col-sm-3 main">
                 <div class="panel panel-danger">
