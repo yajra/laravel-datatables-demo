@@ -12,6 +12,10 @@
             {!! $dataTable->table([], true) !!}
         </div>
         <div class="tab-pane fade" id="tab2">
+            <h2>View</h2>
+            <pre><code>@{!! $dataTable->table([], true) !!}</code></pre>
+            <pre><code>@{!! $dataTable->scripts() !!}</code></pre>
+            <h2>UsersDataTable</h2>
             <pre><code>@include('datatables.service.usersdt')</code></pre>
         </div>
     </div>
