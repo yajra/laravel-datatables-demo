@@ -93,6 +93,7 @@
 		<li><a href="{!! url('services/basic') !!}" class="{!! Request::is('services/basic') ? 'active' : '' !!}">Basic Implementation</a></li>
         <li><a href="{!! url('services/scope') !!}" class="{!! Request::is('services/scope') ? 'active' : '' !!}">DataTables Scoping</a></li>
         <li><a href="{!! url('services/two-datatables') !!}" class="{!! Request::is('services/two-datatables') ? 'active' : '' !!}">Two DataTables</a></li>
+        <li><a href="{!! url('services/users-with-footer') !!}" class="{!! Request::is('services/users-with-footer') ? 'active' : '' !!}">Footer Column Search</a></li>
 	</ul>
 </li>
 

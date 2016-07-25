@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\DataTables\PostsDataTable;
 use App\DataTables\Scopes\UserDataTableScope;
 use App\DataTables\UsersDataTable;
-use App\Http\Requests;
 
 class ServiceController extends Controller
 {
@@ -27,5 +26,12 @@ class ServiceController extends Controller
     public function getPostsDataTables(PostsDataTable $postsDataTable)
     {
         return $postsDataTable->render('datatables.service.two-datatables');
+    }
+
+    public function getUsersWithFooter(UsersDataTable $dataTable)
+    {
+        $title = 'Service implementation with footer column search.';
+
+        return $dataTable->render('datatables.service.footer', compact('title'));
     }
 }
