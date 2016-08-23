@@ -16,7 +16,6 @@
 		"league/fractal": "^0.12.0",
 		"roumen/sitemap": "2.5.3",
 		"maatwebsite/excel": "^2.0",
-		"dompdf/dompdf": "^0.6.1",
 		"barryvdh/laravel-snappy": "^0.3.0",
 		"yajra/laravel-disqus": "^0.1.2"
 	},
