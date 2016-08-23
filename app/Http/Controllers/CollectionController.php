@@ -48,7 +48,19 @@ class CollectionController extends Controller
     {
         $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at'])->get();
 
-        return Datatables::of($users)->make(true);
+        return Datatables::of($users)->setTotalRecords(20)->make(true);
+    }
+
+    public function getTotalRecords(Request $request)
+    {
+        if ($request->ajax()) {
+            $users = User::select(['id', 'name', 'email', 'created_at', 'updated_at'])->get();
+
+            return Datatables::of($users)
+                ->setTotalRecords(20)
+                ->make(true);
+        }
+        return view('datatables.collection.total-records');
     }
 
     public function getMultiFilterSelect()

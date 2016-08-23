@@ -71,6 +71,7 @@
 		<li><a href="{!! url('collection/custom-filter') !!}" class="{!! Request::is('collection/custom-filter') ? 'active' : '' !!}">Custom Filter</a></li>
 		<li><a href="{!! url('collection/carbon') !!}" class="{!! Request::is('collection/carbon') ? 'active' : '' !!}">DateTime/Carbon Objects</a></li>
 		<li><a href="{!! url('collection/ioc') !!}" class="{!! Request::is('collection/ioc') ? 'active' : '' !!}">IOC Container [v5.2++]</a></li>
+		<li><a href="{!! url('collection/total-records') !!}" class="{!! Request::is('collection/total-records') ? 'active' : '' !!}">Set Total Records</a></li>
 		<li class="divider"></li>
 		<li><a href="{!! url('collection') !!}" class="{!! Request::is('collection') ? 'active' : '' !!}"><i class="glyphicon glyphicon-book"></i> Collection Engine Notes</a></li>
 	</ul>
