@@ -89,6 +89,13 @@
 </li>
 
 <li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eloquent Relations<span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="{!! url('relation/has-one') !!}" class="{!! Request::is('relation/has-one') ? 'active' : '' !!}">Has One Relationship</a></li>
+	</ul>
+</li>
+
+<li class="dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service Implementation<span class="caret"></span></a>
 	<ul class="dropdown-menu">
 		<li><a href="{!! url('services/basic') !!}" class="{!! Request::is('services/basic') ? 'active' : '' !!}">Basic Implementation</a></li>

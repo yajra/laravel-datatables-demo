@@ -29,6 +29,7 @@ Route::controllers([
     'sitemap'    => 'SitemapController',
     'buttons'    => 'ButtonsController',
     'services'   => 'ServiceController',
+    'relation'   => 'RelationController',
 ]);
 
 Route::resource('users', 'UsersController');
