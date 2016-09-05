@@ -92,6 +92,7 @@
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eloquent Relations<span class="caret"></span></a>
 	<ul class="dropdown-menu">
 		<li><a href="{!! url('relation/has-one') !!}" class="{!! Request::is('relation/has-one') ? 'active' : '' !!}">Has One Relationship</a></li>
+		<li><a href="{!! url('relation/has-many') !!}" class="{!! Request::is('relation/has-many') ? 'active' : '' !!}">Has Many Relationship</a></li>
 	</ul>
 </li>
 

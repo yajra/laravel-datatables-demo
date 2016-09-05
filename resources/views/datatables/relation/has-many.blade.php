@@ -17,18 +17,20 @@
     public function getHasOne(Request $request)
     {
         if ($request->ajax()) {
-            $query = User::with('onePost')->select('users.*');
+            $query = User::with('posts')->select('users.*');
 
             return $this->dataTable
                 ->eloquent($query)
                 ->addColumn('title', function (User $user) {
-                    return $user->onePost ? str_limit($user->onePost->title, 30, '...') : '';
+                    return $user->posts->map(function($post) {
+                        return str_limit($post->title, 30, '...');
+                    })->implode('&lt;br&gt;');
                 })
                 ->make(true);
         }
 
         return view('datatables.relation.has-one', [
-            'title' => 'Has One Eager Loading Demo',
+            'title' => 'Has Many Eager Loading Demo',
             'controller' => 'Relation Controller',
         ]);
     }
@@ -38,12 +40,12 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '{{ url("relation/has-one") }}',
+        ajax: '{{ url("relation/has-many") }}',
         columns: [
             {data: 'id', name: 'users.id'},
             {data: 'name', name: 'users.name'},
             {data: 'email', name: 'users.email'},
-            {data: 'title', name: 'onePost.title'},
+            {data: 'title', name: 'posts.title'},
         ]
     });
 @endsection

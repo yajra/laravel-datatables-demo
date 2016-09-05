@@ -44,4 +44,25 @@ class RelationController extends Controller
             'controller' => 'Relation Controller',
         ]);
     }
+
+    public function getHasMany(Request $request)
+    {
+        if ($request->ajax()) {
+            $query = User::with('posts')->select('users.*');
+
+            return $this->dataTable
+                    ->eloquent($query)
+                    ->addColumn('title', function (User $user) {
+                        return $user->posts->map(function($post) {
+                            return str_limit($post->title, 30, '...');
+                        })->implode('<br>');
+                    })
+                    ->make(true);
+        }
+
+        return view('datatables.relation.has-many', [
+            'title' => 'Has Many Demo',
+            'controller' => 'Relation Controller',
+        ]);
+    }
 }
