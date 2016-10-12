@@ -65,4 +65,25 @@ class RelationController extends Controller
             'controller' => 'Relation Controller',
         ]);
     }
+
+    public function getBelongsToMany(Request $request)
+    {
+        if ($request->ajax()) {
+            $query = User::with('blogs')->selectRaw('distinct users.*');
+
+            return $this->dataTable
+                ->eloquent($query)
+                ->addColumn('title', function (User $user) {
+                    return $user->blogs->map(function($blog) {
+                        return str_limit($blog->title, 30, '...');
+                    })->implode('<br>');
+                })
+                ->make(true);
+        }
+
+        return view('datatables.relation.belongs-to-many', [
+            'title' => 'Belongs To Many Demo',
+            'controller' => 'Relation Controller',
+        ]);
+    }
 }

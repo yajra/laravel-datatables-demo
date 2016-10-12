@@ -93,6 +93,7 @@
 	<ul class="dropdown-menu">
 		<li><a href="{!! url('relation/has-one') !!}" class="{!! Request::is('relation/has-one') ? 'active' : '' !!}">Has One Relationship</a></li>
 		<li><a href="{!! url('relation/has-many') !!}" class="{!! Request::is('relation/has-many') ? 'active' : '' !!}">Has Many Relationship</a></li>
+		<li><a href="{!! url('relation/belongs-to-many') !!}" class="{!! Request::is('relation/belongs-to-many') ? 'active' : '' !!}">Belongs To Many Relationship</a></li>
 	</ul>
 </li>
 

@@ -46,4 +46,9 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasOne(Post::class);
     }
+
+    public function blogs()
+    {
+        return $this->belongsToMany(Post::class, 'user_post', 'user_id', 'post_id');
+    }
 }
