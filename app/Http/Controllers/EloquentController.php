@@ -251,7 +251,7 @@ class EloquentController extends Controller
 
     public function getRelationships()
     {
-        return view('datatables.eloquent.relationships');
+        return view('datatables.eloquent.relationships', ['title' => 'Eloquent Datatable with Eager Loading']);
     }
 
     public function getRelationshipsData()
@@ -410,5 +410,16 @@ class EloquentController extends Controller
         }
 
         return view('datatables.eloquent.order-column', ['title' => 'Order Column API']);
+    }
+
+    public function getWithTrashed(Request $request)
+    {
+        if ($request->ajax()) {
+            return Datatables::of(User::withTrashed())
+                             ->withTrashed()
+                             ->make(true);
+        }
+
+        return view('datatables.eloquent.with-trashed', ['title' => 'Model With Trashed (Soft Deletes)']);
     }
 }

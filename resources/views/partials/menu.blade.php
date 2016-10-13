@@ -26,9 +26,6 @@
 		<li><a href="{!! url('eloquent/advance-filter') !!}" class="{!! Request::is('eloquent/advance-filter') ? 'active' : '' !!}">Advance Global Filter [v5.1++]</a></li>
 		<li><a href="{!! url('eloquent/transformer') !!}" class="{!! Request::is('eloquent/transformer') ? 'active' : '' !!}">Fractal Transformer [v5.1++]</a></li>
 		<li><a href="{!! url('eloquent/carbon') !!}" class="{!! Request::is('eloquent/carbon') ? 'active' : '' !!}">DateTime/Carbon Objects</a></li>
-		<li><a href="{!! url('eloquent/relationships') !!}" class="{!! Request::is('eloquent/relationships') ? 'active' : '' !!}">Eager Loading</a></li>
-		<li><a href="{!! url('eloquent/has-many') !!}" class="{!! Request::is('eloquent/has-many') ? 'active' : '' !!}">HasMany Relationship</a></li>
-		<li><a href="{!! url('eloquent/joins') !!}" class="{!! Request::is('eloquent/joins') ? 'active' : '' !!}">Join Queries</a></li>
 		<li><a href="{!! url('eloquent/ioc') !!}" class="{!! Request::is('eloquent/ioc') ? 'active' : '' !!}">IOC Container [v5.2++]</a></li>
 		<li><a href="{!! url('eloquent/blacklist') !!}" class="{!! Request::is('eloquent/blacklist') ? 'active' : '' !!}"><strong style="color: red">[NEW]</strong> Blacklist Columns [v6.9++]</a></li>
 		<li><a href="{!! url('eloquent/whitelist') !!}" class="{!! Request::is('eloquent/whitelist') ? 'active' : '' !!}"><strong style="color: red">[NEW]</strong> Whitelist Columns [v6.9++]</a></li>
@@ -91,10 +88,17 @@
 <li class="dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eloquent Relations<span class="caret"></span></a>
 	<ul class="dropdown-menu">
-		<li><a href="{!! url('relation/has-one') !!}" class="{!! Request::is('relation/has-one') ? 'active' : '' !!}">Has One Relationship</a></li>
-		<li><a href="{!! url('relation/has-many') !!}" class="{!! Request::is('relation/has-many') ? 'active' : '' !!}">Has Many Relationship</a></li>
-		<li><a href="{!! url('relation/belongs-to-many') !!}" class="{!! Request::is('relation/belongs-to-many') ? 'active' : '' !!}">Belongs To Many Relationship</a></li>
-	</ul>
+        <li><a href="{!! url('eloquent/relationships') !!}" class="{!! Request::is('eloquent/relationships') ? 'active' : '' !!}">Eager Loading</a></li>
+        <li class="divider"></li>
+        <li><a href="{!! url('relation/has-one') !!}" class="{!! Request::is('relation/has-one') ? 'active' : '' !!}">Has One Eager Loading</a></li>
+		<li><a href="{!! url('relation/has-many') !!}" class="{!! Request::is('relation/has-many') ? 'active' : '' !!}">Has Many Eager Loading</a></li>
+		<li><a href="{!! url('relation/belongs-to-many') !!}" class="{!! Request::is('relation/belongs-to-many') ? 'active' : '' !!}">Belongs To Many Eager Loading</a></li>
+        <li class="divider"></li>
+        <li><a href="{!! url('eloquent/has-many') !!}" class="{!! Request::is('eloquent/has-many') ? 'active' : '' !!}">HasMany Relationship</a></li>
+        <li><a href="{!! url('eloquent/joins') !!}" class="{!! Request::is('eloquent/joins') ? 'active' : '' !!}">Join Queries</a></li>
+        <li class="divider"></li>
+        <li><a href="{!! url('eloquent/with-trashed') !!}" class="{!! Request::is('eloquent/with-trashed') ? 'active' : '' !!}">With Trashed (Soft Deletes)</a></li>
+    </ul>
 </li>
 
 <li class="dropdown">
