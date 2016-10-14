@@ -41,9 +41,9 @@
         columns: [
             {data: 'id'},
             {data: 'name'},
-            {data: 'email', name: 'email'},
-            {data: 'created_at', name: 'created_at'},
-            {data: 'updated_at', name: 'updated_at'}
+            {data: 'email'},
+            {data: 'created_at'},
+            {data: 'updated_at'}
         ]
     });
 @endsection
