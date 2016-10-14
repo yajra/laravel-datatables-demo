@@ -1,6 +1,10 @@
 <div class="search-box">
     <input id="search-filter" type="text" name="keyword" placeholder="Search ..">
 </div>
+<br>
+<div class="panel panel-info">
+    @include('partials.ads',['slot'=>env('ADS_SLOT'),'format'=>null, 'style'=>'display:inline-block;min-width:237px;max-width:237px;width:100%;height:90px;'])
+</div>
 <ul class="sidebar-menu-container">
     <li>
         <a class="sidebar-list-title block" data-toggle="collapse" data-target="#tutorials">Tutorials</a>
@@ -15,9 +19,9 @@
         <a class="sidebar-list-title block" data-toggle="collapse" data-target="#eloquent">Eloquent</a>
         <div id="eloquent" class="collapse collapse-top in">
             <ul class="list-sub-items">
-                <li><a class="keyword {!! Request::is('eloquent/basic') ? 'active' : '' !!}" href="{!! url('eloquent/basic') !!}">Basic [Array Response]</a></li>
+                <li><a class="keyword {!! Request::is('eloquent/basic') ? 'active' : '' !!}" href="{!! url('eloquent/basic') !!}">Basic</a></li>
                 <li><a class="keyword {!! Request::is('eloquent/basic-columns') ? 'active' : '' !!}" href="{!! url('eloquent/basic-columns') !!}">Basic with Column Definition</a></li>
-                <li><a class="keyword {!! Request::is('eloquent/basic-object') ? 'active' : '' !!}" href="{!! url('eloquent/basic-object') !!}">Basic [Object Response]</a></li>
+                <li><a class="keyword {!! Request::is('eloquent/basic-object') ? 'active' : '' !!}" href="{!! url('eloquent/basic-object') !!}">Object Data Source</a></li>
                 <li><a class="keyword {!! Request::is('eloquent/row-details') ? 'active' : '' !!}" href="{!! url('eloquent/row-details') !!}">Row Details</a></li>
                 <li><a class="keyword {!! Request::is('eloquent/master') ? 'active' : '' !!}" href="{!! url('eloquent/master') !!}">Master-Details Table</a></li>
                 <li><a class="keyword {!! Request::is('eloquent/count') ? 'active' : '' !!}" href="{!! url('eloquent/count') !!}">Count Alias</a></li>
@@ -42,8 +46,8 @@
         <a class="sidebar-list-title block" data-toggle="collapse" data-target="#queryBuilder">Query Builder</a>
         <div id="queryBuilder" class="collapse collapse-top in">
             <ul class="list-sub-items">
-                <li><a class="keyword {!! Request::is('fluent/basic') ? 'active' : '' !!}" href="{!! url('fluent/basic') !!}">Basic [Array Response]</a></li>
-                <li><a class="keyword {!! Request::is('fluent/basic-object') ? 'active' : '' !!}" href="{!! url('fluent/basic-object') !!}">Basic [Object Response]</a></li>
+                <li><a class="keyword {!! Request::is('fluent/basic') ? 'active' : '' !!}" href="{!! url('fluent/basic') !!}">Basic</a></li>
+                <li><a class="keyword {!! Request::is('fluent/basic-object') ? 'active' : '' !!}" href="{!! url('fluent/basic-object') !!}">Object Data Source</a></li>
                 <li><a class="keyword {!! Request::is('fluent/union') ? 'active' : '' !!}" href="{!! url('fluent/union') !!}">Union Queries</a></li>
                 <li><a class="keyword {!! Request::is('fluent/multi-filter-select') ? 'active' : '' !!}" href="{!! url('fluent/multi-filter-select') !!}">Column Search</a></li>
                 <li><a class="keyword {!! Request::is('fluent/advance-filter') ? 'active' : '' !!}" href="{!! url('fluent/advance-filter') !!}">Advance Global Filter [v5.1++]</a></li>
@@ -63,8 +67,8 @@
                 <li><a class="keyword {!! Request::is('collection/array') ? 'active' : '' !!}" href="{!! url('collection/array') !!}">Collection of Array Data Source</a></li>
                 <li><a class="keyword {!! Request::is('collection/object') ? 'active' : '' !!}" href="{!! url('collection/object') !!}">Collection of Object Data Source</a></li>
                 <li><a class="keyword {!! Request::is('collection/github') ? 'active' : '' !!}" href="{!! url('collection/github') !!}">Github API Data Source</a></li>
-                <li><a class="keyword {!! Request::is('collection/basic') ? 'active' : '' !!}" href="{!! url('collection/basic') !!}">Basic [Array Response]</a></li>
-                <li><a class="keyword {!! Request::is('collection/basic-object') ? 'active' : '' !!}" href="{!! url('collection/basic-object') !!}">Basic [Object Response]</a></li>
+                <li><a class="keyword {!! Request::is('collection/basic') ? 'active' : '' !!}" href="{!! url('collection/basic') !!}">Basic</a></li>
+                <li><a class="keyword {!! Request::is('collection/basic-object') ? 'active' : '' !!}" href="{!! url('collection/basic-object') !!}">Object Data Source</a></li>
                 <li><a class="keyword {!! Request::is('collection/multi-filter-select') ? 'active' : '' !!}" href="{!! url('collection/multi-filter-select') !!}">Column Search</a></li>
                 <li><a class="keyword {!! Request::is('collection/add-edit-remove-column') ? 'active' : '' !!}" href="{!! url('collection/add-edit-remove-column') !!}">Add/Edit/Remove Column</a></li>
                 <li><a class="keyword {!! Request::is('collection/dt-row') ? 'active' : '' !!}" href="{!! url('collection/dt-row') !!}">DT Row Option</a></li>
@@ -86,7 +90,7 @@
         </div>
     </li>
     <li>
-        <a class="sidebar-list-title block" data-toggle="collapse" data-target="#eloquentRelations">Eloquent Relationships</a>
+        <a class="sidebar-list-title block" data-toggle="collapse" data-target="#eloquentRelations">Eloquent Relations</a>
         <div id="eloquentRelations" class="collapse collapse-top in">
             <ul class="list-sub-items">
                 <li><a class="keyword {!! Request::is('eloquent/relationships') ? 'active' : '' !!}" href="{!! url('eloquent/relationships') !!}">Eager Loading</a></li>
@@ -94,7 +98,7 @@
                 <li><a class="keyword {!! Request::is('relation/has-many') ? 'active' : '' !!}" href="{!! url('relation/has-many') !!}">Has Many Eager Loading</a></li>
                 <li><a class="keyword {!! Request::is('relation/belongs-to') ? 'active' : '' !!}" href="{!! url('relation/belongs-to') !!}">Belongs To Eager Loading</a></li>
                 <li><a class="keyword {!! Request::is('relation/belongs-to-many') ? 'active' : '' !!}" href="{!! url('relation/belongs-to-many') !!}">Belongs To Many Eager Loading</a></li>
-                <li><a class="keyword {!! Request::is('eloquent/has-many') ? 'active' : '' !!}" href="{!! url('eloquent/has-many') !!}">Has Many Relationship</a></li>
+                <li><a class="keyword {!! Request::is('eloquent/has-many') ? 'active' : '' !!}" href="{!! url('eloquent/has-many') !!}">HasMany Relationship</a></li>
                 <li><a class="keyword {!! Request::is('eloquent/joins') ? 'active' : '' !!}" href="{!! url('eloquent/joins') !!}">Join Queries</a></li>
                 <li><a class="keyword {!! Request::is('eloquent/with-trashed') ? 'active' : '' !!}" href="{!! url('eloquent/with-trashed') !!}">With Trashed (Soft Deletes)</a></li>
             </ul>

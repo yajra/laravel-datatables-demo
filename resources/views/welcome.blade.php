@@ -85,11 +85,12 @@ return Datatables::of(User::all())->make(true);
 	</div>
     <div class="col-md-3">
         <div class="row">
+            @include('donate')
+            <br>
             @include('partials.quick-links')
             <br>
-            @include('partials.ads-vertical')
+            @include('partials.ads',['slot'=>env('ADS_VERTICAL_SLOT'),'format'=>'auto', 'style'=>'display:block;'])
             <br>
-            @include('donate')
         </div>
     </div>
 </div>

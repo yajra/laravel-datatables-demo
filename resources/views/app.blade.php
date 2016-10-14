@@ -74,9 +74,12 @@
             <br>
             @include('donate')
             <br>
-            @include('partials.ads-vertical')
+            <div class="panel panel-info">
+                @include('partials.ads',['slot'=>env('ADS_VERTICAL_SLOT'),'format'=>'auto', 'style'=>'display:block;'])
+            </div>
         </div>
-        <div class="col-sm-9 main">@include('partials.ads-long')
+        <div class="col-sm-9 main">
+            @include('partials.ads',['slot'=>env('ADS_VERTICAL_SLOT'), 'format'=>'auto', 'style'=>'display:block;'])
             <div class="col-md-12">
                 @yield('content')
                 <hr>
