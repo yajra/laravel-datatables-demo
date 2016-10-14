@@ -1,6 +1,7 @@
 @extends('app')
 
 @section('content')
+    <h1 class="" style="">Footer Column Search</h1>
     <!-- TAB NAVIGATION -->
     <ul class="nav nav-tabs" role="tablist">
         <li class="active"><a href="#tab1" role="tab" data-toggle="tab">Service Implementation with Footer Column Search</a></li>

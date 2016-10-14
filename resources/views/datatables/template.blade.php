@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-<h1 class="page-header" style="font-size: 1.5em">{{ $controller . ' - ' .$title }}</h1>
+<h1 class="" style="">{{ $controller . ' - ' .$title }}</h1>
 <div class="tabs">
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#demo">Demo</a></li>

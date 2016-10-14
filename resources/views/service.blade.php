@@ -131,7 +131,7 @@
             <pre><code>Route::resource('users', 'UsersController');</code></pre>
 
             <h5>Expected output:</h5>
-            <img src="{{ asset('images/tuts-service.png') }}" alt="tuts">
+            <img src="{{ asset('images/tuts-service.png') }}" alt="tuts" style="max-width: 100%">
         </li>
     </ol>
 @stop
