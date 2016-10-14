@@ -18,6 +18,8 @@
     <link href="{{ asset('/css/datatables.bootstrap.css') }}" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,800' rel='stylesheet'
           type='text/css'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet'
+          type='text/css'>
     <link rel="stylesheet" href="{{ asset('highlight/styles/zenburn.css') }}">
     <script src="{{ asset('highlight/highlight.pack.js')  }}"></script>
     <script>hljs.initHighlightingOnLoad();</script>
@@ -40,13 +42,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url('/') }}">Laravel Datatables</a>
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <span class="dt-icon"><i class="fa fa-th-list"></i></span>
+                Laravel Datatables</a>
         </div>
         
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                <li><a href="https://github.com/yajra/laravel-datatables"><strong><i class="fa fa-github"></i> Github</strong></a></li>
                 <li><a href="http://yajra.github.io/laravel-datatables/api/"><strong>API</strong></a></li>
-                <li><a href="https://github.com/yajra/laravel-datatables"><strong>Github</strong></a></li>
                 <li><a href="https://pledgie.com/campaigns/29515"><strong>Donate</strong></a></li>
             </ul>
             
