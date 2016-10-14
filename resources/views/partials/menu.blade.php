@@ -92,6 +92,7 @@
         <li class="divider"></li>
         <li><a href="{!! url('relation/has-one') !!}" class="{!! Request::is('relation/has-one') ? 'active' : '' !!}">Has One Eager Loading</a></li>
 		<li><a href="{!! url('relation/has-many') !!}" class="{!! Request::is('relation/has-many') ? 'active' : '' !!}">Has Many Eager Loading</a></li>
+		<li><a href="{!! url('relation/belongs-to') !!}" class="{!! Request::is('relation/belongs-to') ? 'active' : '' !!}">Belongs To Eager Loading</a></li>
 		<li><a href="{!! url('relation/belongs-to-many') !!}" class="{!! Request::is('relation/belongs-to-many') ? 'active' : '' !!}">Belongs To Many Eager Loading</a></li>
         <li class="divider"></li>
         <li><a href="{!! url('eloquent/has-many') !!}" class="{!! Request::is('eloquent/has-many') ? 'active' : '' !!}">HasMany Relationship</a></li>

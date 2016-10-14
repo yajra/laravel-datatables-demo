@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use App\User;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use Yajra\Datatables\Datatables;
 
 class RelationController extends Controller
@@ -32,15 +30,15 @@ class RelationController extends Controller
             $query = User::with('onePost')->select('users.*');
 
             return $this->dataTable
-                    ->eloquent($query)
-                    ->addColumn('title', function (User $user) {
-                        return $user->onePost ? str_limit($user->onePost->title, 30, '...') : '';
-                    })
-                    ->make(true);
+                ->eloquent($query)
+                ->addColumn('title', function (User $user) {
+                    return $user->onePost ? str_limit($user->onePost->title, 30, '...') : '';
+                })
+                ->make(true);
         }
 
         return view('datatables.relation.has-one', [
-            'title' => 'Has One Demo',
+            'title'      => 'Has One Demo',
             'controller' => 'Relation Controller',
         ]);
     }
@@ -51,17 +49,17 @@ class RelationController extends Controller
             $query = User::with('posts')->select('users.*');
 
             return $this->dataTable
-                    ->eloquent($query)
-                    ->addColumn('title', function (User $user) {
-                        return $user->posts->map(function($post) {
-                            return str_limit($post->title, 30, '...');
-                        })->implode('<br>');
-                    })
-                    ->make(true);
+                ->eloquent($query)
+                ->addColumn('title', function (User $user) {
+                    return $user->posts->map(function ($post) {
+                        return str_limit($post->title, 30, '...');
+                    })->implode('<br>');
+                })
+                ->make(true);
         }
 
         return view('datatables.relation.has-many', [
-            'title' => 'Has Many Demo',
+            'title'      => 'Has Many Demo',
             'controller' => 'Relation Controller',
         ]);
     }
@@ -74,7 +72,7 @@ class RelationController extends Controller
             return $this->dataTable
                 ->eloquent($query)
                 ->addColumn('title', function (User $user) {
-                    return $user->blogs->map(function($blog) {
+                    return $user->blogs->map(function ($blog) {
                         return str_limit($blog->title, 30, '...');
                     })->implode('<br>');
                 })
@@ -82,7 +80,21 @@ class RelationController extends Controller
         }
 
         return view('datatables.relation.belongs-to-many', [
-            'title' => 'Belongs To Many Demo',
+            'title'      => 'Belongs To Many Demo',
+            'controller' => 'Relation Controller',
+        ]);
+    }
+
+    public function getBelongsTo(Request $request)
+    {
+        if ($request->ajax()) {
+            $query = Post::with('user')->select('posts.*');
+
+            return $this->dataTable->eloquent($query)->make(true);
+        }
+
+        return view('datatables.relation.belongs-to', [
+            'title'      => 'Model Belongs To Demo',
             'controller' => 'Relation Controller',
         ]);
     }
