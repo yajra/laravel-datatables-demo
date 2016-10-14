@@ -1,6 +1,7 @@
 @extends('app')
 
 @section('content')
+    <h1 class="" style="">Basic Two DataTables</h1>
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">

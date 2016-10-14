@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-<h3 class="page-header">{{$title}}</h3>
+<h1>{{$title}}</h1>
 <div class="row">
     <div class="col-sm-12">
         <h4>Requirements</h4>

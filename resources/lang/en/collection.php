@@ -61,5 +61,5 @@ return [
 
     'getRowNum.title'       => 'MySQL RowNum demo',
     'getRowNum.description' => 'Laravel Datatables demo showing how to use MySQL RowNum',
-
+    'getTotalRecords.title' => 'Set Total Records',
 ];

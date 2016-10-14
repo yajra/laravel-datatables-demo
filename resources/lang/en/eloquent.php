@@ -62,4 +62,7 @@ return [
     'getRowNum.title'       => 'MySQL RowNum demo',
     'getRowNum.description' => 'Laravel Datatables demo showing how to use MySQL RowNum',
 
+    'getHasMany.title' => 'Has Many',
+    'getJoins.title'   => 'Join',
+
 ];

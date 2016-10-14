@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="row">
-	<div class="col-md-12">
-		<h1>Welcome to Laravel DataTables Demo Application</h1>
+	<div class="col-md-9">
+		<h1>Laravel DataTables Demo Application</h1>
 		<h2>Datatables Package for Laravel 4.2|5.0|5.1|5.2</h2>
 		<p>
 			<a href="http://laravel.com"><img src="https://camo.githubusercontent.com/294f3ca8f4159d1df5e2bab3773b4a52f0a6d17e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c61726176656c2d342e32253743352e30253743352e31253743352e322d6f72616e67652e737667" alt="Laravel 4.2|5.0|5.1|5.2" data-canonical-src="https://img.shields.io/badge/Laravel-4.2%7C5.0%7C5.1%7C5.2-orange.svg" style="max-width:100%;"></a>
@@ -67,6 +67,15 @@
 		</ul>
 
 	</div>
+    <div class="col-md-3">
+        <div class="row">
+            @include('partials.quick-links')
+            <br>
+            @include('partials.ads-vertical')
+            <br>
+            @include('donate')
+        </div>
+    </div>
 </div>
 @endsection
 
