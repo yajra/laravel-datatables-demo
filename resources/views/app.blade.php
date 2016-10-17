@@ -10,9 +10,9 @@
     @else
         <meta name="description" content="jQuery Datatables API for Laravel 4 and Laravel 5">
     @endif
-    
+
     <title>Laravel Datatables {{ isset($title) ? " | $title" : "" }}</title>
-    
+
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/demo.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/datatables.bootstrap.css') }}" rel="stylesheet">
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{ asset('highlight/styles/zenburn.css') }}">
     <script src="{{ asset('highlight/highlight.pack.js')  }}"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -46,14 +46,15 @@
                 <span class="dt-icon"><i class="fa fa-th-list"></i></span>
                 Laravel Datatables</a>
         </div>
-        
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="https://github.com/yajra/laravel-datatables"><strong><i class="fa fa-github"></i> Github</strong></a></li>
+                <li><a href="https://github.com/yajra/laravel-datatables"><strong><i class="fa fa-github"></i>
+                            Github</strong></a></li>
                 <li><a href="http://yajra.github.io/laravel-datatables/api/"><strong>API</strong></a></li>
                 <li><a href="https://pledgie.com/campaigns/29515"><strong>Donate</strong></a></li>
             </ul>
-            
+
             <ul class="nav navbar-nav navbar-right navbar-custom">
                 @if (Auth::guest())
                     <li><a href="{{ url('/auth/login') }}">Login</a></li>
@@ -79,13 +80,28 @@
             @include('donate')
             <br>
             <div class="panel panel-info">
-                @include('partials.ads',['slot'=>env('ADS_VERTICAL_SLOT'),'format'=>'auto', 'style'=>'display:block;'])
+                @include('partials.ads',[
+                    'slot'=>env('ADS_VERTICAL_SLOT'),
+                    'format'=>'auto',
+                    'style'=>'display:block;'
+                ])
             </div>
         </div>
         <div class="col-sm-9 main">
-            @include('partials.ads',['slot'=>env('ADS_VERTICAL_SLOT'), 'format'=>'auto', 'style'=>'display:block;'])
+            @include('partials.ads',[
+                'slot'=>env('ADS_VERTICAL_SLOT'),
+                'format'=>'auto',
+                'style'=>'display:block;'
+            ])
             <div class="col-md-12">
                 @yield('content')
+                <hr>
+                @include('partials.ads',[
+                    'client' => env('ADS_YAJRA_CLIENT'),
+                    'slot'  => env('ADS_YAJRA_SLOT'),
+                    'format'=>'auto',
+                    'style'=>'display:block;'
+                ])
                 <hr>
                 <div id="disqus_thread"></div>
             </div>

@@ -2,7 +2,7 @@
 <!-- DT Ads -->
 <ins class="adsbygoogle"
      style="{{$style}}"
-     data-ad-client="{{env('ADS_CLIENT')}}"
+     data-ad-client="{{$client or env('ADS_CLIENT')}}"
      data-ad-slot="{{$slot}}"
      data-ad-format="{{$format}}"></ins>
 <script>

@@ -89,7 +89,11 @@ return Datatables::of(User::all())->make(true);
             <br>
             @include('partials.quick-links')
             <br>
-            @include('partials.ads',['slot'=>env('ADS_VERTICAL_SLOT'),'format'=>'auto', 'style'=>'display:block;'])
+            @include('partials.ads',[
+                'slot'=>env('ADS_VERTICAL_SLOT'),
+                'format'=>'auto',
+                'style'=>'display:block;'
+            ])
             <br>
         </div>
     </div>
