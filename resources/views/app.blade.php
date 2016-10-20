@@ -82,7 +82,7 @@
             <div class="panel panel-info">
                 @include('partials.ads',[
                     'client' => env('ADS_YAJRA_CLIENT'),
-                    'slot'=>'2669626074',
+                    'slot'  => env('ADS_YAJRA_SLOT_BOX'),
                     'format'=>'auto',
                     'style'=>'display:block;'
                 ])
