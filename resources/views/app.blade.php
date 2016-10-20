@@ -81,7 +81,8 @@
             <br>
             <div class="panel panel-info">
                 @include('partials.ads',[
-                    'slot'=>env('ADS_VERTICAL_SLOT'),
+                    'client' => env('ADS_YAJRA_CLIENT'),
+                    'slot'=>'2669626074',
                     'format'=>'auto',
                     'style'=>'display:block;'
                 ])
