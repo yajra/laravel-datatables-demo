@@ -6,16 +6,13 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "5.1.*",
-		"laravelcollective/html": "~5.0",
 		"yajra/laravel-oci8": "~2.0",
 		"yajra/laravel-datatables-oracle": "^6.6.0",
 		"laracasts/generators": "~1.1",
 		"laracasts/testdummy": "~2.0",
 		"barryvdh/laravel-debugbar": "~2.0",
 		"guzzlehttp/guzzle": "^5.2",
-		"league/fractal": "^0.12.0",
 		"roumen/sitemap": "2.5.3",
-		"maatwebsite/excel": "^2.0",
 		"barryvdh/laravel-snappy": "^0.3.0",
 		"yajra/laravel-disqus": "^0.1.2"
 	},

@@ -39,7 +39,7 @@ class RelationController extends Controller
 
         return view('datatables.relation.has-one', [
             'title'      => 'Has One Demo',
-            'controller' => 'Relation Controller',
+            'controller' => 'RelationController.php',
         ]);
     }
 
@@ -60,7 +60,7 @@ class RelationController extends Controller
 
         return view('datatables.relation.has-many', [
             'title'      => 'Has Many Demo',
-            'controller' => 'Relation Controller',
+            'controller' => 'RelationController.php',
         ]);
     }
 
@@ -81,7 +81,7 @@ class RelationController extends Controller
 
         return view('datatables.relation.belongs-to-many', [
             'title'      => 'Belongs To Many Demo',
-            'controller' => 'Relation Controller',
+            'controller' => 'RelationController.php',
         ]);
     }
 
@@ -95,7 +95,25 @@ class RelationController extends Controller
 
         return view('datatables.relation.belongs-to', [
             'title'      => 'Model Belongs To Demo',
-            'controller' => 'Relation Controller',
+            'controller' => 'RelationController.php',
+        ]);
+    }
+
+    public function getMorphToMany(Request $request)
+    {
+        if ($request->ajax()) {
+            $query = Post::with('tags')->select('posts.*');
+
+            return $this->dataTable->eloquent($query)
+                ->addColumn('tags', function (Post $post) {
+                    return $post->tags->pluck('name')->implode('<br>');
+                })
+                ->make(true);
+        }
+
+        return view('datatables.relation.morph-to-many', [
+            'title'      => 'Morph To Many Demo',
+            'controller' => 'RelationController.php',
         ]);
     }
 }

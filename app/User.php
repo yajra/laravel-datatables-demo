@@ -52,4 +52,9 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->belongsToMany(Post::class, 'user_post', 'user_id', 'post_id');
     }
+
+    public function tags()
+    {
+        return $this->morphToMany(Tag::class, 'taggable');
+    }
 }
