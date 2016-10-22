@@ -98,6 +98,7 @@
                 <li><a class="keyword {!! Request::is('relation/has-many') ? 'active' : '' !!}" href="{!! url('relation/has-many') !!}">Has Many Eager Loading</a></li>
                 <li><a class="keyword {!! Request::is('relation/belongs-to') ? 'active' : '' !!}" href="{!! url('relation/belongs-to') !!}">Belongs To Eager Loading</a></li>
                 <li><a class="keyword {!! Request::is('relation/belongs-to-many') ? 'active' : '' !!}" href="{!! url('relation/belongs-to-many') !!}">Belongs To Many Eager Loading</a></li>
+                <li><a class="keyword {!! Request::is('relation/morph-to-many') ? 'active' : '' !!}" href="{!! url('relation/morph-to-many') !!}">Morph To Many Eager Loading</a></li>
                 <li><a class="keyword {!! Request::is('eloquent/has-many') ? 'active' : '' !!}" href="{!! url('eloquent/has-many') !!}">HasMany Relationship</a></li>
                 <li><a class="keyword {!! Request::is('eloquent/joins') ? 'active' : '' !!}" href="{!! url('eloquent/joins') !!}">Join Queries</a></li>
                 <li><a class="keyword {!! Request::is('eloquent/with-trashed') ? 'active' : '' !!}" href="{!! url('eloquent/with-trashed') !!}">With Trashed (Soft Deletes)</a></li>
