@@ -246,6 +246,9 @@ class EloquentController extends Controller
             ->editColumn('updated_at', function ($user) {
                 return $user->updated_at->format('Y/m/d');
             })
+            ->filterColumn('updated_at', function ($query, $keyword) {
+                $query->whereRaw("DATE_FORMAT(updated_at,'%Y/%m/%d') like ?", ["%$keyword%"]);
+            })
             ->make(true);
     }
 
