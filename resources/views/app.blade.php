@@ -51,8 +51,8 @@
             <ul class="nav navbar-nav">
                 <li><a href="https://github.com/yajra/laravel-datatables"><strong><i class="fa fa-github"></i>
                             Github</strong></a></li>
-                <li><a href="http://yajra.github.io/laravel-datatables/api/"><strong>API</strong></a></li>
-                <li><a href="https://pledgie.com/campaigns/29515"><strong>Donate</strong></a></li>
+                <li><a href="https://yajrabox.com/docs/laravel-datatables/6.0"><strong>Documentation</strong></a></li>
+                <li><a href="https://www.patreon.com/bePatron?u=4521203"><strong>Become a Patreon</strong></a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right navbar-custom">
