@@ -2991,16 +2991,16 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v6.22.7",
+            "version": "v6.22.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "8408b5c13ddc4ae66686ebc2a2f51750cb0108ed"
+                "reference": "82595924b679ffdcd5420144bdee3001e806ce64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/8408b5c13ddc4ae66686ebc2a2f51750cb0108ed",
-                "reference": "8408b5c13ddc4ae66686ebc2a2f51750cb0108ed",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/82595924b679ffdcd5420144bdee3001e806ce64",
+                "reference": "82595924b679ffdcd5420144bdee3001e806ce64",
                 "shasum": ""
             },
             "require": {
@@ -3047,7 +3047,7 @@
                 "laravel4",
                 "laravel5"
             ],
-            "time": "2017-01-04 02:12:39"
+            "time": "2017-01-20 11:58:02"
         },
         {
             "name": "yajra/laravel-disqus",
