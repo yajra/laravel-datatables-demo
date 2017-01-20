@@ -23,15 +23,20 @@
     public function getUnionData()
     {
         $first = DB::table('users')
-            ->select(['id', 'name', 'email', 'created_at', 'updated_at'])
-            ->where('name', 'like', '%jon%');
+            ->select(['id', 'name', 'email', 'created_at', 'updated_at']);
 
-        $users = DB::table('users')
+        $union = DB::table('users')
             ->select(['id', 'name', 'email', 'created_at', 'updated_at'])
-            ->where('name', 'like', '%sus%')
             ->union($first);
 
-        return Datatables::of($users)->make(true);
+        $query = DB::table(DB::raw("({$union->toSql()}) as x"))
+            ->select(['id', 'name', 'email', 'created_at', 'updated_at'])
+            ->where(function ($query) {
+                $query->where('id', '<', 50)
+                    ->orWhere('id', '>', 100);
+            });
+
+        return Datatables::of($query)->make(true);
     }
 @endsection
 

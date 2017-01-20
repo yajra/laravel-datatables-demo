@@ -41,8 +41,8 @@ return [
     'getRowDetails.title'       => 'Row Details',
     'getRowDetails.description' => 'Laravel Datatables demo showing how to add a row details',
 
-    'getRowDetails.title'       => 'Eloquent HasMany',
-    'getRowDetails.description' => 'Laravel Datatables demo showing how to use HasMany relationships',
+    'getUnion.title'       => 'Union Queries',
+    'getUnion.description' => 'Laravel Datatables demo showing how to use Union queries',
 
     'getTransformer.title'       => 'Fractal Transformer',
     'getTransformer.description' => 'Laravel Datatables demo showing how to use Fractal Transformer',
