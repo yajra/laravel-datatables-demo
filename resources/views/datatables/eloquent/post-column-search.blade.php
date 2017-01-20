@@ -44,8 +44,6 @@
                 $query->whereRaw("CONCAT(users.id,'-',users.id) like ?", ["%{$keyword}%"]);
             })
             ->make(true);
-
-        return $datatables->make(true);
     }
 @endsection
 
