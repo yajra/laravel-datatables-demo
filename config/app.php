@@ -150,7 +150,7 @@ return [
         /*
          * Third Party Service Providers
          */
-        // Yajra\Oci8\Oci8ServiceProvider::class,
+        Yajra\Oci8\Oci8ServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
         Laracasts\Generators\GeneratorsServiceProvider::class,
         Roumen\Sitemap\SitemapServiceProvider::class,
