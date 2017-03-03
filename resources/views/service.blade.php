@@ -19,7 +19,7 @@
 
     <h3>Requirements</h3>
     <ul>
-        <li>Laravel 5.0 | 5.1 | 5.2</li>
+        <li>Laravel 5.0 | 5.1 | 5.2 | 5.3</li>
         <li><a href="https://github.com/yajra/laravel-datatables/tree/6.0">yajra/laravel-datatables-oracle:~6.0</a></li>
         <li>DataTables Buttons assets: <a href="http://datatables.net/extensions/buttons/">http://datatables.net/extensions/buttons/</a></li>
     </ul>
@@ -33,6 +33,14 @@
             <li>resources/views/vendor/datatables/print.blade.php</li>
             <li>config/datatables.php</li>
         </ol>
+    </div>
+
+    <div class="alert alert-danger">
+        <h4>UPDATE: Laravel 5.4 Upgrade Guide</h4>
+        <p>
+            This tutorial is only applicable to Laravel v5.0 - v5.3.
+            If you are using Laravel 5.4, please see <a href="https://yajrabox.com/docs/laravel-datatables/7.0/upgrade">upgrade guide</a>.
+        </p>
     </div>
 
     <h3>Displaying users data by using DataTable Service</h3>
