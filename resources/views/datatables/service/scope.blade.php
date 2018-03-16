@@ -20,7 +20,7 @@
             <pre><code>php artisan datatables:scope UserDataTableScope</code></pre>
             <pre><code>namespace App\DataTables\Scopes;
 
-use Yajra\Datatables\Contracts\DataTableScopeContract;
+use Yajra\DataTables\Contracts\DataTableScopeContract;
 
 class UserDataTableScope implements DataTableScopeContract
 {

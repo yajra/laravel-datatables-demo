@@ -1,4 +1,4 @@
-use Yajra\Datatables\Html\Builder; // import class on controller
+use Yajra\DataTables\Html\Builder; // import class on controller
 
 public function getBasic(Request $request, Builder $htmlBuilder)
 {

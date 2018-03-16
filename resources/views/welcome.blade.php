@@ -16,7 +16,7 @@
 			This package is created to handle server-side works of {!! link_to('http://datatables.net/', 'DataTables') !!} jQuery Plugin via AJAX option by using Eloquent ORM, Fluent Query Builder or Collection.
 		</p>
 
-        <pre><code>use Yajra\Datatables\Facades\Datatables;
+        <pre><code>use Yajra\DataTables\Facades\Datatables;
 
 // Using Eloquent
 return Datatables::eloquent(User::query())->make(true);
