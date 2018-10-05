@@ -148,18 +148,18 @@ class EloquentController extends Controller
         ])->leftJoin('posts', 'posts.user_id', '=', 'users.id')
         ->groupBy('users.id');
 
-        $datatables =  app('datatables')->of($users)
-            ->filterColumn('users.id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ? ", ["$1"]);
-
         // having count search
         if ($datatables->request->get('post') <> '') {
-            $datatables->having('count', $datatables->request->get('operator'), $datatables->request->get('post'));
+            $users->having('count', $datatables->request->get('operator'), $datatables->request->get('post'));
         }
 
         // additional users.name search
         if ($name = $datatables->request->get('name')) {
-            $datatables->where('users.name', 'like', "$name%");
+            $users->where('users.name', 'like', "$name%");
         }
+
+        $datatables =  app('datatables')->of($users)
+            ->filterColumn('users.id', 'whereRaw', "CONCAT(users.id,'-',users.id) like ? ", ["$1"]);
 
         return $datatables->make(true);
     }

@@ -214,11 +214,13 @@ class FluentController extends Controller
 
         $datatables =  Datatables::of($users);
         if ($request->get('post')) {
-            $datatables->having('count', $request->get('operator'), $request->get('post')); // having count search
+            // having count search
+            $users->having('count', $request->get('operator'), $request->get('post'));
         }
 
         if ($name = $request->get('name')) {
-            $datatables->where('users.name', 'like', "$name%"); // additional users.name search
+            // additional users.name search
+            $users->where('users.name', 'like', "$name%");
         }
 
         // Global search function
