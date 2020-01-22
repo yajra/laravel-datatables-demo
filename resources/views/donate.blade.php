@@ -6,6 +6,5 @@
         <p>
             {!! App\Services\Donate::quote() !!}
         </p>
-        <a href='https://pledgie.com/campaigns/29515'><img alt='Click here to lend your support to: Laravel Datatables and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/29515.png?skin_name=chrome' border='0' ></a>
     </div>
 </div>
